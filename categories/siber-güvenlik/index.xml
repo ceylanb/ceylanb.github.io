@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Siber Güvenlik on Ceylan Bozoğullarından | Kişisel Web Sayfası</title>
+    <link>http://example.org/categories/siber-g%C3%BCvenlik/</link>
+    <description>Recent content in Siber Güvenlik on Ceylan Bozoğullarından | Kişisel Web Sayfası</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>tr</language>
+    <copyright>Ceylan Bozoğullarından</copyright>
+    <lastBuildDate>Sat, 06 Jul 2019 16:15:59 +0000</lastBuildDate><atom:link href="http://example.org/categories/siber-g%C3%BCvenlik/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PhishHunterAI (Test): Oltalama Saldırıları için Chrome Eklentisi</title>
+      <link>http://example.org/2019/07/phishhunterai-test-oltalama-saldirilari-icin-chrome-eklentisi/</link>
+      <pubDate>Sat, 06 Jul 2019 16:15:59 +0000</pubDate>
+      
+      <guid>http://example.org/2019/07/phishhunterai-test-oltalama-saldirilari-icin-chrome-eklentisi/</guid>
+      <description>Son 4-5 aydır, oltalama saldırıları için açılmış alan adlarını yapay zeka ile otonom tespit etme üzerine çalışmalar gerçekleştiriyordum. Hala gerçekleştiriyorum fakat çok akademik olan ve teoride kalan bir çalışma yerine meyvesini herkesin yiyebileceği bir ara ürün çıkarmak istedim. Bunun üzerine Chrome kullanıcılarının internette gezinirken karşılaştıkları oltalama saldırısı için açılmış (ya da dolandırıcılık amacıyla açılmış) alan adlarını otonom tespit ederek, uyarı veren bir Google Chrome eklentisi geliştirdim. Adına da PhishHunterAI dedim.</description>
+    </item>
+    
+    <item>
+      <title>WordPress Plugin Survey &amp; Poll SQL Injection</title>
+      <link>http://example.org/2018/09/wordpress-plugin-survey-poll-sql-injection/</link>
+      <pubDate>Fri, 14 Sep 2018 17:24:09 +0000</pubDate>
+      
+      <guid>http://example.org/2018/09/wordpress-plugin-survey-poll-sql-injection/</guid>
+      <description>I decided to write some posts in English. This post is one of them. In this post, I am going to explain a vulnerability that I discovered in WordPress Survey &amp;amp; Poll plugin.
+I’ve always done black box testing, till today! A few days ago, I decided to spend my time reading code for finding a vulnerability until my conscription date came up. At the end of this quest, i found a treasure: an SQL injection vulnerability.</description>
+    </item>
+    
+  </channel>
+</rss>

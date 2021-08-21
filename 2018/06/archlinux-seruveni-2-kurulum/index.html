@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> Archlinux Serüveni 2: Kurulum | Ceylan Bozoğullarından | Kişisel Web Sayfası</title>
+  <link rel = 'canonical' href = 'http://example.org/2018/06/archlinux-seruveni-2-kurulum/'>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta property="og:title" content="Archlinux Serüveni 2: Kurulum" />
+<meta property="og:description" content="Bu bölümde, Archlinux Kurulumu’nu değil, kurulum esnasında edindiğim tecrübeleri ve detayları anlatıyor olacağım. Önceki bölümde,Archlinux Wiki “Installation Guide”sayfasında yer alan yönergeleri takip ederek kurulum yaptığımı belirtmiştim. Tek bir sayfa ve kısa olduğu için kurulumun kolay olacağını düşünmüştüm ancak durum sandığım kadar basit değildi. Çünkü ezbere bir kurulum yapmak istemediğim için diğer sayfalara verilen bağlantıların hemen hemen hepsine tek tek girip okumuştum. Neticede, okuduklarım ışığında ilk sayfadakinden biraz farklı bir kurulum gerçekleştirmiş oldum." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/2018/06/archlinux-seruveni-2-kurulum/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2018-06-21T08:40:09+00:00" />
+<meta property="article:modified_time" content="2018-06-21T08:40:09+00:00" /><meta property="og:site_name" content="Ceylan Bozoğullarından | Kişisel Web Sayfası" />
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Archlinux Serüveni 2: Kurulum"/>
+<meta name="twitter:description" content="Bu bölümde, Archlinux Kurulumu’nu değil, kurulum esnasında edindiğim tecrübeleri ve detayları anlatıyor olacağım. Önceki bölümde,Archlinux Wiki “Installation Guide”sayfasında yer alan yönergeleri takip ederek kurulum yaptığımı belirtmiştim. Tek bir sayfa ve kısa olduğu için kurulumun kolay olacağını düşünmüştüm ancak durum sandığım kadar basit değildi. Çünkü ezbere bir kurulum yapmak istemediğim için diğer sayfalara verilen bağlantıların hemen hemen hepsine tek tek girip okumuştum. Neticede, okuduklarım ışığında ilk sayfadakinden biraz farklı bir kurulum gerçekleştirmiş oldum."/>
+
+  
+  
+    
+  
+  
+  <link rel="stylesheet" href="http://example.org/css/styles.c05d68261bf086a9d7713c4f8a6215a3601608e267a816a7ee58f139b3d1aae51222aae2081c8e0c6bd35e1334773b7a16283022f31f92afd93bb37e5e822e66.css" integrity="sha512-wF1oJhvwhqnXcTxPimIVo2AWCOJnqBan7ljxObPRquUSIqriCByODGvTXhM0dzt6FigwIvMfkq/ZO7N&#43;XoIuZg==">
+  <link rel="stylesheet" href="http://example.org/css/styles.aa7f4879cac49d951c789d9f35a54627ec2d3da6b0f6b1a638d54cd60a3b1d4d827cc0a737e071cbe211e5813758ffcd847cd7fc33aea5573917e1718700e955.css" integrity="sha512-qn9IecrEnZUceJ2fNaVGJ&#43;wtPaaw9rGmONVM1go7HU2CfMCnN&#43;Bxy&#43;IR5YE3WP/NhHzX/DOupVc5F&#43;FxhwDpVQ=="> 
+
+  
+  
+  
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+  
+<link rel="icon" type="image/png" href="http://example.org/images/favicon.ico" />
+
+  
+  
+  
+  
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+  <div class="content index py4">
+
+  <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+        <li><a href="/">Anasayfa</a></li>
+         
+        <li><a href="/posts">Tüm Yazılar</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li>
+          <a class="icon" href=" http://example.org/2018/06/giris/" aria-label="Previous">
+            <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a class="icon" href="http://example.org/2018/08/django-asenkron-islemler-celery/" aria-label="Next">
+            <i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i>
+          </a>
+        </li>
+        
+        <li>
+          <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+            <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i>
+          </a>
+        </li>
+        <li>
+          <a class="icon" href="#" aria-label="Share">
+            <i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i>
+          </a>
+        </li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Önceki Yazı</span>
+      <span id="i-next" class="info" style="display:none;">Sonraki Yazı</span>
+      <span id="i-top" class="info" style="display:none;">Yukarı Dön</span>
+      <span id="i-share" class="info" style="display:none;">Yazıyı Paylaş</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=http%3a%2f%2fexample.org%2f2018%2f06%2farchlinux-seruveni-2-kurulum%2f" aria-label="Facebook">
+      <i class="fab fa-facebook " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=http%3a%2f%2fexample.org%2f2018%2f06%2farchlinux-seruveni-2-kurulum%2f&text=Archlinux%20Ser%c3%bcveni%202%3a%20Kurulum" aria-label="Twitter">
+      <i class="fab fa-twitter " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2fexample.org%2f2018%2f06%2farchlinux-seruveni-2-kurulum%2f&title=Archlinux%20Ser%c3%bcveni%202%3a%20Kurulum" aria-label="Linkedin">
+      <i class="fab fa-linkedin " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2fexample.org%2f2018%2f06%2farchlinux-seruveni-2-kurulum%2f&is_video=false&description=Archlinux%20Ser%c3%bcveni%202%3a%20Kurulum" aria-label="Pinterest">
+      <i class="fab fa-pinterest " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=Archlinux%20Ser%c3%bcveni%202%3a%20Kurulum&body=Check out this article: http%3a%2f%2fexample.org%2f2018%2f06%2farchlinux-seruveni-2-kurulum%2f" aria-label="Email">
+      <i class="fas fa-envelope " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=http%3a%2f%2fexample.org%2f2018%2f06%2farchlinux-seruveni-2-kurulum%2f&title=Archlinux%20Ser%c3%bcveni%202%3a%20Kurulum" aria-label="Pocket">
+      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=http%3a%2f%2fexample.org%2f2018%2f06%2farchlinux-seruveni-2-kurulum%2f&title=Archlinux%20Ser%c3%bcveni%202%3a%20Kurulum" aria-label="reddit">
+      <i class="fab fa-reddit " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2fexample.org%2f2018%2f06%2farchlinux-seruveni-2-kurulum%2f&name=Archlinux%20Ser%c3%bcveni%202%3a%20Kurulum&description=Bu%20b%c3%b6l%c3%bcmde%2c%20Archlinux%20Kurulumu%e2%80%99nu%20de%c4%9fil%2c%20kurulum%20esnas%c4%b1nda%20edindi%c4%9fim%20tecr%c3%bcbeleri%20ve%20detaylar%c4%b1%20anlat%c4%b1yor%20olaca%c4%9f%c4%b1m.%20%c3%96nceki%20b%c3%b6l%c3%bcmde%2cArchlinux%20Wiki%c2%a0%e2%80%9cInstallation%20Guide%e2%80%9dsayfas%c4%b1nda%20yer%20alan%20y%c3%b6nergeleri%20takip%20ederek%20kurulum%20yapt%c4%b1%c4%9f%c4%b1m%c4%b1%20belirtmi%c5%9ftim.%20Tek%20bir%20sayfa%20ve%20k%c4%b1sa%20oldu%c4%9fu%20i%c3%a7in%20kurulumun%20kolay%20olaca%c4%9f%c4%b1n%c4%b1%20d%c3%bc%c5%9f%c3%bcnm%c3%bc%c5%9ft%c3%bcm%20ancak%20durum%20sand%c4%b1%c4%9f%c4%b1m%20kadar%20basit%20de%c4%9fildi.%20%c3%87%c3%bcnk%c3%bc%20ezbere%20bir%20kurulum%20yapmak%20istemedi%c4%9fim%20i%c3%a7in%20di%c4%9fer%20sayfalara%20verilen%20ba%c4%9flant%c4%b1lar%c4%b1n%20hemen%20hemen%20hepsine%20tek%20tek%20girip%20okumu%c5%9ftum.%20Neticede%2c%20okuduklar%c4%b1m%20%c4%b1%c5%9f%c4%b1%c4%9f%c4%b1nda%20ilk%20sayfadakinden%20biraz%20farkl%c4%b1%20bir%20kurulum%20ger%c3%a7ekle%c5%9ftirmi%c5%9f%20oldum." aria-label="Tumblr">
+      <i class="fab fa-tumblr " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2fexample.org%2f2018%2f06%2farchlinux-seruveni-2-kurulum%2f&t=Archlinux%20Ser%c3%bcveni%202%3a%20Kurulum" aria-label="Hacker News">
+      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#klavye-ve-font-problemi">Klavye ve Font Problemi</a></li>
+    <li><a href="#ssd--hdd-bölümleme">SSD + HDD Bölümleme</a>
+      <ul>
+        <li><a href="#home8221-ve-8220var8221-dizinleri">/HOME” ve “/var” Dizinleri</a></li>
+        <li><a href="#swap-alanı">SWAP Alanı</a></li>
+        <li><a href="#ekstra-boş-alan">Ekstra Boş Alan</a></li>
+        <li><a href="#sonuç">Sonuç</a></li>
+      </ul>
+    </li>
+    <li><a href="#internet-bağlantısı">İnternet Bağlantısı</a></li>
+    <li><a href="#bootloader">Bootloader</a></li>
+    <li><a href="#intel-cpu">Intel CPU</a></li>
+    <li><a href="#sonuç-1">Sonuç</a></li>
+    <li><a href="#kaynaklar">Kaynaklar</a></li>
+  </ul>
+</nav>
+    </div>
+  </span>
+</div>
+
+
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+      <h1 class="posttitle" itemprop="name headline">
+        Archlinux Serüveni 2: Kurulum
+      </h1>
+      <div class="meta">
+        
+        <div class="postdate">
+          
+          <time datetime="2018-06-21 08:40:09 &#43;0000 &#43;0000" itemprop="datePublished">2018-06-21</time>
+          
+        </div>
+        
+        
+        <div class="article-read-time">
+          <i class="far fa-clock"></i>
+          
+          4 dakikalık okuma
+        </div>
+        
+        
+        <div class="article-category">
+            <i class="fas fa-archive"></i>
+            
+            
+            <a class="category-link" href="/categories/linux">Linux</a>
+            
+        </div>
+        
+        
+        <div class="article-tag">
+            <i class="fas fa-tag"></i>
+            
+            
+            <a class="tag-link" href="/tags/archlinux" rel="tag">archlinux</a>
+            
+             ,  
+            <a class="tag-link" href="/tags/kurulum" rel="tag">kurulum</a>
+            
+        </div>
+        
+      </div>
+    </header>
+
+  
+    <div class="content" itemprop="articleBody">
+      <p>Bu bölümde, Archlinux Kurulumu’nu değil, kurulum esnasında edindiğim tecrübeleri ve detayları anlatıyor olacağım. <!-- raw HTML omitted -->Önceki bölümde,<!-- raw HTML omitted --> Archlinux Wiki <!-- raw HTML omitted -->“Installation Guide”<!-- raw HTML omitted --> sayfasında yer alan yönergeleri takip ederek kurulum yaptığımı belirtmiştim. Tek bir sayfa ve kısa olduğu için kurulumun kolay olacağını düşünmüştüm ancak durum sandığım kadar basit değildi. Çünkü ezbere bir kurulum yapmak istemediğim için diğer sayfalara verilen bağlantıların hemen hemen hepsine tek tek girip okumuştum. Neticede, okuduklarım ışığında ilk sayfadakinden biraz farklı bir kurulum gerçekleştirmiş oldum. Bu farklılıkları ve kurulum için gerekli detayları  tek bir sayfada derlemek istedim.</p>
+<h2 id="klavye-ve-font-problemi">Klavye ve Font Problemi</h2>
+<p>Kuruluma başlarken klavye ve font problemini çözmek için aşağıdaki komutlar çalıştırılmalı:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>loadkeys trq
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span>setfont iso09.16
+</code></pre></div><h2 id="ssd--hdd-bölümleme">SSD + HDD Bölümleme</h2>
+<p>İlk farklılık disk bölümleme konusunda baş gösterdi. Yeni bilgisayarımda iki adet disk var; biri SSD diğeri HDD. Wiki’de ve diğer birçok sayfada tek bir disk üzerinden bölümleme anlatılmış. Bu yüzden, en ideal ve doğru bölümleme şeklini bulabilmek için biraz araştırma yapmam gerekti.</p>
+<p>Bölümleme yaparken ilk olarak boot modun ne olduğunu aşağıdaki komutla öğrendim; eğer çıktıda dizin bulunamadı gibi bir hata alınıyorsa sistem BIOS modda, alınmıyorsa UEFI modda açılmış oluyordu. Ben hata almadığım için sistemimin UEFI modda açıldığını öğrenmiş oldum.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>ls /sys/firmware/efi/efivars
+</code></pre></div><p>Sırada, UEFI moda göre disk bölümleme yapmalıydım. <!-- raw HTML omitted -->İlgili Wiki sayfası<!-- raw HTML omitted -->nda BIOS ve UEFI için ayrı ayrı örnek bölümleme tabloları yer alıyor. Bu tablolardan esinlendim elbette ama dediğim gibi tek bir disk için hazırlanmıştı tablolar.</p>
+<p>
+  <img src="/posts/arch-seruveni-2/partitioning.png" alt="Disk Bölümleme">
+
+</p>
+<h3 id="home8221-ve-8220var8221-dizinleri">/HOME” ve “/var” Dizinleri</h3>
+<p>İnternette biraz araştırmanın ardından, /home ve /var dizinlerinin HDD’de tutulmasının daha yararlı olacağını öğrendim [2]. Nedenlerini şöyle açıklayalım; Logların sürekli ve sık olarak yazıldığı “/var” dizininin SSD üzerinde olması, SSD ömrünü azaltır diyor yazar. Bunun yerine bu dizinin HDD ‘ye taşınması performans kaybına neden olur ancak bu çok farkedilmez. Böylece SSD alanı daha verimli şekilde kullanılır.</p>
+<p>Kullanıcıların kişisel dosyalarının (müzik, fotoğraf, video, film vb.) yer aldığı “/home” dizininin de HDD’ye taşınmasıyla hissedilemeyecek kadar performans kaybı yaşanabilir. Ancak, HDD alanı daha genişse (ki benimki daha geniş), bu dizinin de HDD’ye taşınması SSD alanını daraltmamak için gayet mantıklı ve makul. (Tabii ben böyle düşünüyorum, yanlışsam düzeltin.)</p>
+<h3 id="swap-alanı">SWAP Alanı</h3>
+<p>Bunların dışında bir de SWAP alanını konumlandırmam gerekiyordu. Birçok forumda bu alana belleğin yetersiz kaldığı durumlarda sık yazım gerçekleştirileceği için SSD ömrünü uzatmak adına HDD’de yer almasının doğru olacağı belirtiliyordu.  Ancak Wiki’de, SWAP alanının, TRIM destekli SSD üzerinde konumlandırılması durumunda, <!-- raw HTML omitted -->ufak bir konfigürasyonla<!-- raw HTML omitted --> uzun süreli performans yakalanabileceği belirtiliyordu [3]. Bunun üzerine kurulumun <!-- raw HTML omitted -->“Format the Partitions”<!-- raw HTML omitted --> kısmında yer alan swapon komutuna -d (discard) parametresini ekleyerek bu konfigürasyonu da yapmış oldum.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>swapon /dev/sdaX -d
+</code></pre></div><p>Tabii SSD diskin TRIM destekli olup olmadığını da görmek için resimde belirtilen komutu çalıştırarak çıktıdaki DISC-GRAN ve DISC-MAX kolonları kontrol ettim. 0B olmayan disk TRIM desteklidir. Resimde de görüldüğü gibi SSD diskim (sdb) TRIM destekli olduğunu teyit etmiş oldum.</p>
+<p>
+  <img src="/posts/arch-seruveni-2/trim.png" alt="SSD Trim Kontrol">
+
+</p>
+<h3 id="ekstra-boş-alan">Ekstra Boş Alan</h3>
+<p>Okuduğum bazı kaynaklarda, mevcut disk alanı gerekenden fazla ise hepsini kullanmak yerine bir miktarının, daha sonra başka amaçlar için kullanılmak üzere boş bırakılması öneriliyordu. Mantıklıydı. Ben de tavsiyeye uyup HDD üzerinde 150GB lık boş bir alan bıraktım. (Okuduğum kaynakları bulamadığım için maalesef belirtemedim, bulursam koyarım.)</p>
+<h3 id="sonuç">Sonuç</h3>
+<p>Diski kaç parçaya ayıracağımı belirledikten sonra ayırdığım bu parçaların boyutlarını belirlemeliydim. Bunun için de yine dallanıp <!-- raw HTML omitted -->Wiki – Partitioning<!-- raw HTML omitted --> sayfasını okudum ve okuduklarım neticesinde disklerimi aşağıdaki gibi yapılandırdım.</p>
+<p>SSD;
+
+  <img src="/posts/arch-seruveni-2/SSD_partitioning.png" alt="SSD Disk Bölümlemesi">
+
+</p>
+<p>HDD;
+
+  <img src="/posts/arch-seruveni-2/HDD_partitioning.png" alt="HDD Disk Bölümlemesi">
+
+</p>
+<h2 id="internet-bağlantısı">İnternet Bağlantısı</h2>
+<p>Kurulum için indirdiğim ISO dosyası yaklaşık 570MB civarındaydı. Şaşırmıştım çünkü Windows, Ubuntu gibi işletim sistemlerinin dosya boyutları iki katından fazlaydı. Nedenini sonradan anladım tabii. Gerekli temel paketler, kurulum dosyasında bulunmadığından, bu paketlerin kurulum esnasında internet bağlantısıyla indirilip kurulması gerekiyordu.</p>
+<p>Ben internete Ethernet kablosu ile çıkıyordum. O yüzden bağlantı için ayrıca konfigürasyon yapmadım. Ethernet’im olmasaydı ve kablosuz bağlantı sağlamak isteseydim muhtemelen ayrıca işlemler yapmam gerekecekti. Sonuçta öyle ya da böyle kurulumu yapmak için internet bağlantınız olmalı, en azından ben öyle anladım.</p>
+<h2 id="bootloader">Bootloader</h2>
+<p>Wiki’yi takip ettiğimde geldiğim en son kısım olan bootloader ‘da biraz takıldım. Çünkü öncesindeki <!-- raw HTML omitted -->initramfs<!-- raw HTML omitted --> başlığındakileri atlamıştım. Ayrıca GRUB ‘u yüklerken sistemim UEFI olduğu halde BIOS parametlerine göre komutları yazdığım için hata almıştım.</p>
+<p>Bu hataları çözmek için komple kurulumu baştan alıp adımları atlamadan uyguladım. <!-- raw HTML omitted -->bootloader<!-- raw HTML omitted --> başlığına geldiğimde, dallanıp <!-- raw HTML omitted -->GRUB<!-- raw HTML omitted --> sayfasını okumaya başladım. Burada “UEFI Systems” başlığı altında yer alan komutları da anlayarak çalıştırdığımda başarılı şekilde GRUB’u yükledim. Yaptığım şey aslında basitti, grub paketini yükledikten sonra aşağıdaki gibi bir komutu çalıştırmak;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>grub-install --target<span style="color:#ff79c6">=</span>x86_64-efi --efi-directory<span style="color:#ff79c6">=</span>/boot --bootloader-id<span style="color:#ff79c6">=</span>GRUB
+</code></pre></div><p>Ben, bootloader olarak GRUB tercih ettim. Bunun tek bir nedeni var, en sık duyduğum ve gördüğüm bootloader olduğu için, başka bir nedeni yok.</p>
+<h2 id="intel-cpu">Intel CPU</h2>
+<p>Eğer bir Intel işlemciye sahipseniz ve kurulum için Wiki’yi takip ediyorsanız konuyla ilgili aşağıdaki tek cümleyi atlamamanız gerekir. Bunlara vurgu yapmak istiyorum çünkü tek bir cümle ile değinilmiş gerçekten önemli detaylar var. Bu da onlardan biri.</p>
+<blockquote>
+<p>If you have an Intel CPU, install the <!-- raw HTML omitted --><!-- raw HTML omitted -->intel-ucode<!-- raw HTML omitted --><!-- raw HTML omitted --> package in addition, and <a href="https://wiki.archlinux.org/index.php/Microcode#Enabling_Intel_microcode_updates">enable microcode updates</a>. [4]</p>
+</blockquote>
+<h2 id="sonuç-1">Sonuç</h2>
+<p>Archlinux kurulumunu tamamladıktan sonra, kurulumun doğruluğunu teyit için bir de youtube’da birkaç video izledim. Videolara bakarken Archlinux üzerine özelleşmiş videolarıyla Luke Smith adlı youtuber dikkatimi çekti. Archlinux ile ilgili kurulumdan, sonraki aşamalarına kadar birçok videosu var. Güzel şekilde anlatıyor. Kendi kurulumumu Luke Smith’in <!-- raw HTML omitted -->şuradaki<!-- raw HTML omitted --> videosuyla teyit ettim. Tek eksiğim <!-- raw HTML omitted -->networkmanager<!-- raw HTML omitted --> kurmamamdı. Onu da sonradan kurabilirdim zaten.</p>
+<p>Bu yazıyı kurulumdan üç hafta sonra yazıyor olmam nedeniyle kaçırdığım detaylar muhakkak olacaktır. Zaten o detaylar, varsa bu yazıyı okuyup uygulamaya çalışan birinin önüne çıkacaktır. İşte o birine sesleniyorum; yorum olarak bilgilendirirsen, önce müteşekkir olurum sonra da buraya eklerim.</p>
+<h2 id="kaynaklar">Kaynaklar</h2>
+<p>[1] <a href="https://wiki.archlinux.org/index.php/partitioning#UEFI.2FGPT_example_layout">https://wiki.archlinux.org/index.php/partitioning#UEFI.2FGPT_example_layout</a></p>
+<p>[2] <a href="https://catdevblog.nickbair.net/2010/10/30/a-good-ssdhdd-partitioning-scheme/">https://catdevblog.nickbair.net/2010/10/30/a-good-ssdhdd-partitioning-scheme/</a></p>
+<p>[3] https://wiki.archlinux.org/index.php/swap#Swap_partition</p>
+<p>[4] https://wiki.archlinux.org/index.php/Installation_guide#Boot_loader</p>
+<p>[5] https://wiki.archlinux.org/index.php/Partitioning</p>
+<p>[6] https://wiki.archlinux.org/index.php/EFI_System_Partition#Mount_the_partition</p>
+<p>[7] <a href="https://wiki.archlinux.org/index.php/Microcode#Enabling_Intel_microcode_updates">https://wiki.archlinux.org/index.php/Microcode#Enabling_Intel_microcode_updates</a></p>
+
+    </div>
+  </article>
+
+  
+  
+
+
+
+
+  
+    <div class="blog-post-comments">
+        <div id="disqus_thread">
+          <script type="text/javascript">
+          
+          (function() {
+              
+              
+              
+              
+          
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              var disqus_shortname = 'bozogullarindan';
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+          <a href="https://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+    </div>
+
+  
+
+
+  <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Anasayfa</a></li>
+         
+          <li><a href="/posts">Tüm Yazılar</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#klavye-ve-font-problemi">Klavye ve Font Problemi</a></li>
+    <li><a href="#ssd--hdd-bölümleme">SSD + HDD Bölümleme</a>
+      <ul>
+        <li><a href="#home8221-ve-8220var8221-dizinleri">/HOME” ve “/var” Dizinleri</a></li>
+        <li><a href="#swap-alanı">SWAP Alanı</a></li>
+        <li><a href="#ekstra-boş-alan">Ekstra Boş Alan</a></li>
+        <li><a href="#sonuç">Sonuç</a></li>
+      </ul>
+    </li>
+    <li><a href="#internet-bağlantısı">İnternet Bağlantısı</a></li>
+    <li><a href="#bootloader">Bootloader</a></li>
+    <li><a href="#intel-cpu">Intel CPU</a></li>
+    <li><a href="#sonuç-1">Sonuç</a></li>
+    <li><a href="#kaynaklar">Kaynaklar</a></li>
+  </ul>
+</nav>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=http%3a%2f%2fexample.org%2f2018%2f06%2farchlinux-seruveni-2-kurulum%2f" aria-label="Facebook">
+      <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=http%3a%2f%2fexample.org%2f2018%2f06%2farchlinux-seruveni-2-kurulum%2f&text=Archlinux%20Ser%c3%bcveni%202%3a%20Kurulum" aria-label="Twitter">
+      <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2fexample.org%2f2018%2f06%2farchlinux-seruveni-2-kurulum%2f&title=Archlinux%20Ser%c3%bcveni%202%3a%20Kurulum" aria-label="Linkedin">
+      <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2fexample.org%2f2018%2f06%2farchlinux-seruveni-2-kurulum%2f&is_video=false&description=Archlinux%20Ser%c3%bcveni%202%3a%20Kurulum" aria-label="Pinterest">
+      <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=Archlinux%20Ser%c3%bcveni%202%3a%20Kurulum&body=Check out this article: http%3a%2f%2fexample.org%2f2018%2f06%2farchlinux-seruveni-2-kurulum%2f" aria-label="Email">
+      <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=http%3a%2f%2fexample.org%2f2018%2f06%2farchlinux-seruveni-2-kurulum%2f&title=Archlinux%20Ser%c3%bcveni%202%3a%20Kurulum" aria-label="Pocket">
+      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=http%3a%2f%2fexample.org%2f2018%2f06%2farchlinux-seruveni-2-kurulum%2f&title=Archlinux%20Ser%c3%bcveni%202%3a%20Kurulum" aria-label="reddit">
+      <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2fexample.org%2f2018%2f06%2farchlinux-seruveni-2-kurulum%2f&name=Archlinux%20Ser%c3%bcveni%202%3a%20Kurulum&description=Bu%20b%c3%b6l%c3%bcmde%2c%20Archlinux%20Kurulumu%e2%80%99nu%20de%c4%9fil%2c%20kurulum%20esnas%c4%b1nda%20edindi%c4%9fim%20tecr%c3%bcbeleri%20ve%20detaylar%c4%b1%20anlat%c4%b1yor%20olaca%c4%9f%c4%b1m.%20%c3%96nceki%20b%c3%b6l%c3%bcmde%2cArchlinux%20Wiki%c2%a0%e2%80%9cInstallation%20Guide%e2%80%9dsayfas%c4%b1nda%20yer%20alan%20y%c3%b6nergeleri%20takip%20ederek%20kurulum%20yapt%c4%b1%c4%9f%c4%b1m%c4%b1%20belirtmi%c5%9ftim.%20Tek%20bir%20sayfa%20ve%20k%c4%b1sa%20oldu%c4%9fu%20i%c3%a7in%20kurulumun%20kolay%20olaca%c4%9f%c4%b1n%c4%b1%20d%c3%bc%c5%9f%c3%bcnm%c3%bc%c5%9ft%c3%bcm%20ancak%20durum%20sand%c4%b1%c4%9f%c4%b1m%20kadar%20basit%20de%c4%9fildi.%20%c3%87%c3%bcnk%c3%bc%20ezbere%20bir%20kurulum%20yapmak%20istemedi%c4%9fim%20i%c3%a7in%20di%c4%9fer%20sayfalara%20verilen%20ba%c4%9flant%c4%b1lar%c4%b1n%20hemen%20hemen%20hepsine%20tek%20tek%20girip%20okumu%c5%9ftum.%20Neticede%2c%20okuduklar%c4%b1m%20%c4%b1%c5%9f%c4%b1%c4%9f%c4%b1nda%20ilk%20sayfadakinden%20biraz%20farkl%c4%b1%20bir%20kurulum%20ger%c3%a7ekle%c5%9ftirmi%c5%9f%20oldum." aria-label="Tumblr">
+      <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2fexample.org%2f2018%2f06%2farchlinux-seruveni-2-kurulum%2f&t=Archlinux%20Ser%c3%bcveni%202%3a%20Kurulum" aria-label="Hacker News">
+      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      
+        <a id="menu-toggle" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;" aria-label="Menu">
+          <i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc-toggle" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;" aria-label="TOC">
+          <i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share-toggle" class="icon" href="#" onclick="$('#share-footer').toggle();return false;" aria-label="Share">
+          <i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+          <i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+
+  <footer id="footer">
+  <div class="footer-left">
+    Copyright  &copy; 2021  Ceylan Bozoğullarından 
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+        <li><a href="/">Anasayfa</a></li>
+         
+        <li><a href="/posts">Tüm Yazılar</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+
+  </div>
+</body>
+
+<link rel="stylesheet" href=/lib/font-awesome/css/all.min.css>
+<script src=/lib/jquery/jquery.min.js></script>
+<script src=/js/main.js></script>
+<script src=/js/code-copy.js></script>
+
+
+
+</html>

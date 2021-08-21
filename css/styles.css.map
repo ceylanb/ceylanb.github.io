@@ -1,0 +1,13 @@
+{
+	"version": 3,
+	"file": "styles.css",
+	"sourceRoot": "/home/r00t/hugo/bozogullarindan",
+	"sources": [
+		"stdin"
+	],
+	"sourcesContent": [
+		"figure {\n    display: inline-block;\n    /*border: 1px dotted gray;*/\n    /* margin: 20px;  adjust as needed */\n}\n\nfigure > img {\n    vertical-align: top;\n}\n\nfigure figcaption {\n    padding: 5px;\n    text-align: center;\n}\n\nh1,\n.h1 {\n  margin-top: 1rem;\n}"
+	],
+	"names": [],
+	"mappings": "AAAA,AAAA,MAAM,AAAC,CACH,OAAO,CAAE,YAAY,CAGxB,AAED,AAAA,MAAM,CAAG,GAAG,AAAC,CACT,cAAc,CAAE,GAAG,CACtB,AAED,AAAA,MAAM,CAAC,UAAU,AAAC,CACd,OAAO,CAAE,GAAG,CACZ,UAAU,CAAE,MAAM,CACrB,AAED,AAAA,EAAE,CACF,GAAG,AAAC,CACF,UAAU,CAAE,IAAI,CACjB"
+}

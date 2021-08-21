@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Ceylan Bozoğullarından | Kişisel Web Sayfası</title>
+    <link>http://example.org/categories/</link>
+    <description>Recent content in Categories on Ceylan Bozoğullarından | Kişisel Web Sayfası</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>tr</language>
+    <copyright>Ceylan Bozoğullarından</copyright>
+    <lastBuildDate>Mon, 27 Jan 2020 15:48:49 +0000</lastBuildDate><atom:link href="http://example.org/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Uncategorized</title>
+      <link>http://example.org/categories/uncategorized/</link>
+      <pubDate>Mon, 27 Jan 2020 15:48:49 +0000</pubDate>
+      
+      <guid>http://example.org/categories/uncategorized/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Akademik</title>
+      <link>http://example.org/categories/akademik/</link>
+      <pubDate>Sat, 06 Jul 2019 16:15:59 +0000</pubDate>
+      
+      <guid>http://example.org/categories/akademik/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Derin Öğrenme</title>
+      <link>http://example.org/categories/derin-%C3%B6%C4%9Frenme/</link>
+      <pubDate>Sat, 06 Jul 2019 16:15:59 +0000</pubDate>
+      
+      <guid>http://example.org/categories/derin-%C3%B6%C4%9Frenme/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Geliştirdiklerim</title>
+      <link>http://example.org/categories/geli%C5%9Ftirdiklerim/</link>
+      <pubDate>Sat, 06 Jul 2019 16:15:59 +0000</pubDate>
+      
+      <guid>http://example.org/categories/geli%C5%9Ftirdiklerim/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Siber Güvenlik</title>
+      <link>http://example.org/categories/siber-g%C3%BCvenlik/</link>
+      <pubDate>Sat, 06 Jul 2019 16:15:59 +0000</pubDate>
+      
+      <guid>http://example.org/categories/siber-g%C3%BCvenlik/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>http://example.org/categories/linux/</link>
+      <pubDate>Tue, 26 Mar 2019 13:27:08 +0000</pubDate>
+      
+      <guid>http://example.org/categories/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Özgür Yazılım</title>
+      <link>http://example.org/categories/%C3%B6zg%C3%BCr-yaz%C4%B1l%C4%B1m/</link>
+      <pubDate>Tue, 26 Mar 2019 13:27:08 +0000</pubDate>
+      
+      <guid>http://example.org/categories/%C3%B6zg%C3%BCr-yaz%C4%B1l%C4%B1m/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Teknik Olmayan</title>
+      <link>http://example.org/categories/teknik-olmayan/</link>
+      <pubDate>Mon, 11 Jun 2018 16:38:58 +0000</pubDate>
+      
+      <guid>http://example.org/categories/teknik-olmayan/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

