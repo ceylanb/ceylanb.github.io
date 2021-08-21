@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title> Celery: Büyük İşlemlerin Asenkron İşletilmesi (Django) | Ceylan Bozoğullarından | Kişisel Web Sayfası</title>
-  <link rel = 'canonical' href = 'https://ceylanb.github.io/2018/08/django-asenkron-islemler-celery/'>
+  <link rel = 'canonical' href = 'https://bozogullarindan.com/2018/08/django-asenkron-islemler-celery/'>
   
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="all,follow">
@@ -17,7 +17,7 @@
 <meta property="og:description" content="Son yazımda arkadaşımın akademik çalışmasından bahsetmiştim. Bu yazının içeriği de Python’da Django Framework üzerinde Celery kullanarak, büyük işlemlerin arka planda asenkron olarak işletilmesi üzerine olacak.
 Asenkron işlemlere neden ihtiyaç duyduğumu belirtmek için projemden kısaca bahsedeyim. Projenin amacı özetle; sembolik regresyon problemlerinin, kullanıcı dostu bir arayüzle evrimsel hesaplama algoritmaları kullanılarak web uygulaması üzerinden çözülebilmesini sağlamak. Amaçtan da anlaşıldığı gibi bir web uygulamasında saatler sürecek işlemlerin gerçekleştirilmesi gerekiyor. Bu işlemlerin, web uygulamasındaki gezintiyi etkilememesi için işlemlerin arkaplanda asenkron olarak çalıştırılması gerekiyor." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://ceylanb.github.io/2018/08/django-asenkron-islemler-celery/" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="https://bozogullarindan.com/2018/08/django-asenkron-islemler-celery/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2018-08-28T13:33:29+00:00" />
 <meta property="article:modified_time" content="2018-08-28T13:33:29+00:00" /><meta property="og:site_name" content="Ceylan Bozoğullarından | Kişisel Web Sayfası" />
 
@@ -32,8 +32,8 @@ Asenkron işlemlere neden ihtiyaç duyduğumu belirtmek için projemden kısaca 
     
   
   
-  <link rel="stylesheet" href="https://ceylanb.github.io/css/styles.c05d68261bf086a9d7713c4f8a6215a3601608e267a816a7ee58f139b3d1aae51222aae2081c8e0c6bd35e1334773b7a16283022f31f92afd93bb37e5e822e66.css" integrity="sha512-wF1oJhvwhqnXcTxPimIVo2AWCOJnqBan7ljxObPRquUSIqriCByODGvTXhM0dzt6FigwIvMfkq/ZO7N&#43;XoIuZg==">
-  <link rel="stylesheet" href="https://ceylanb.github.io/css/styles.aa7f4879cac49d951c789d9f35a54627ec2d3da6b0f6b1a638d54cd60a3b1d4d827cc0a737e071cbe211e5813758ffcd847cd7fc33aea5573917e1718700e955.css" integrity="sha512-qn9IecrEnZUceJ2fNaVGJ&#43;wtPaaw9rGmONVM1go7HU2CfMCnN&#43;Bxy&#43;IR5YE3WP/NhHzX/DOupVc5F&#43;FxhwDpVQ=="> 
+  <link rel="stylesheet" href="https://bozogullarindan.com/css/styles.c05d68261bf086a9d7713c4f8a6215a3601608e267a816a7ee58f139b3d1aae51222aae2081c8e0c6bd35e1334773b7a16283022f31f92afd93bb37e5e822e66.css" integrity="sha512-wF1oJhvwhqnXcTxPimIVo2AWCOJnqBan7ljxObPRquUSIqriCByODGvTXhM0dzt6FigwIvMfkq/ZO7N&#43;XoIuZg==">
+  <link rel="stylesheet" href="https://bozogullarindan.com/css/styles.aa7f4879cac49d951c789d9f35a54627ec2d3da6b0f6b1a638d54cd60a3b1d4d827cc0a737e071cbe211e5813758ffcd847cd7fc33aea5573917e1718700e955.css" integrity="sha512-qn9IecrEnZUceJ2fNaVGJ&#43;wtPaaw9rGmONVM1go7HU2CfMCnN&#43;Bxy&#43;IR5YE3WP/NhHzX/DOupVc5F&#43;FxhwDpVQ=="> 
 
   
   
@@ -45,7 +45,7 @@ Asenkron işlemlere neden ihtiyaç duyduğumu belirtmek için projemden kısaca 
   
 
   
-<link rel="icon" type="image/png" href="https://ceylanb.github.io/images/favicon.ico" />
+<link rel="icon" type="image/png" href="https://bozogullarindan.com/images/favicon.ico" />
 
   
   
@@ -75,14 +75,14 @@ Asenkron işlemlere neden ihtiyaç duyduğumu belirtmek için projemden kısaca 
       <ul>
         
         <li>
-          <a class="icon" href=" https://ceylanb.github.io/2018/06/archlinux-seruveni-2-kurulum/" aria-label="Previous">
+          <a class="icon" href=" https://bozogullarindan.com/2018/06/archlinux-seruveni-2-kurulum/" aria-label="Previous">
             <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
           </a>
         </li>
         
         
         <li>
-          <a class="icon" href="https://ceylanb.github.io/2018/09/wordpress-plugin-survey-poll-sql-injection/" aria-label="Next">
+          <a class="icon" href="https://bozogullarindan.com/2018/09/wordpress-plugin-survey-poll-sql-injection/" aria-label="Next">
             <i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i>
           </a>
         </li>
@@ -113,47 +113,47 @@ Asenkron işlemlere neden ihtiyaç duyduğumu belirtmek için projemden kısaca 
   
   
   <li>
-    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fceylanb.github.io%2f2018%2f08%2fdjango-asenkron-islemler-celery%2f" aria-label="Facebook">
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fbozogullarindan.com%2f2018%2f08%2fdjango-asenkron-islemler-celery%2f" aria-label="Facebook">
       <i class="fab fa-facebook " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fceylanb.github.io%2f2018%2f08%2fdjango-asenkron-islemler-celery%2f&text=Celery%3a%20B%c3%bcy%c3%bck%20%c4%b0%c5%9flemlerin%20Asenkron%20%c4%b0%c5%9fletilmesi%20%28Django%29" aria-label="Twitter">
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fbozogullarindan.com%2f2018%2f08%2fdjango-asenkron-islemler-celery%2f&text=Celery%3a%20B%c3%bcy%c3%bck%20%c4%b0%c5%9flemlerin%20Asenkron%20%c4%b0%c5%9fletilmesi%20%28Django%29" aria-label="Twitter">
       <i class="fab fa-twitter " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fceylanb.github.io%2f2018%2f08%2fdjango-asenkron-islemler-celery%2f&title=Celery%3a%20B%c3%bcy%c3%bck%20%c4%b0%c5%9flemlerin%20Asenkron%20%c4%b0%c5%9fletilmesi%20%28Django%29" aria-label="Linkedin">
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fbozogullarindan.com%2f2018%2f08%2fdjango-asenkron-islemler-celery%2f&title=Celery%3a%20B%c3%bcy%c3%bck%20%c4%b0%c5%9flemlerin%20Asenkron%20%c4%b0%c5%9fletilmesi%20%28Django%29" aria-label="Linkedin">
       <i class="fab fa-linkedin " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fceylanb.github.io%2f2018%2f08%2fdjango-asenkron-islemler-celery%2f&is_video=false&description=Celery%3a%20B%c3%bcy%c3%bck%20%c4%b0%c5%9flemlerin%20Asenkron%20%c4%b0%c5%9fletilmesi%20%28Django%29" aria-label="Pinterest">
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fbozogullarindan.com%2f2018%2f08%2fdjango-asenkron-islemler-celery%2f&is_video=false&description=Celery%3a%20B%c3%bcy%c3%bck%20%c4%b0%c5%9flemlerin%20Asenkron%20%c4%b0%c5%9fletilmesi%20%28Django%29" aria-label="Pinterest">
       <i class="fab fa-pinterest " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="mailto:?subject=Celery%3a%20B%c3%bcy%c3%bck%20%c4%b0%c5%9flemlerin%20Asenkron%20%c4%b0%c5%9fletilmesi%20%28Django%29&body=Check out this article: https%3a%2f%2fceylanb.github.io%2f2018%2f08%2fdjango-asenkron-islemler-celery%2f" aria-label="Email">
+    <a class="icon" href="mailto:?subject=Celery%3a%20B%c3%bcy%c3%bck%20%c4%b0%c5%9flemlerin%20Asenkron%20%c4%b0%c5%9fletilmesi%20%28Django%29&body=Check out this article: https%3a%2f%2fbozogullarindan.com%2f2018%2f08%2fdjango-asenkron-islemler-celery%2f" aria-label="Email">
       <i class="fas fa-envelope " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fceylanb.github.io%2f2018%2f08%2fdjango-asenkron-islemler-celery%2f&title=Celery%3a%20B%c3%bcy%c3%bck%20%c4%b0%c5%9flemlerin%20Asenkron%20%c4%b0%c5%9fletilmesi%20%28Django%29" aria-label="Pocket">
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fbozogullarindan.com%2f2018%2f08%2fdjango-asenkron-islemler-celery%2f&title=Celery%3a%20B%c3%bcy%c3%bck%20%c4%b0%c5%9flemlerin%20Asenkron%20%c4%b0%c5%9fletilmesi%20%28Django%29" aria-label="Pocket">
       <i class="fab fa-get-pocket " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fceylanb.github.io%2f2018%2f08%2fdjango-asenkron-islemler-celery%2f&title=Celery%3a%20B%c3%bcy%c3%bck%20%c4%b0%c5%9flemlerin%20Asenkron%20%c4%b0%c5%9fletilmesi%20%28Django%29" aria-label="reddit">
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fbozogullarindan.com%2f2018%2f08%2fdjango-asenkron-islemler-celery%2f&title=Celery%3a%20B%c3%bcy%c3%bck%20%c4%b0%c5%9flemlerin%20Asenkron%20%c4%b0%c5%9fletilmesi%20%28Django%29" aria-label="reddit">
       <i class="fab fa-reddit " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fceylanb.github.io%2f2018%2f08%2fdjango-asenkron-islemler-celery%2f&name=Celery%3a%20B%c3%bcy%c3%bck%20%c4%b0%c5%9flemlerin%20Asenkron%20%c4%b0%c5%9fletilmesi%20%28Django%29&description=Son%20yaz%c4%b1mda%20arkada%c5%9f%c4%b1m%c4%b1n%20akademik%20%c3%a7al%c4%b1%c5%9fmas%c4%b1ndan%20bahsetmi%c5%9ftim.%20Bu%20yaz%c4%b1n%c4%b1n%20i%c3%a7eri%c4%9fi%20de%20Python%e2%80%99da%20Django%20Framework%20%c3%bczerinde%20Celery%20kullanarak%2c%20b%c3%bcy%c3%bck%20i%c5%9flemlerin%20arka%20planda%20asenkron%20olarak%20i%c5%9fletilmesi%20%c3%bczerine%20olacak.%0aAsenkron%20i%c5%9flemlere%20neden%20ihtiya%c3%a7%20duydu%c4%9fumu%20belirtmek%20i%c3%a7in%20projemden%20k%c4%b1saca%20bahsedeyim.%20Projenin%20amac%c4%b1%20%c3%b6zetle%3b%20sembolik%20regresyon%20problemlerinin%2c%20kullan%c4%b1c%c4%b1%20dostu%20bir%20aray%c3%bczle%20evrimsel%20hesaplama%20algoritmalar%c4%b1%20kullan%c4%b1larak%20web%20uygulamas%c4%b1%20%c3%bczerinden%20%c3%a7%c3%b6z%c3%bclebilmesini%20sa%c4%9flamak.%20Ama%c3%a7tan%20da%20anla%c5%9f%c4%b1ld%c4%b1%c4%9f%c4%b1%20gibi%20bir%20web%20uygulamas%c4%b1nda%20saatler%20s%c3%bcrecek%20i%c5%9flemlerin%20ger%c3%a7ekle%c5%9ftirilmesi%20gerekiyor.%20Bu%20i%c5%9flemlerin%2c%20web%20uygulamas%c4%b1ndaki%20gezintiyi%20etkilememesi%20i%c3%a7in%20i%c5%9flemlerin%20arkaplanda%20asenkron%20olarak%20%c3%a7al%c4%b1%c5%9ft%c4%b1r%c4%b1lmas%c4%b1%20gerekiyor." aria-label="Tumblr">
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fbozogullarindan.com%2f2018%2f08%2fdjango-asenkron-islemler-celery%2f&name=Celery%3a%20B%c3%bcy%c3%bck%20%c4%b0%c5%9flemlerin%20Asenkron%20%c4%b0%c5%9fletilmesi%20%28Django%29&description=Son%20yaz%c4%b1mda%20arkada%c5%9f%c4%b1m%c4%b1n%20akademik%20%c3%a7al%c4%b1%c5%9fmas%c4%b1ndan%20bahsetmi%c5%9ftim.%20Bu%20yaz%c4%b1n%c4%b1n%20i%c3%a7eri%c4%9fi%20de%20Python%e2%80%99da%20Django%20Framework%20%c3%bczerinde%20Celery%20kullanarak%2c%20b%c3%bcy%c3%bck%20i%c5%9flemlerin%20arka%20planda%20asenkron%20olarak%20i%c5%9fletilmesi%20%c3%bczerine%20olacak.%0aAsenkron%20i%c5%9flemlere%20neden%20ihtiya%c3%a7%20duydu%c4%9fumu%20belirtmek%20i%c3%a7in%20projemden%20k%c4%b1saca%20bahsedeyim.%20Projenin%20amac%c4%b1%20%c3%b6zetle%3b%20sembolik%20regresyon%20problemlerinin%2c%20kullan%c4%b1c%c4%b1%20dostu%20bir%20aray%c3%bczle%20evrimsel%20hesaplama%20algoritmalar%c4%b1%20kullan%c4%b1larak%20web%20uygulamas%c4%b1%20%c3%bczerinden%20%c3%a7%c3%b6z%c3%bclebilmesini%20sa%c4%9flamak.%20Ama%c3%a7tan%20da%20anla%c5%9f%c4%b1ld%c4%b1%c4%9f%c4%b1%20gibi%20bir%20web%20uygulamas%c4%b1nda%20saatler%20s%c3%bcrecek%20i%c5%9flemlerin%20ger%c3%a7ekle%c5%9ftirilmesi%20gerekiyor.%20Bu%20i%c5%9flemlerin%2c%20web%20uygulamas%c4%b1ndaki%20gezintiyi%20etkilememesi%20i%c3%a7in%20i%c5%9flemlerin%20arkaplanda%20asenkron%20olarak%20%c3%a7al%c4%b1%c5%9ft%c4%b1r%c4%b1lmas%c4%b1%20gerekiyor." aria-label="Tumblr">
       <i class="fab fa-tumblr " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fceylanb.github.io%2f2018%2f08%2fdjango-asenkron-islemler-celery%2f&t=Celery%3a%20B%c3%bcy%c3%bck%20%c4%b0%c5%9flemlerin%20Asenkron%20%c4%b0%c5%9fletilmesi%20%28Django%29" aria-label="Hacker News">
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fbozogullarindan.com%2f2018%2f08%2fdjango-asenkron-islemler-celery%2f&t=Celery%3a%20B%c3%bcy%c3%bck%20%c4%b0%c5%9flemlerin%20Asenkron%20%c4%b0%c5%9fletilmesi%20%28Django%29" aria-label="Hacker News">
       <i class="fab fa-hacker-news " aria-hidden="true"></i>
     </a>
   </li>
@@ -401,47 +401,47 @@ Asenkron işlemlere neden ihtiyaç duyduğumu belirtmek için projemden kısaca 
   
   
   <li>
-    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fceylanb.github.io%2f2018%2f08%2fdjango-asenkron-islemler-celery%2f" aria-label="Facebook">
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fbozogullarindan.com%2f2018%2f08%2fdjango-asenkron-islemler-celery%2f" aria-label="Facebook">
       <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fceylanb.github.io%2f2018%2f08%2fdjango-asenkron-islemler-celery%2f&text=Celery%3a%20B%c3%bcy%c3%bck%20%c4%b0%c5%9flemlerin%20Asenkron%20%c4%b0%c5%9fletilmesi%20%28Django%29" aria-label="Twitter">
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fbozogullarindan.com%2f2018%2f08%2fdjango-asenkron-islemler-celery%2f&text=Celery%3a%20B%c3%bcy%c3%bck%20%c4%b0%c5%9flemlerin%20Asenkron%20%c4%b0%c5%9fletilmesi%20%28Django%29" aria-label="Twitter">
       <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fceylanb.github.io%2f2018%2f08%2fdjango-asenkron-islemler-celery%2f&title=Celery%3a%20B%c3%bcy%c3%bck%20%c4%b0%c5%9flemlerin%20Asenkron%20%c4%b0%c5%9fletilmesi%20%28Django%29" aria-label="Linkedin">
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fbozogullarindan.com%2f2018%2f08%2fdjango-asenkron-islemler-celery%2f&title=Celery%3a%20B%c3%bcy%c3%bck%20%c4%b0%c5%9flemlerin%20Asenkron%20%c4%b0%c5%9fletilmesi%20%28Django%29" aria-label="Linkedin">
       <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fceylanb.github.io%2f2018%2f08%2fdjango-asenkron-islemler-celery%2f&is_video=false&description=Celery%3a%20B%c3%bcy%c3%bck%20%c4%b0%c5%9flemlerin%20Asenkron%20%c4%b0%c5%9fletilmesi%20%28Django%29" aria-label="Pinterest">
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fbozogullarindan.com%2f2018%2f08%2fdjango-asenkron-islemler-celery%2f&is_video=false&description=Celery%3a%20B%c3%bcy%c3%bck%20%c4%b0%c5%9flemlerin%20Asenkron%20%c4%b0%c5%9fletilmesi%20%28Django%29" aria-label="Pinterest">
       <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="mailto:?subject=Celery%3a%20B%c3%bcy%c3%bck%20%c4%b0%c5%9flemlerin%20Asenkron%20%c4%b0%c5%9fletilmesi%20%28Django%29&body=Check out this article: https%3a%2f%2fceylanb.github.io%2f2018%2f08%2fdjango-asenkron-islemler-celery%2f" aria-label="Email">
+    <a class="icon" href="mailto:?subject=Celery%3a%20B%c3%bcy%c3%bck%20%c4%b0%c5%9flemlerin%20Asenkron%20%c4%b0%c5%9fletilmesi%20%28Django%29&body=Check out this article: https%3a%2f%2fbozogullarindan.com%2f2018%2f08%2fdjango-asenkron-islemler-celery%2f" aria-label="Email">
       <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fceylanb.github.io%2f2018%2f08%2fdjango-asenkron-islemler-celery%2f&title=Celery%3a%20B%c3%bcy%c3%bck%20%c4%b0%c5%9flemlerin%20Asenkron%20%c4%b0%c5%9fletilmesi%20%28Django%29" aria-label="Pocket">
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fbozogullarindan.com%2f2018%2f08%2fdjango-asenkron-islemler-celery%2f&title=Celery%3a%20B%c3%bcy%c3%bck%20%c4%b0%c5%9flemlerin%20Asenkron%20%c4%b0%c5%9fletilmesi%20%28Django%29" aria-label="Pocket">
       <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fceylanb.github.io%2f2018%2f08%2fdjango-asenkron-islemler-celery%2f&title=Celery%3a%20B%c3%bcy%c3%bck%20%c4%b0%c5%9flemlerin%20Asenkron%20%c4%b0%c5%9fletilmesi%20%28Django%29" aria-label="reddit">
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fbozogullarindan.com%2f2018%2f08%2fdjango-asenkron-islemler-celery%2f&title=Celery%3a%20B%c3%bcy%c3%bck%20%c4%b0%c5%9flemlerin%20Asenkron%20%c4%b0%c5%9fletilmesi%20%28Django%29" aria-label="reddit">
       <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fceylanb.github.io%2f2018%2f08%2fdjango-asenkron-islemler-celery%2f&name=Celery%3a%20B%c3%bcy%c3%bck%20%c4%b0%c5%9flemlerin%20Asenkron%20%c4%b0%c5%9fletilmesi%20%28Django%29&description=Son%20yaz%c4%b1mda%20arkada%c5%9f%c4%b1m%c4%b1n%20akademik%20%c3%a7al%c4%b1%c5%9fmas%c4%b1ndan%20bahsetmi%c5%9ftim.%20Bu%20yaz%c4%b1n%c4%b1n%20i%c3%a7eri%c4%9fi%20de%20Python%e2%80%99da%20Django%20Framework%20%c3%bczerinde%20Celery%20kullanarak%2c%20b%c3%bcy%c3%bck%20i%c5%9flemlerin%20arka%20planda%20asenkron%20olarak%20i%c5%9fletilmesi%20%c3%bczerine%20olacak.%0aAsenkron%20i%c5%9flemlere%20neden%20ihtiya%c3%a7%20duydu%c4%9fumu%20belirtmek%20i%c3%a7in%20projemden%20k%c4%b1saca%20bahsedeyim.%20Projenin%20amac%c4%b1%20%c3%b6zetle%3b%20sembolik%20regresyon%20problemlerinin%2c%20kullan%c4%b1c%c4%b1%20dostu%20bir%20aray%c3%bczle%20evrimsel%20hesaplama%20algoritmalar%c4%b1%20kullan%c4%b1larak%20web%20uygulamas%c4%b1%20%c3%bczerinden%20%c3%a7%c3%b6z%c3%bclebilmesini%20sa%c4%9flamak.%20Ama%c3%a7tan%20da%20anla%c5%9f%c4%b1ld%c4%b1%c4%9f%c4%b1%20gibi%20bir%20web%20uygulamas%c4%b1nda%20saatler%20s%c3%bcrecek%20i%c5%9flemlerin%20ger%c3%a7ekle%c5%9ftirilmesi%20gerekiyor.%20Bu%20i%c5%9flemlerin%2c%20web%20uygulamas%c4%b1ndaki%20gezintiyi%20etkilememesi%20i%c3%a7in%20i%c5%9flemlerin%20arkaplanda%20asenkron%20olarak%20%c3%a7al%c4%b1%c5%9ft%c4%b1r%c4%b1lmas%c4%b1%20gerekiyor." aria-label="Tumblr">
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fbozogullarindan.com%2f2018%2f08%2fdjango-asenkron-islemler-celery%2f&name=Celery%3a%20B%c3%bcy%c3%bck%20%c4%b0%c5%9flemlerin%20Asenkron%20%c4%b0%c5%9fletilmesi%20%28Django%29&description=Son%20yaz%c4%b1mda%20arkada%c5%9f%c4%b1m%c4%b1n%20akademik%20%c3%a7al%c4%b1%c5%9fmas%c4%b1ndan%20bahsetmi%c5%9ftim.%20Bu%20yaz%c4%b1n%c4%b1n%20i%c3%a7eri%c4%9fi%20de%20Python%e2%80%99da%20Django%20Framework%20%c3%bczerinde%20Celery%20kullanarak%2c%20b%c3%bcy%c3%bck%20i%c5%9flemlerin%20arka%20planda%20asenkron%20olarak%20i%c5%9fletilmesi%20%c3%bczerine%20olacak.%0aAsenkron%20i%c5%9flemlere%20neden%20ihtiya%c3%a7%20duydu%c4%9fumu%20belirtmek%20i%c3%a7in%20projemden%20k%c4%b1saca%20bahsedeyim.%20Projenin%20amac%c4%b1%20%c3%b6zetle%3b%20sembolik%20regresyon%20problemlerinin%2c%20kullan%c4%b1c%c4%b1%20dostu%20bir%20aray%c3%bczle%20evrimsel%20hesaplama%20algoritmalar%c4%b1%20kullan%c4%b1larak%20web%20uygulamas%c4%b1%20%c3%bczerinden%20%c3%a7%c3%b6z%c3%bclebilmesini%20sa%c4%9flamak.%20Ama%c3%a7tan%20da%20anla%c5%9f%c4%b1ld%c4%b1%c4%9f%c4%b1%20gibi%20bir%20web%20uygulamas%c4%b1nda%20saatler%20s%c3%bcrecek%20i%c5%9flemlerin%20ger%c3%a7ekle%c5%9ftirilmesi%20gerekiyor.%20Bu%20i%c5%9flemlerin%2c%20web%20uygulamas%c4%b1ndaki%20gezintiyi%20etkilememesi%20i%c3%a7in%20i%c5%9flemlerin%20arkaplanda%20asenkron%20olarak%20%c3%a7al%c4%b1%c5%9ft%c4%b1r%c4%b1lmas%c4%b1%20gerekiyor." aria-label="Tumblr">
       <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fceylanb.github.io%2f2018%2f08%2fdjango-asenkron-islemler-celery%2f&t=Celery%3a%20B%c3%bcy%c3%bck%20%c4%b0%c5%9flemlerin%20Asenkron%20%c4%b0%c5%9fletilmesi%20%28Django%29" aria-label="Hacker News">
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fbozogullarindan.com%2f2018%2f08%2fdjango-asenkron-islemler-celery%2f&t=Celery%3a%20B%c3%bcy%c3%bck%20%c4%b0%c5%9flemlerin%20Asenkron%20%c4%b0%c5%9fletilmesi%20%28Django%29" aria-label="Hacker News">
       <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
     </a>
   </li>

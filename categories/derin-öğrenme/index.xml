@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Derin Öğrenme on Ceylan Bozoğullarından | Kişisel Web Sayfası</title>
-    <link>https://ceylanb.github.io/categories/derin-%C3%B6%C4%9Frenme/</link>
+    <link>https://bozogullarindan.com/categories/derin-%C3%B6%C4%9Frenme/</link>
     <description>Recent content in Derin Öğrenme on Ceylan Bozoğullarından | Kişisel Web Sayfası</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>tr</language>
     <copyright>Ceylan Bozoğullarından</copyright>
-    <lastBuildDate>Sat, 06 Jul 2019 16:15:59 +0000</lastBuildDate><atom:link href="https://ceylanb.github.io/categories/derin-%C3%B6%C4%9Frenme/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 06 Jul 2019 16:15:59 +0000</lastBuildDate><atom:link href="https://bozogullarindan.com/categories/derin-%C3%B6%C4%9Frenme/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>PhishHunterAI (Test): Oltalama Saldırıları için Chrome Eklentisi</title>
-      <link>https://ceylanb.github.io/2019/07/phishhunterai-test-oltalama-saldirilari-icin-chrome-eklentisi/</link>
+      <link>https://bozogullarindan.com/2019/07/phishhunterai-test-oltalama-saldirilari-icin-chrome-eklentisi/</link>
       <pubDate>Sat, 06 Jul 2019 16:15:59 +0000</pubDate>
       
-      <guid>https://ceylanb.github.io/2019/07/phishhunterai-test-oltalama-saldirilari-icin-chrome-eklentisi/</guid>
+      <guid>https://bozogullarindan.com/2019/07/phishhunterai-test-oltalama-saldirilari-icin-chrome-eklentisi/</guid>
       <description>Son 4-5 aydır, oltalama saldırıları için açılmış alan adlarını yapay zeka ile otonom tespit etme üzerine çalışmalar gerçekleştiriyordum. Hala gerçekleştiriyorum fakat çok akademik olan ve teoride kalan bir çalışma yerine meyvesini herkesin yiyebileceği bir ara ürün çıkarmak istedim. Bunun üzerine Chrome kullanıcılarının internette gezinirken karşılaştıkları oltalama saldırısı için açılmış (ya da dolandırıcılık amacıyla açılmış) alan adlarını otonom tespit ederek, uyarı veren bir Google Chrome eklentisi geliştirdim. Adına da PhishHunterAI dedim.</description>
     </item>
     

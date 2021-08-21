@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>elektronik on Ceylan Bozoğullarından | Kişisel Web Sayfası</title>
-    <link>https://ceylanb.github.io/tags/elektronik/</link>
+    <link>https://bozogullarindan.com/tags/elektronik/</link>
     <description>Recent content in elektronik on Ceylan Bozoğullarından | Kişisel Web Sayfası</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>tr</language>
     <copyright>Ceylan Bozoğullarından</copyright>
-    <lastBuildDate>Tue, 26 Mar 2019 13:27:08 +0000</lastBuildDate><atom:link href="https://ceylanb.github.io/tags/elektronik/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 26 Mar 2019 13:27:08 +0000</lastBuildDate><atom:link href="https://bozogullarindan.com/tags/elektronik/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Thinkpad x200 Libreboot Kurulumu (2): Nasıl?</title>
-      <link>https://ceylanb.github.io/2019/03/thinkpad-x200-libreboot-kurulumu-2-nasil/</link>
+      <link>https://bozogullarindan.com/2019/03/thinkpad-x200-libreboot-kurulumu-2-nasil/</link>
       <pubDate>Tue, 26 Mar 2019 13:27:08 +0000</pubDate>
       
-      <guid>https://ceylanb.github.io/2019/03/thinkpad-x200-libreboot-kurulumu-2-nasil/</guid>
+      <guid>https://bozogullarindan.com/2019/03/thinkpad-x200-libreboot-kurulumu-2-nasil/</guid>
       <description>&lt;p&gt;
-  &lt;img src=&#34;https://ceylanb.github.io/posts/x200-libreboot-2/libre-onecikan.jpeg&#34; alt=&#34;Featured&#34;&gt;
+  &lt;img src=&#34;https://bozogullarindan.com/posts/x200-libreboot-2/libre-onecikan.jpeg&#34; alt=&#34;Featured&#34;&gt;
 
 &lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://ceylanb.github.io/2019/03/thinkpad-x200-libreboot-kurulumu-1-neden/&#34;&gt;Bir önceki yazımda&lt;/a&gt; Libreboot’un ne olduğundan bahsetmiştim. Bu yazıda ise Thinkpad x200 ‘e Libreboot kurulum aşamalarından ve bu aşamaları gerçekleştirirken deneyimlediğim bazı problemlerden ve çözümlerinden detaylı olarak bahsedeceğim.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://bozogullarindan.com/2019/03/thinkpad-x200-libreboot-kurulumu-1-neden/&#34;&gt;Bir önceki yazımda&lt;/a&gt; Libreboot’un ne olduğundan bahsetmiştim. Bu yazıda ise Thinkpad x200 ‘e Libreboot kurulum aşamalarından ve bu aşamaları gerçekleştirirken deneyimlediğim bazı problemlerden ve çözümlerinden detaylı olarak bahsedeceğim.&lt;/p&gt;
 &lt;p&gt;Bu işlemi gerçekleştirirken karşılaştığım birçok problemin tartışıldığı Reddit platformundan çok yardım aldım. Hatta &lt;a href=&#34;https://www.reddit.com/r/libreboot/comments/7dajn6/x200_libreboot_tutorial_for_raspberry_pi_with/&#34;&gt;takip ettiğim ana kaynak&lt;/a&gt; da Reddit üzerinde yer alıyordu. Bu konuda Türkçe kaynak bulmak gerçekten çok zor, ben sadece &lt;a href=&#34;http://serdaroktaytunc.blogspot.com/2017/03/raspberry-pi-araclg-ile-libreboot-ve.html&#34;&gt;bir tane bulabildim&lt;/a&gt; mesela.&lt;/p&gt;
 &lt;p&gt;Thinkpad X60 ve T60 gibi bazı bilgisayarlara, donanımsal olarak herhangi bir müdahale olmadan Libreboot kurulabiliyor ancak x200 için donanımsal müdahale gerektiği için bazı ekipmanların olması gerekir. &lt;strong&gt;Benim kullandığım&lt;/strong&gt; ekipmanları aşağıdaki listede belirttim.&lt;/p&gt;</description>
     </item>

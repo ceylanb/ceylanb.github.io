@@ -2,27 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Akademik on Ceylan Bozoğullarından | Kişisel Web Sayfası</title>
-    <link>https://ceylanb.github.io/categories/akademik/</link>
+    <link>https://bozogullarindan.com/categories/akademik/</link>
     <description>Recent content in Akademik on Ceylan Bozoğullarından | Kişisel Web Sayfası</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>tr</language>
     <copyright>Ceylan Bozoğullarından</copyright>
-    <lastBuildDate>Sat, 06 Jul 2019 16:15:59 +0000</lastBuildDate><atom:link href="https://ceylanb.github.io/categories/akademik/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 06 Jul 2019 16:15:59 +0000</lastBuildDate><atom:link href="https://bozogullarindan.com/categories/akademik/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>PhishHunterAI (Test): Oltalama Saldırıları için Chrome Eklentisi</title>
-      <link>https://ceylanb.github.io/2019/07/phishhunterai-test-oltalama-saldirilari-icin-chrome-eklentisi/</link>
+      <link>https://bozogullarindan.com/2019/07/phishhunterai-test-oltalama-saldirilari-icin-chrome-eklentisi/</link>
       <pubDate>Sat, 06 Jul 2019 16:15:59 +0000</pubDate>
       
-      <guid>https://ceylanb.github.io/2019/07/phishhunterai-test-oltalama-saldirilari-icin-chrome-eklentisi/</guid>
+      <guid>https://bozogullarindan.com/2019/07/phishhunterai-test-oltalama-saldirilari-icin-chrome-eklentisi/</guid>
       <description>Son 4-5 aydır, oltalama saldırıları için açılmış alan adlarını yapay zeka ile otonom tespit etme üzerine çalışmalar gerçekleştiriyordum. Hala gerçekleştiriyorum fakat çok akademik olan ve teoride kalan bir çalışma yerine meyvesini herkesin yiyebileceği bir ara ürün çıkarmak istedim. Bunun üzerine Chrome kullanıcılarının internette gezinirken karşılaştıkları oltalama saldırısı için açılmış (ya da dolandırıcılık amacıyla açılmış) alan adlarını otonom tespit ederek, uyarı veren bir Google Chrome eklentisi geliştirdim. Adına da PhishHunterAI dedim.</description>
     </item>
     
     <item>
       <title>Celery: Büyük İşlemlerin Asenkron İşletilmesi (Django)</title>
-      <link>https://ceylanb.github.io/2018/08/django-asenkron-islemler-celery/</link>
+      <link>https://bozogullarindan.com/2018/08/django-asenkron-islemler-celery/</link>
       <pubDate>Tue, 28 Aug 2018 13:33:29 +0000</pubDate>
       
-      <guid>https://ceylanb.github.io/2018/08/django-asenkron-islemler-celery/</guid>
+      <guid>https://bozogullarindan.com/2018/08/django-asenkron-islemler-celery/</guid>
       <description>Son yazımda arkadaşımın akademik çalışmasından bahsetmiştim. Bu yazının içeriği de Python’da Django Framework üzerinde Celery kullanarak, büyük işlemlerin arka planda asenkron olarak işletilmesi üzerine olacak.
 Asenkron işlemlere neden ihtiyaç duyduğumu belirtmek için projemden kısaca bahsedeyim. Projenin amacı özetle; sembolik regresyon problemlerinin, kullanıcı dostu bir arayüzle evrimsel hesaplama algoritmaları kullanılarak web uygulaması üzerinden çözülebilmesini sağlamak. Amaçtan da anlaşıldığı gibi bir web uygulamasında saatler sürecek işlemlerin gerçekleştirilmesi gerekiyor. Bu işlemlerin, web uygulamasındaki gezintiyi etkilememesi için işlemlerin arkaplanda asenkron olarak çalıştırılması gerekiyor.</description>
     </item>

@@ -2,40 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://ceylanb.github.io/en/categories/</loc>
+    <loc>https://bozogullarindan.com/en/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="tr"
-                href="https://ceylanb.github.io/categories/"
+                href="https://bozogullarindan.com/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://ceylanb.github.io/en/categories/"
+                href="https://bozogullarindan.com/en/categories/"
                 />
   </url><url>
-    <loc>https://ceylanb.github.io/en/</loc>
+    <loc>https://bozogullarindan.com/en/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="tr"
-                href="https://ceylanb.github.io/"
+                href="https://bozogullarindan.com/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://ceylanb.github.io/en/"
+                href="https://bozogullarindan.com/en/"
                 />
   </url><url>
-    <loc>https://ceylanb.github.io/en/tags/</loc>
+    <loc>https://bozogullarindan.com/en/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="tr"
-                href="https://ceylanb.github.io/tags/"
+                href="https://bozogullarindan.com/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://ceylanb.github.io/en/tags/"
+                href="https://bozogullarindan.com/en/tags/"
                 />
   </url>
 </urlset>

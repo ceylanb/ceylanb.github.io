@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>özgür yazılım on Ceylan Bozoğullarından | Kişisel Web Sayfası</title>
-    <link>https://ceylanb.github.io/tags/%C3%B6zg%C3%BCr-yaz%C4%B1l%C4%B1m/</link>
+    <link>https://bozogullarindan.com/tags/%C3%B6zg%C3%BCr-yaz%C4%B1l%C4%B1m/</link>
     <description>Recent content in özgür yazılım on Ceylan Bozoğullarından | Kişisel Web Sayfası</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>tr</language>
     <copyright>Ceylan Bozoğullarından</copyright>
-    <lastBuildDate>Mon, 25 Mar 2019 10:14:13 +0000</lastBuildDate><atom:link href="https://ceylanb.github.io/tags/%C3%B6zg%C3%BCr-yaz%C4%B1l%C4%B1m/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 25 Mar 2019 10:14:13 +0000</lastBuildDate><atom:link href="https://bozogullarindan.com/tags/%C3%B6zg%C3%BCr-yaz%C4%B1l%C4%B1m/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Thinkpad x200 Libreboot Kurulumu (1): Neden?</title>
-      <link>https://ceylanb.github.io/2019/03/thinkpad-x200-libreboot-kurulumu-1-neden/</link>
+      <link>https://bozogullarindan.com/2019/03/thinkpad-x200-libreboot-kurulumu-1-neden/</link>
       <pubDate>Mon, 25 Mar 2019 10:14:13 +0000</pubDate>
       
-      <guid>https://ceylanb.github.io/2019/03/thinkpad-x200-libreboot-kurulumu-1-neden/</guid>
+      <guid>https://bozogullarindan.com/2019/03/thinkpad-x200-libreboot-kurulumu-1-neden/</guid>
       <description>Yaklasik iki aydir yazamiyorum ve o gunden bugune çok şey değişti. Mesela ikinci el bir bilgisayar aldım: Thinkpad x200 (Şekil 1). Almamın nedenlerinden biri, Libreboot ‘un desteklediği [1] nadir bilgisayarlar arasında olmasıydı. Alır almaz, üzerindeki tüm etiketleri söküp temizliğini yaptım ve libreboot yüklemek üzere çalışma masama aldım. Bu yazıda bu güzel bilgisayara onu özgürlestirmek adına ne yaptığımı ve neden yaptığımı anlatacağım. Bir sonraki yazım ise “nasıl” yaptığım üzerine olacak.  Şekil 1.</description>
     </item>
     

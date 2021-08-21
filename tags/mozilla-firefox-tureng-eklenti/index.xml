@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mozilla Firefox Tureng Eklenti on Ceylan Bozoğullarından | Kişisel Web Sayfası</title>
-    <link>https://ceylanb.github.io/tags/mozilla-firefox-tureng-eklenti/</link>
+    <link>https://bozogullarindan.com/tags/mozilla-firefox-tureng-eklenti/</link>
     <description>Recent content in Mozilla Firefox Tureng Eklenti on Ceylan Bozoğullarından | Kişisel Web Sayfası</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>tr</language>
     <copyright>Ceylan Bozoğullarından</copyright>
-    <lastBuildDate>Sun, 23 Dec 2018 21:39:57 +0000</lastBuildDate><atom:link href="https://ceylanb.github.io/tags/mozilla-firefox-tureng-eklenti/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 23 Dec 2018 21:39:57 +0000</lastBuildDate><atom:link href="https://bozogullarindan.com/tags/mozilla-firefox-tureng-eklenti/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Firefox Tureng Sözlük Eklentisi</title>
-      <link>https://ceylanb.github.io/2018/12/firefox-tureng-sozluk-eklentisi/</link>
+      <link>https://bozogullarindan.com/2018/12/firefox-tureng-sozluk-eklentisi/</link>
       <pubDate>Sun, 23 Dec 2018 21:39:57 +0000</pubDate>
       
-      <guid>https://ceylanb.github.io/2018/12/firefox-tureng-sozluk-eklentisi/</guid>
+      <guid>https://bozogullarindan.com/2018/12/firefox-tureng-sozluk-eklentisi/</guid>
       <description>&lt;p&gt;
-  &lt;img src=&#34;https://ceylanb.github.io/posts/firefox-tureng/ff-1.png&#34; alt=&#34;Featured&#34;&gt;
+  &lt;img src=&#34;https://bozogullarindan.com/posts/firefox-tureng/ff-1.png&#34; alt=&#34;Featured&#34;&gt;
 
 &lt;/p&gt;
 &lt;p&gt;Son haftalarda Chrome’da karşılaştığım bir problemden dolayı tekrar Firefox’a dönme kararı aldım. Ancak Chrome’da kullanımına alışkın olduğum Google Çeviri eklentisi Firefox’ta olmadığı için eksikliğini hemen hissettirdi. Bunun üzerine Firefox’ta Google Çeviri’ye benzeyen bir eklenti var mı diye şöyle bir bakındım. Her ne kadar benzerleri olsa da tam isteğimi karşılayan bir eklenti bulamadım. Zaten Firefox için bir eklenti geliştirmek istiyordum. Bu durum da kolları sıvamak için güzel bir neden oldu. Sonuç olarak &lt;a href=&#34;https://addons.mozilla.org/tr/firefox/addon/tureng-kelime-%C3%A7eviri/&#34;&gt;Mozilla Firefox Tureng Anlık Sözlük&lt;/a&gt; eklentisini geliştirerek Mozilla eklentiler kataloğunda yayınladım.&lt;/p&gt;</description>

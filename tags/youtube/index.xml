@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>youtube on Ceylan Bozoğullarından | Kişisel Web Sayfası</title>
-    <link>https://ceylanb.github.io/tags/youtube/</link>
+    <link>https://bozogullarindan.com/tags/youtube/</link>
     <description>Recent content in youtube on Ceylan Bozoğullarından | Kişisel Web Sayfası</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>tr</language>
     <copyright>Ceylan Bozoğullarından</copyright>
-    <lastBuildDate>Thu, 17 Jan 2019 12:19:46 +0000</lastBuildDate><atom:link href="https://ceylanb.github.io/tags/youtube/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 17 Jan 2019 12:19:46 +0000</lastBuildDate><atom:link href="https://bozogullarindan.com/tags/youtube/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Chrome Eklentisi: Çocuklar için Youtube</title>
-      <link>https://ceylanb.github.io/2019/01/chrome-cocuklar-icin-youtube/</link>
+      <link>https://bozogullarindan.com/2019/01/chrome-cocuklar-icin-youtube/</link>
       <pubDate>Thu, 17 Jan 2019 12:19:46 +0000</pubDate>
       
-      <guid>https://ceylanb.github.io/2019/01/chrome-cocuklar-icin-youtube/</guid>
+      <guid>https://bozogullarindan.com/2019/01/chrome-cocuklar-icin-youtube/</guid>
       <description>&lt;p&gt;
-  &lt;img src=&#34;https://ceylanb.github.io/posts/chrome-youtube/homepage.png&#34; alt=&#34;Featured&#34;&gt;
+  &lt;img src=&#34;https://bozogullarindan.com/posts/chrome-youtube/homepage.png&#34; alt=&#34;Featured&#34;&gt;
 
 &lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;%22/2018/12/firefox-tureng-sozluk-eklentisi/%22&#34;&gt;Önceki yazımda&lt;/a&gt; bahsettiğim Firefox Tureng eklentisi&lt;!-- raw HTML omitted --&gt;nden sonra geliştirmesini dün tamamladığım, “çocuklar için youtube” adını verdiğim Chrome eklentisi dün onaylanarak yayınlandı. Çıkış noktam, YouTube’da daha az vakit geçirebilmekti. Malum, insanlar YouTube’a özel bir amaç için girdiklerinde bile kendilerini saçma sapan bir videoyu izlerken bulabiliyorlar. Bu kendini buluş süreci bazen çok uzun sürebiliyor yani saate bir bakıyorsunuz onlarca dakika geçmiş. Neticede insan kendine “ben buraya ne için girmiştim?” sorusunu soruyor ve işini bitirip çıkıyor. En azından durum benim için ve tanıdığım bir çok insan için de böyle.&lt;/p&gt;

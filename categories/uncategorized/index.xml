@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Uncategorized on Ceylan Bozoğullarından | Kişisel Web Sayfası</title>
-    <link>https://ceylanb.github.io/categories/uncategorized/</link>
+    <link>https://bozogullarindan.com/categories/uncategorized/</link>
     <description>Recent content in Uncategorized on Ceylan Bozoğullarından | Kişisel Web Sayfası</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>tr</language>
     <copyright>Ceylan Bozoğullarından</copyright>
-    <lastBuildDate>Mon, 27 Jan 2020 15:48:49 +0000</lastBuildDate><atom:link href="https://ceylanb.github.io/categories/uncategorized/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Jan 2020 15:48:49 +0000</lastBuildDate><atom:link href="https://bozogullarindan.com/categories/uncategorized/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>WebGoat Insecure Deserialization Çözümü</title>
-      <link>https://ceylanb.github.io/2020/01/webgoat-insecure-deserialization-cozumu/</link>
+      <link>https://bozogullarindan.com/2020/01/webgoat-insecure-deserialization-cozumu/</link>
       <pubDate>Mon, 27 Jan 2020 15:48:49 +0000</pubDate>
       
-      <guid>https://ceylanb.github.io/2020/01/webgoat-insecure-deserialization-cozumu/</guid>
+      <guid>https://bozogullarindan.com/2020/01/webgoat-insecure-deserialization-cozumu/</guid>
       <description>&lt;p&gt;“Insecure Deserialization” zafiyeti için araştırma yaparken, WebGoat’ta yer alan problemi çözeyim dedim ancak problem sandığımdan zor çıktı. Beklemediğim birçok problemle karşılaştım. Herhangi bir yerde adam akıllı kaynak da bulamayınca, çözümü buraya kaydetmek istedim. Zafiyetin ne olduğu ile ilgili internette tonla kaynak varken, zafiyetin anlatımı ile ilgili bir benim yazmamın herhalde pek bir katma değeri olmaz. O yüzden direkt karşılaştığım problemlerle birlikte çözümü yazacağım.&lt;/p&gt;</description>
     </item>
     

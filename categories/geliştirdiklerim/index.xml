@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Geliştirdiklerim on Ceylan Bozoğullarından | Kişisel Web Sayfası</title>
-    <link>https://ceylanb.github.io/categories/geli%C5%9Ftirdiklerim/</link>
+    <link>https://bozogullarindan.com/categories/geli%C5%9Ftirdiklerim/</link>
     <description>Recent content in Geliştirdiklerim on Ceylan Bozoğullarından | Kişisel Web Sayfası</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>tr</language>
     <copyright>Ceylan Bozoğullarından</copyright>
-    <lastBuildDate>Sat, 06 Jul 2019 16:15:59 +0000</lastBuildDate><atom:link href="https://ceylanb.github.io/categories/geli%C5%9Ftirdiklerim/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 06 Jul 2019 16:15:59 +0000</lastBuildDate><atom:link href="https://bozogullarindan.com/categories/geli%C5%9Ftirdiklerim/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>PhishHunterAI (Test): Oltalama Saldırıları için Chrome Eklentisi</title>
-      <link>https://ceylanb.github.io/2019/07/phishhunterai-test-oltalama-saldirilari-icin-chrome-eklentisi/</link>
+      <link>https://bozogullarindan.com/2019/07/phishhunterai-test-oltalama-saldirilari-icin-chrome-eklentisi/</link>
       <pubDate>Sat, 06 Jul 2019 16:15:59 +0000</pubDate>
       
-      <guid>https://ceylanb.github.io/2019/07/phishhunterai-test-oltalama-saldirilari-icin-chrome-eklentisi/</guid>
+      <guid>https://bozogullarindan.com/2019/07/phishhunterai-test-oltalama-saldirilari-icin-chrome-eklentisi/</guid>
       <description>Son 4-5 aydır, oltalama saldırıları için açılmış alan adlarını yapay zeka ile otonom tespit etme üzerine çalışmalar gerçekleştiriyordum. Hala gerçekleştiriyorum fakat çok akademik olan ve teoride kalan bir çalışma yerine meyvesini herkesin yiyebileceği bir ara ürün çıkarmak istedim. Bunun üzerine Chrome kullanıcılarının internette gezinirken karşılaştıkları oltalama saldırısı için açılmış (ya da dolandırıcılık amacıyla açılmış) alan adlarını otonom tespit ederek, uyarı veren bir Google Chrome eklentisi geliştirdim. Adına da PhishHunterAI dedim.</description>
     </item>
     
     <item>
       <title>Chrome Eklentisi: Çocuklar için Youtube</title>
-      <link>https://ceylanb.github.io/2019/01/chrome-cocuklar-icin-youtube/</link>
+      <link>https://bozogullarindan.com/2019/01/chrome-cocuklar-icin-youtube/</link>
       <pubDate>Thu, 17 Jan 2019 12:19:46 +0000</pubDate>
       
-      <guid>https://ceylanb.github.io/2019/01/chrome-cocuklar-icin-youtube/</guid>
+      <guid>https://bozogullarindan.com/2019/01/chrome-cocuklar-icin-youtube/</guid>
       <description>&lt;p&gt;
-  &lt;img src=&#34;https://ceylanb.github.io/posts/chrome-youtube/homepage.png&#34; alt=&#34;Featured&#34;&gt;
+  &lt;img src=&#34;https://bozogullarindan.com/posts/chrome-youtube/homepage.png&#34; alt=&#34;Featured&#34;&gt;
 
 &lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;%22/2018/12/firefox-tureng-sozluk-eklentisi/%22&#34;&gt;Önceki yazımda&lt;/a&gt; bahsettiğim Firefox Tureng eklentisi&lt;!-- raw HTML omitted --&gt;nden sonra geliştirmesini dün tamamladığım, “çocuklar için youtube” adını verdiğim Chrome eklentisi dün onaylanarak yayınlandı. Çıkış noktam, YouTube’da daha az vakit geçirebilmekti. Malum, insanlar YouTube’a özel bir amaç için girdiklerinde bile kendilerini saçma sapan bir videoyu izlerken bulabiliyorlar. Bu kendini buluş süreci bazen çok uzun sürebiliyor yani saate bir bakıyorsunuz onlarca dakika geçmiş. Neticede insan kendine “ben buraya ne için girmiştim?” sorusunu soruyor ve işini bitirip çıkıyor. En azından durum benim için ve tanıdığım bir çok insan için de böyle.&lt;/p&gt;
@@ -33,12 +33,12 @@
     
     <item>
       <title>Firefox Tureng Sözlük Eklentisi</title>
-      <link>https://ceylanb.github.io/2018/12/firefox-tureng-sozluk-eklentisi/</link>
+      <link>https://bozogullarindan.com/2018/12/firefox-tureng-sozluk-eklentisi/</link>
       <pubDate>Sun, 23 Dec 2018 21:39:57 +0000</pubDate>
       
-      <guid>https://ceylanb.github.io/2018/12/firefox-tureng-sozluk-eklentisi/</guid>
+      <guid>https://bozogullarindan.com/2018/12/firefox-tureng-sozluk-eklentisi/</guid>
       <description>&lt;p&gt;
-  &lt;img src=&#34;https://ceylanb.github.io/posts/firefox-tureng/ff-1.png&#34; alt=&#34;Featured&#34;&gt;
+  &lt;img src=&#34;https://bozogullarindan.com/posts/firefox-tureng/ff-1.png&#34; alt=&#34;Featured&#34;&gt;
 
 &lt;/p&gt;
 &lt;p&gt;Son haftalarda Chrome’da karşılaştığım bir problemden dolayı tekrar Firefox’a dönme kararı aldım. Ancak Chrome’da kullanımına alışkın olduğum Google Çeviri eklentisi Firefox’ta olmadığı için eksikliğini hemen hissettirdi. Bunun üzerine Firefox’ta Google Çeviri’ye benzeyen bir eklenti var mı diye şöyle bir bakındım. Her ne kadar benzerleri olsa da tam isteğimi karşılayan bir eklenti bulamadım. Zaten Firefox için bir eklenti geliştirmek istiyordum. Bu durum da kolları sıvamak için güzel bir neden oldu. Sonuç olarak &lt;a href=&#34;https://addons.mozilla.org/tr/firefox/addon/tureng-kelime-%C3%A7eviri/&#34;&gt;Mozilla Firefox Tureng Anlık Sözlük&lt;/a&gt; eklentisini geliştirerek Mozilla eklentiler kataloğunda yayınladım.&lt;/p&gt;</description>
