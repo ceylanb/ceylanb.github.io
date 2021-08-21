@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title> WebGoat Insecure Deserialization Çözümü | Ceylan Bozoğullarından | Kişisel Web Sayfası</title>
-  <link rel = 'canonical' href = 'http://example.org/2020/01/webgoat-insecure-deserialization-cozumu/'>
+  <link rel = 'canonical' href = 'https://ceylanb.gitlab.io/2020/01/webgoat-insecure-deserialization-cozumu/'>
   
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="all,follow">
@@ -16,7 +16,7 @@
   <meta property="og:title" content="WebGoat Insecure Deserialization Çözümü" />
 <meta property="og:description" content="“Insecure Deserialization” zafiyeti için araştırma yaparken, WebGoat’ta yer alan problemi çözeyim dedim ancak problem sandığımdan zor çıktı. Beklemediğim birçok problemle karşılaştım. Herhangi bir yerde adam akıllı kaynak da bulamayınca, çözümü buraya kaydetmek istedim. Zafiyetin ne olduğu ile ilgili internette tonla kaynak varken, zafiyetin anlatımı ile ilgili bir benim yazmamın herhalde pek bir katma değeri olmaz. O yüzden direkt karşılaştığım problemlerle birlikte çözümü yazacağım." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://example.org/2020/01/webgoat-insecure-deserialization-cozumu/" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="https://ceylanb.gitlab.io/2020/01/webgoat-insecure-deserialization-cozumu/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-01-27T15:48:49+00:00" />
 <meta property="article:modified_time" content="2020-01-27T15:48:49+00:00" /><meta property="og:site_name" content="Ceylan Bozoğullarından | Kişisel Web Sayfası" />
 
@@ -30,8 +30,8 @@
     
   
   
-  <link rel="stylesheet" href="http://example.org/css/styles.c05d68261bf086a9d7713c4f8a6215a3601608e267a816a7ee58f139b3d1aae51222aae2081c8e0c6bd35e1334773b7a16283022f31f92afd93bb37e5e822e66.css" integrity="sha512-wF1oJhvwhqnXcTxPimIVo2AWCOJnqBan7ljxObPRquUSIqriCByODGvTXhM0dzt6FigwIvMfkq/ZO7N&#43;XoIuZg==">
-  <link rel="stylesheet" href="http://example.org/css/styles.aa7f4879cac49d951c789d9f35a54627ec2d3da6b0f6b1a638d54cd60a3b1d4d827cc0a737e071cbe211e5813758ffcd847cd7fc33aea5573917e1718700e955.css" integrity="sha512-qn9IecrEnZUceJ2fNaVGJ&#43;wtPaaw9rGmONVM1go7HU2CfMCnN&#43;Bxy&#43;IR5YE3WP/NhHzX/DOupVc5F&#43;FxhwDpVQ=="> 
+  <link rel="stylesheet" href="https://ceylanb.gitlab.io/css/styles.c05d68261bf086a9d7713c4f8a6215a3601608e267a816a7ee58f139b3d1aae51222aae2081c8e0c6bd35e1334773b7a16283022f31f92afd93bb37e5e822e66.css" integrity="sha512-wF1oJhvwhqnXcTxPimIVo2AWCOJnqBan7ljxObPRquUSIqriCByODGvTXhM0dzt6FigwIvMfkq/ZO7N&#43;XoIuZg==">
+  <link rel="stylesheet" href="https://ceylanb.gitlab.io/css/styles.aa7f4879cac49d951c789d9f35a54627ec2d3da6b0f6b1a638d54cd60a3b1d4d827cc0a737e071cbe211e5813758ffcd847cd7fc33aea5573917e1718700e955.css" integrity="sha512-qn9IecrEnZUceJ2fNaVGJ&#43;wtPaaw9rGmONVM1go7HU2CfMCnN&#43;Bxy&#43;IR5YE3WP/NhHzX/DOupVc5F&#43;FxhwDpVQ=="> 
 
   
   
@@ -43,7 +43,7 @@
   
 
   
-<link rel="icon" type="image/png" href="http://example.org/images/favicon.ico" />
+<link rel="icon" type="image/png" href="https://ceylanb.gitlab.io/images/favicon.ico" />
 
   
   
@@ -73,7 +73,7 @@
       <ul>
         
         <li>
-          <a class="icon" href=" http://example.org/2019/07/phishhunterai-test-oltalama-saldirilari-icin-chrome-eklentisi/" aria-label="Previous">
+          <a class="icon" href=" https://ceylanb.gitlab.io/2019/07/phishhunterai-test-oltalama-saldirilari-icin-chrome-eklentisi/" aria-label="Previous">
             <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
           </a>
         </li>
@@ -105,47 +105,47 @@
   
   
   <li>
-    <a class="icon" href="http://www.facebook.com/sharer.php?u=http%3a%2f%2fexample.org%2f2020%2f01%2fwebgoat-insecure-deserialization-cozumu%2f" aria-label="Facebook">
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fceylanb.gitlab.io%2f2020%2f01%2fwebgoat-insecure-deserialization-cozumu%2f" aria-label="Facebook">
       <i class="fab fa-facebook " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://twitter.com/share?url=http%3a%2f%2fexample.org%2f2020%2f01%2fwebgoat-insecure-deserialization-cozumu%2f&text=WebGoat%20Insecure%20Deserialization%20%c3%87%c3%b6z%c3%bcm%c3%bc" aria-label="Twitter">
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fceylanb.gitlab.io%2f2020%2f01%2fwebgoat-insecure-deserialization-cozumu%2f&text=WebGoat%20Insecure%20Deserialization%20%c3%87%c3%b6z%c3%bcm%c3%bc" aria-label="Twitter">
       <i class="fab fa-twitter " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2fexample.org%2f2020%2f01%2fwebgoat-insecure-deserialization-cozumu%2f&title=WebGoat%20Insecure%20Deserialization%20%c3%87%c3%b6z%c3%bcm%c3%bc" aria-label="Linkedin">
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fceylanb.gitlab.io%2f2020%2f01%2fwebgoat-insecure-deserialization-cozumu%2f&title=WebGoat%20Insecure%20Deserialization%20%c3%87%c3%b6z%c3%bcm%c3%bc" aria-label="Linkedin">
       <i class="fab fa-linkedin " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2fexample.org%2f2020%2f01%2fwebgoat-insecure-deserialization-cozumu%2f&is_video=false&description=WebGoat%20Insecure%20Deserialization%20%c3%87%c3%b6z%c3%bcm%c3%bc" aria-label="Pinterest">
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fceylanb.gitlab.io%2f2020%2f01%2fwebgoat-insecure-deserialization-cozumu%2f&is_video=false&description=WebGoat%20Insecure%20Deserialization%20%c3%87%c3%b6z%c3%bcm%c3%bc" aria-label="Pinterest">
       <i class="fab fa-pinterest " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="mailto:?subject=WebGoat%20Insecure%20Deserialization%20%c3%87%c3%b6z%c3%bcm%c3%bc&body=Check out this article: http%3a%2f%2fexample.org%2f2020%2f01%2fwebgoat-insecure-deserialization-cozumu%2f" aria-label="Email">
+    <a class="icon" href="mailto:?subject=WebGoat%20Insecure%20Deserialization%20%c3%87%c3%b6z%c3%bcm%c3%bc&body=Check out this article: https%3a%2f%2fceylanb.gitlab.io%2f2020%2f01%2fwebgoat-insecure-deserialization-cozumu%2f" aria-label="Email">
       <i class="fas fa-envelope " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://getpocket.com/save?url=http%3a%2f%2fexample.org%2f2020%2f01%2fwebgoat-insecure-deserialization-cozumu%2f&title=WebGoat%20Insecure%20Deserialization%20%c3%87%c3%b6z%c3%bcm%c3%bc" aria-label="Pocket">
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fceylanb.gitlab.io%2f2020%2f01%2fwebgoat-insecure-deserialization-cozumu%2f&title=WebGoat%20Insecure%20Deserialization%20%c3%87%c3%b6z%c3%bcm%c3%bc" aria-label="Pocket">
       <i class="fab fa-get-pocket " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://reddit.com/submit?url=http%3a%2f%2fexample.org%2f2020%2f01%2fwebgoat-insecure-deserialization-cozumu%2f&title=WebGoat%20Insecure%20Deserialization%20%c3%87%c3%b6z%c3%bcm%c3%bc" aria-label="reddit">
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fceylanb.gitlab.io%2f2020%2f01%2fwebgoat-insecure-deserialization-cozumu%2f&title=WebGoat%20Insecure%20Deserialization%20%c3%87%c3%b6z%c3%bcm%c3%bc" aria-label="reddit">
       <i class="fab fa-reddit " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2fexample.org%2f2020%2f01%2fwebgoat-insecure-deserialization-cozumu%2f&name=WebGoat%20Insecure%20Deserialization%20%c3%87%c3%b6z%c3%bcm%c3%bc&description=%3cp%3e%e2%80%9cInsecure%20Deserialization%e2%80%9d%20zafiyeti%20i%c3%a7in%20ara%c5%9ft%c4%b1rma%20yaparken%2c%20WebGoat%e2%80%99ta%20yer%20alan%20problemi%20%c3%a7%c3%b6zeyim%20dedim%20ancak%20problem%20sand%c4%b1%c4%9f%c4%b1mdan%20zor%20%c3%a7%c4%b1kt%c4%b1.%20Beklemedi%c4%9fim%20bir%c3%a7ok%20problemle%20kar%c5%9f%c4%b1la%c5%9ft%c4%b1m.%20Herhangi%20bir%20yerde%20adam%20ak%c4%b1ll%c4%b1%20kaynak%20da%20bulamay%c4%b1nca%2c%20%c3%a7%c3%b6z%c3%bcm%c3%bc%20buraya%20kaydetmek%20istedim.%20Zafiyetin%20ne%20oldu%c4%9fu%20ile%20ilgili%20internette%20tonla%20kaynak%20varken%2c%20zafiyetin%20anlat%c4%b1m%c4%b1%20ile%20ilgili%20bir%20benim%20yazmam%c4%b1n%20herhalde%20pek%20bir%20katma%20de%c4%9feri%20olmaz.%20O%20y%c3%bczden%20direkt%20kar%c5%9f%c4%b1la%c5%9ft%c4%b1%c4%9f%c4%b1m%20problemlerle%20birlikte%20%c3%a7%c3%b6z%c3%bcm%c3%bc%20yazaca%c4%9f%c4%b1m.%3c%2fp%3e" aria-label="Tumblr">
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fceylanb.gitlab.io%2f2020%2f01%2fwebgoat-insecure-deserialization-cozumu%2f&name=WebGoat%20Insecure%20Deserialization%20%c3%87%c3%b6z%c3%bcm%c3%bc&description=%3cp%3e%e2%80%9cInsecure%20Deserialization%e2%80%9d%20zafiyeti%20i%c3%a7in%20ara%c5%9ft%c4%b1rma%20yaparken%2c%20WebGoat%e2%80%99ta%20yer%20alan%20problemi%20%c3%a7%c3%b6zeyim%20dedim%20ancak%20problem%20sand%c4%b1%c4%9f%c4%b1mdan%20zor%20%c3%a7%c4%b1kt%c4%b1.%20Beklemedi%c4%9fim%20bir%c3%a7ok%20problemle%20kar%c5%9f%c4%b1la%c5%9ft%c4%b1m.%20Herhangi%20bir%20yerde%20adam%20ak%c4%b1ll%c4%b1%20kaynak%20da%20bulamay%c4%b1nca%2c%20%c3%a7%c3%b6z%c3%bcm%c3%bc%20buraya%20kaydetmek%20istedim.%20Zafiyetin%20ne%20oldu%c4%9fu%20ile%20ilgili%20internette%20tonla%20kaynak%20varken%2c%20zafiyetin%20anlat%c4%b1m%c4%b1%20ile%20ilgili%20bir%20benim%20yazmam%c4%b1n%20herhalde%20pek%20bir%20katma%20de%c4%9feri%20olmaz.%20O%20y%c3%bczden%20direkt%20kar%c5%9f%c4%b1la%c5%9ft%c4%b1%c4%9f%c4%b1m%20problemlerle%20birlikte%20%c3%a7%c3%b6z%c3%bcm%c3%bc%20yazaca%c4%9f%c4%b1m.%3c%2fp%3e" aria-label="Tumblr">
       <i class="fab fa-tumblr " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2fexample.org%2f2020%2f01%2fwebgoat-insecure-deserialization-cozumu%2f&t=WebGoat%20Insecure%20Deserialization%20%c3%87%c3%b6z%c3%bcm%c3%bc" aria-label="Hacker News">
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fceylanb.gitlab.io%2f2020%2f01%2fwebgoat-insecure-deserialization-cozumu%2f&t=WebGoat%20Insecure%20Deserialization%20%c3%87%c3%b6z%c3%bcm%c3%bc" aria-label="Hacker News">
       <i class="fab fa-hacker-news " aria-hidden="true"></i>
     </a>
   </li>
@@ -301,47 +301,47 @@
   
   
   <li>
-    <a class="icon" href="http://www.facebook.com/sharer.php?u=http%3a%2f%2fexample.org%2f2020%2f01%2fwebgoat-insecure-deserialization-cozumu%2f" aria-label="Facebook">
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fceylanb.gitlab.io%2f2020%2f01%2fwebgoat-insecure-deserialization-cozumu%2f" aria-label="Facebook">
       <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://twitter.com/share?url=http%3a%2f%2fexample.org%2f2020%2f01%2fwebgoat-insecure-deserialization-cozumu%2f&text=WebGoat%20Insecure%20Deserialization%20%c3%87%c3%b6z%c3%bcm%c3%bc" aria-label="Twitter">
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fceylanb.gitlab.io%2f2020%2f01%2fwebgoat-insecure-deserialization-cozumu%2f&text=WebGoat%20Insecure%20Deserialization%20%c3%87%c3%b6z%c3%bcm%c3%bc" aria-label="Twitter">
       <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2fexample.org%2f2020%2f01%2fwebgoat-insecure-deserialization-cozumu%2f&title=WebGoat%20Insecure%20Deserialization%20%c3%87%c3%b6z%c3%bcm%c3%bc" aria-label="Linkedin">
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fceylanb.gitlab.io%2f2020%2f01%2fwebgoat-insecure-deserialization-cozumu%2f&title=WebGoat%20Insecure%20Deserialization%20%c3%87%c3%b6z%c3%bcm%c3%bc" aria-label="Linkedin">
       <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2fexample.org%2f2020%2f01%2fwebgoat-insecure-deserialization-cozumu%2f&is_video=false&description=WebGoat%20Insecure%20Deserialization%20%c3%87%c3%b6z%c3%bcm%c3%bc" aria-label="Pinterest">
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fceylanb.gitlab.io%2f2020%2f01%2fwebgoat-insecure-deserialization-cozumu%2f&is_video=false&description=WebGoat%20Insecure%20Deserialization%20%c3%87%c3%b6z%c3%bcm%c3%bc" aria-label="Pinterest">
       <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="mailto:?subject=WebGoat%20Insecure%20Deserialization%20%c3%87%c3%b6z%c3%bcm%c3%bc&body=Check out this article: http%3a%2f%2fexample.org%2f2020%2f01%2fwebgoat-insecure-deserialization-cozumu%2f" aria-label="Email">
+    <a class="icon" href="mailto:?subject=WebGoat%20Insecure%20Deserialization%20%c3%87%c3%b6z%c3%bcm%c3%bc&body=Check out this article: https%3a%2f%2fceylanb.gitlab.io%2f2020%2f01%2fwebgoat-insecure-deserialization-cozumu%2f" aria-label="Email">
       <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://getpocket.com/save?url=http%3a%2f%2fexample.org%2f2020%2f01%2fwebgoat-insecure-deserialization-cozumu%2f&title=WebGoat%20Insecure%20Deserialization%20%c3%87%c3%b6z%c3%bcm%c3%bc" aria-label="Pocket">
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fceylanb.gitlab.io%2f2020%2f01%2fwebgoat-insecure-deserialization-cozumu%2f&title=WebGoat%20Insecure%20Deserialization%20%c3%87%c3%b6z%c3%bcm%c3%bc" aria-label="Pocket">
       <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://reddit.com/submit?url=http%3a%2f%2fexample.org%2f2020%2f01%2fwebgoat-insecure-deserialization-cozumu%2f&title=WebGoat%20Insecure%20Deserialization%20%c3%87%c3%b6z%c3%bcm%c3%bc" aria-label="reddit">
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fceylanb.gitlab.io%2f2020%2f01%2fwebgoat-insecure-deserialization-cozumu%2f&title=WebGoat%20Insecure%20Deserialization%20%c3%87%c3%b6z%c3%bcm%c3%bc" aria-label="reddit">
       <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2fexample.org%2f2020%2f01%2fwebgoat-insecure-deserialization-cozumu%2f&name=WebGoat%20Insecure%20Deserialization%20%c3%87%c3%b6z%c3%bcm%c3%bc&description=%3cp%3e%e2%80%9cInsecure%20Deserialization%e2%80%9d%20zafiyeti%20i%c3%a7in%20ara%c5%9ft%c4%b1rma%20yaparken%2c%20WebGoat%e2%80%99ta%20yer%20alan%20problemi%20%c3%a7%c3%b6zeyim%20dedim%20ancak%20problem%20sand%c4%b1%c4%9f%c4%b1mdan%20zor%20%c3%a7%c4%b1kt%c4%b1.%20Beklemedi%c4%9fim%20bir%c3%a7ok%20problemle%20kar%c5%9f%c4%b1la%c5%9ft%c4%b1m.%20Herhangi%20bir%20yerde%20adam%20ak%c4%b1ll%c4%b1%20kaynak%20da%20bulamay%c4%b1nca%2c%20%c3%a7%c3%b6z%c3%bcm%c3%bc%20buraya%20kaydetmek%20istedim.%20Zafiyetin%20ne%20oldu%c4%9fu%20ile%20ilgili%20internette%20tonla%20kaynak%20varken%2c%20zafiyetin%20anlat%c4%b1m%c4%b1%20ile%20ilgili%20bir%20benim%20yazmam%c4%b1n%20herhalde%20pek%20bir%20katma%20de%c4%9feri%20olmaz.%20O%20y%c3%bczden%20direkt%20kar%c5%9f%c4%b1la%c5%9ft%c4%b1%c4%9f%c4%b1m%20problemlerle%20birlikte%20%c3%a7%c3%b6z%c3%bcm%c3%bc%20yazaca%c4%9f%c4%b1m.%3c%2fp%3e" aria-label="Tumblr">
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fceylanb.gitlab.io%2f2020%2f01%2fwebgoat-insecure-deserialization-cozumu%2f&name=WebGoat%20Insecure%20Deserialization%20%c3%87%c3%b6z%c3%bcm%c3%bc&description=%3cp%3e%e2%80%9cInsecure%20Deserialization%e2%80%9d%20zafiyeti%20i%c3%a7in%20ara%c5%9ft%c4%b1rma%20yaparken%2c%20WebGoat%e2%80%99ta%20yer%20alan%20problemi%20%c3%a7%c3%b6zeyim%20dedim%20ancak%20problem%20sand%c4%b1%c4%9f%c4%b1mdan%20zor%20%c3%a7%c4%b1kt%c4%b1.%20Beklemedi%c4%9fim%20bir%c3%a7ok%20problemle%20kar%c5%9f%c4%b1la%c5%9ft%c4%b1m.%20Herhangi%20bir%20yerde%20adam%20ak%c4%b1ll%c4%b1%20kaynak%20da%20bulamay%c4%b1nca%2c%20%c3%a7%c3%b6z%c3%bcm%c3%bc%20buraya%20kaydetmek%20istedim.%20Zafiyetin%20ne%20oldu%c4%9fu%20ile%20ilgili%20internette%20tonla%20kaynak%20varken%2c%20zafiyetin%20anlat%c4%b1m%c4%b1%20ile%20ilgili%20bir%20benim%20yazmam%c4%b1n%20herhalde%20pek%20bir%20katma%20de%c4%9feri%20olmaz.%20O%20y%c3%bczden%20direkt%20kar%c5%9f%c4%b1la%c5%9ft%c4%b1%c4%9f%c4%b1m%20problemlerle%20birlikte%20%c3%a7%c3%b6z%c3%bcm%c3%bc%20yazaca%c4%9f%c4%b1m.%3c%2fp%3e" aria-label="Tumblr">
       <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2fexample.org%2f2020%2f01%2fwebgoat-insecure-deserialization-cozumu%2f&t=WebGoat%20Insecure%20Deserialization%20%c3%87%c3%b6z%c3%bcm%c3%bc" aria-label="Hacker News">
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fceylanb.gitlab.io%2f2020%2f01%2fwebgoat-insecure-deserialization-cozumu%2f&t=WebGoat%20Insecure%20Deserialization%20%c3%87%c3%b6z%c3%bcm%c3%bc" aria-label="Hacker News">
       <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
     </a>
   </li>

@@ -2,33 +2,33 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>thinkpad x200 on Ceylan Bozoğullarından | Kişisel Web Sayfası</title>
-    <link>http://example.org/tags/thinkpad-x200/</link>
+    <link>https://ceylanb.gitlab.io/tags/thinkpad-x200/</link>
     <description>Recent content in thinkpad x200 on Ceylan Bozoğullarından | Kişisel Web Sayfası</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>tr</language>
     <copyright>Ceylan Bozoğullarından</copyright>
-    <lastBuildDate>Tue, 26 Mar 2019 13:27:08 +0000</lastBuildDate><atom:link href="http://example.org/tags/thinkpad-x200/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 26 Mar 2019 13:27:08 +0000</lastBuildDate><atom:link href="https://ceylanb.gitlab.io/tags/thinkpad-x200/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Thinkpad x200 Libreboot Kurulumu (2): Nasıl?</title>
-      <link>http://example.org/2019/03/thinkpad-x200-libreboot-kurulumu-2-nasil/</link>
+      <link>https://ceylanb.gitlab.io/2019/03/thinkpad-x200-libreboot-kurulumu-2-nasil/</link>
       <pubDate>Tue, 26 Mar 2019 13:27:08 +0000</pubDate>
       
-      <guid>http://example.org/2019/03/thinkpad-x200-libreboot-kurulumu-2-nasil/</guid>
+      <guid>https://ceylanb.gitlab.io/2019/03/thinkpad-x200-libreboot-kurulumu-2-nasil/</guid>
       <description>&lt;p&gt;
-  &lt;img src=&#34;http://example.org/posts/x200-libreboot-2/libre-onecikan.jpeg&#34; alt=&#34;Featured&#34;&gt;
+  &lt;img src=&#34;https://ceylanb.gitlab.io/posts/x200-libreboot-2/libre-onecikan.jpeg&#34; alt=&#34;Featured&#34;&gt;
 
 &lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;http://example.org/2019/03/thinkpad-x200-libreboot-kurulumu-1-neden/&#34;&gt;Bir önceki yazımda&lt;/a&gt; Libreboot’un ne olduğundan bahsetmiştim. Bu yazıda ise Thinkpad x200 ‘e Libreboot kurulum aşamalarından ve bu aşamaları gerçekleştirirken deneyimlediğim bazı problemlerden ve çözümlerinden detaylı olarak bahsedeceğim.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://ceylanb.gitlab.io/2019/03/thinkpad-x200-libreboot-kurulumu-1-neden/&#34;&gt;Bir önceki yazımda&lt;/a&gt; Libreboot’un ne olduğundan bahsetmiştim. Bu yazıda ise Thinkpad x200 ‘e Libreboot kurulum aşamalarından ve bu aşamaları gerçekleştirirken deneyimlediğim bazı problemlerden ve çözümlerinden detaylı olarak bahsedeceğim.&lt;/p&gt;
 &lt;p&gt;Bu işlemi gerçekleştirirken karşılaştığım birçok problemin tartışıldığı Reddit platformundan çok yardım aldım. Hatta &lt;a href=&#34;https://www.reddit.com/r/libreboot/comments/7dajn6/x200_libreboot_tutorial_for_raspberry_pi_with/&#34;&gt;takip ettiğim ana kaynak&lt;/a&gt; da Reddit üzerinde yer alıyordu. Bu konuda Türkçe kaynak bulmak gerçekten çok zor, ben sadece &lt;a href=&#34;http://serdaroktaytunc.blogspot.com/2017/03/raspberry-pi-araclg-ile-libreboot-ve.html&#34;&gt;bir tane bulabildim&lt;/a&gt; mesela.&lt;/p&gt;
 &lt;p&gt;Thinkpad X60 ve T60 gibi bazı bilgisayarlara, donanımsal olarak herhangi bir müdahale olmadan Libreboot kurulabiliyor ancak x200 için donanımsal müdahale gerektiği için bazı ekipmanların olması gerekir. &lt;strong&gt;Benim kullandığım&lt;/strong&gt; ekipmanları aşağıdaki listede belirttim.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Thinkpad x200 Libreboot Kurulumu (1): Neden?</title>
-      <link>http://example.org/2019/03/thinkpad-x200-libreboot-kurulumu-1-neden/</link>
+      <link>https://ceylanb.gitlab.io/2019/03/thinkpad-x200-libreboot-kurulumu-1-neden/</link>
       <pubDate>Mon, 25 Mar 2019 10:14:13 +0000</pubDate>
       
-      <guid>http://example.org/2019/03/thinkpad-x200-libreboot-kurulumu-1-neden/</guid>
+      <guid>https://ceylanb.gitlab.io/2019/03/thinkpad-x200-libreboot-kurulumu-1-neden/</guid>
       <description>Yaklasik iki aydir yazamiyorum ve o gunden bugune çok şey değişti. Mesela ikinci el bir bilgisayar aldım: Thinkpad x200 (Şekil 1). Almamın nedenlerinden biri, Libreboot ‘un desteklediği [1] nadir bilgisayarlar arasında olmasıydı. Alır almaz, üzerindeki tüm etiketleri söküp temizliğini yaptım ve libreboot yüklemek üzere çalışma masama aldım. Bu yazıda bu güzel bilgisayara onu özgürlestirmek adına ne yaptığımı ve neden yaptığımı anlatacağım. Bir sonraki yazım ise “nasıl” yaptığım üzerine olacak.  Şekil 1.</description>
     </item>
     

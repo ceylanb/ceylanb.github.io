@@ -2,40 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://example.org/en/categories/</loc>
+    <loc>https://ceylanb.gitlab.io/en/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="tr"
-                href="http://example.org/categories/"
+                href="https://ceylanb.gitlab.io/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://example.org/en/categories/"
+                href="https://ceylanb.gitlab.io/en/categories/"
                 />
   </url><url>
-    <loc>http://example.org/en/</loc>
+    <loc>https://ceylanb.gitlab.io/en/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="tr"
-                href="http://example.org/"
+                href="https://ceylanb.gitlab.io/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://example.org/en/"
+                href="https://ceylanb.gitlab.io/en/"
                 />
   </url><url>
-    <loc>http://example.org/en/tags/</loc>
+    <loc>https://ceylanb.gitlab.io/en/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="tr"
-                href="http://example.org/tags/"
+                href="https://ceylanb.gitlab.io/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://example.org/en/tags/"
+                href="https://ceylanb.gitlab.io/en/tags/"
                 />
   </url>
 </urlset>

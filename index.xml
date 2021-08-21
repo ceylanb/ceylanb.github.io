@@ -2,62 +2,62 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ceylan Bozoğullarından | Kişisel Web Sayfası</title>
-    <link>http://example.org/</link>
+    <link>https://ceylanb.gitlab.io/</link>
     <description>Recent content on Ceylan Bozoğullarından | Kişisel Web Sayfası</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>tr</language>
     <copyright>Ceylan Bozoğullarından</copyright>
-    <lastBuildDate>Mon, 27 Jan 2020 15:48:49 +0000</lastBuildDate><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Jan 2020 15:48:49 +0000</lastBuildDate><atom:link href="https://ceylanb.gitlab.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>WebGoat Insecure Deserialization Çözümü</title>
-      <link>http://example.org/2020/01/webgoat-insecure-deserialization-cozumu/</link>
+      <link>https://ceylanb.gitlab.io/2020/01/webgoat-insecure-deserialization-cozumu/</link>
       <pubDate>Mon, 27 Jan 2020 15:48:49 +0000</pubDate>
       
-      <guid>http://example.org/2020/01/webgoat-insecure-deserialization-cozumu/</guid>
+      <guid>https://ceylanb.gitlab.io/2020/01/webgoat-insecure-deserialization-cozumu/</guid>
       <description>&lt;p&gt;“Insecure Deserialization” zafiyeti için araştırma yaparken, WebGoat’ta yer alan problemi çözeyim dedim ancak problem sandığımdan zor çıktı. Beklemediğim birçok problemle karşılaştım. Herhangi bir yerde adam akıllı kaynak da bulamayınca, çözümü buraya kaydetmek istedim. Zafiyetin ne olduğu ile ilgili internette tonla kaynak varken, zafiyetin anlatımı ile ilgili bir benim yazmamın herhalde pek bir katma değeri olmaz. O yüzden direkt karşılaştığım problemlerle birlikte çözümü yazacağım.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>PhishHunterAI (Test): Oltalama Saldırıları için Chrome Eklentisi</title>
-      <link>http://example.org/2019/07/phishhunterai-test-oltalama-saldirilari-icin-chrome-eklentisi/</link>
+      <link>https://ceylanb.gitlab.io/2019/07/phishhunterai-test-oltalama-saldirilari-icin-chrome-eklentisi/</link>
       <pubDate>Sat, 06 Jul 2019 16:15:59 +0000</pubDate>
       
-      <guid>http://example.org/2019/07/phishhunterai-test-oltalama-saldirilari-icin-chrome-eklentisi/</guid>
+      <guid>https://ceylanb.gitlab.io/2019/07/phishhunterai-test-oltalama-saldirilari-icin-chrome-eklentisi/</guid>
       <description>Son 4-5 aydır, oltalama saldırıları için açılmış alan adlarını yapay zeka ile otonom tespit etme üzerine çalışmalar gerçekleştiriyordum. Hala gerçekleştiriyorum fakat çok akademik olan ve teoride kalan bir çalışma yerine meyvesini herkesin yiyebileceği bir ara ürün çıkarmak istedim. Bunun üzerine Chrome kullanıcılarının internette gezinirken karşılaştıkları oltalama saldırısı için açılmış (ya da dolandırıcılık amacıyla açılmış) alan adlarını otonom tespit ederek, uyarı veren bir Google Chrome eklentisi geliştirdim. Adına da PhishHunterAI dedim.</description>
     </item>
     
     <item>
       <title>Thinkpad x200 Libreboot Kurulumu (2): Nasıl?</title>
-      <link>http://example.org/2019/03/thinkpad-x200-libreboot-kurulumu-2-nasil/</link>
+      <link>https://ceylanb.gitlab.io/2019/03/thinkpad-x200-libreboot-kurulumu-2-nasil/</link>
       <pubDate>Tue, 26 Mar 2019 13:27:08 +0000</pubDate>
       
-      <guid>http://example.org/2019/03/thinkpad-x200-libreboot-kurulumu-2-nasil/</guid>
+      <guid>https://ceylanb.gitlab.io/2019/03/thinkpad-x200-libreboot-kurulumu-2-nasil/</guid>
       <description>&lt;p&gt;
-  &lt;img src=&#34;http://example.org/posts/x200-libreboot-2/libre-onecikan.jpeg&#34; alt=&#34;Featured&#34;&gt;
+  &lt;img src=&#34;https://ceylanb.gitlab.io/posts/x200-libreboot-2/libre-onecikan.jpeg&#34; alt=&#34;Featured&#34;&gt;
 
 &lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;http://example.org/2019/03/thinkpad-x200-libreboot-kurulumu-1-neden/&#34;&gt;Bir önceki yazımda&lt;/a&gt; Libreboot’un ne olduğundan bahsetmiştim. Bu yazıda ise Thinkpad x200 ‘e Libreboot kurulum aşamalarından ve bu aşamaları gerçekleştirirken deneyimlediğim bazı problemlerden ve çözümlerinden detaylı olarak bahsedeceğim.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://ceylanb.gitlab.io/2019/03/thinkpad-x200-libreboot-kurulumu-1-neden/&#34;&gt;Bir önceki yazımda&lt;/a&gt; Libreboot’un ne olduğundan bahsetmiştim. Bu yazıda ise Thinkpad x200 ‘e Libreboot kurulum aşamalarından ve bu aşamaları gerçekleştirirken deneyimlediğim bazı problemlerden ve çözümlerinden detaylı olarak bahsedeceğim.&lt;/p&gt;
 &lt;p&gt;Bu işlemi gerçekleştirirken karşılaştığım birçok problemin tartışıldığı Reddit platformundan çok yardım aldım. Hatta &lt;a href=&#34;https://www.reddit.com/r/libreboot/comments/7dajn6/x200_libreboot_tutorial_for_raspberry_pi_with/&#34;&gt;takip ettiğim ana kaynak&lt;/a&gt; da Reddit üzerinde yer alıyordu. Bu konuda Türkçe kaynak bulmak gerçekten çok zor, ben sadece &lt;a href=&#34;http://serdaroktaytunc.blogspot.com/2017/03/raspberry-pi-araclg-ile-libreboot-ve.html&#34;&gt;bir tane bulabildim&lt;/a&gt; mesela.&lt;/p&gt;
 &lt;p&gt;Thinkpad X60 ve T60 gibi bazı bilgisayarlara, donanımsal olarak herhangi bir müdahale olmadan Libreboot kurulabiliyor ancak x200 için donanımsal müdahale gerektiği için bazı ekipmanların olması gerekir. &lt;strong&gt;Benim kullandığım&lt;/strong&gt; ekipmanları aşağıdaki listede belirttim.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Thinkpad x200 Libreboot Kurulumu (1): Neden?</title>
-      <link>http://example.org/2019/03/thinkpad-x200-libreboot-kurulumu-1-neden/</link>
+      <link>https://ceylanb.gitlab.io/2019/03/thinkpad-x200-libreboot-kurulumu-1-neden/</link>
       <pubDate>Mon, 25 Mar 2019 10:14:13 +0000</pubDate>
       
-      <guid>http://example.org/2019/03/thinkpad-x200-libreboot-kurulumu-1-neden/</guid>
+      <guid>https://ceylanb.gitlab.io/2019/03/thinkpad-x200-libreboot-kurulumu-1-neden/</guid>
       <description>Yaklasik iki aydir yazamiyorum ve o gunden bugune çok şey değişti. Mesela ikinci el bir bilgisayar aldım: Thinkpad x200 (Şekil 1). Almamın nedenlerinden biri, Libreboot ‘un desteklediği [1] nadir bilgisayarlar arasında olmasıydı. Alır almaz, üzerindeki tüm etiketleri söküp temizliğini yaptım ve libreboot yüklemek üzere çalışma masama aldım. Bu yazıda bu güzel bilgisayara onu özgürlestirmek adına ne yaptığımı ve neden yaptığımı anlatacağım. Bir sonraki yazım ise “nasıl” yaptığım üzerine olacak.  Şekil 1.</description>
     </item>
     
     <item>
       <title>Chrome Eklentisi: Çocuklar için Youtube</title>
-      <link>http://example.org/2019/01/chrome-cocuklar-icin-youtube/</link>
+      <link>https://ceylanb.gitlab.io/2019/01/chrome-cocuklar-icin-youtube/</link>
       <pubDate>Thu, 17 Jan 2019 12:19:46 +0000</pubDate>
       
-      <guid>http://example.org/2019/01/chrome-cocuklar-icin-youtube/</guid>
+      <guid>https://ceylanb.gitlab.io/2019/01/chrome-cocuklar-icin-youtube/</guid>
       <description>&lt;p&gt;
-  &lt;img src=&#34;http://example.org/posts/chrome-youtube/homepage.png&#34; alt=&#34;Featured&#34;&gt;
+  &lt;img src=&#34;https://ceylanb.gitlab.io/posts/chrome-youtube/homepage.png&#34; alt=&#34;Featured&#34;&gt;
 
 &lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;%22/2018/12/firefox-tureng-sozluk-eklentisi/%22&#34;&gt;Önceki yazımda&lt;/a&gt; bahsettiğim Firefox Tureng eklentisi&lt;!-- raw HTML omitted --&gt;nden sonra geliştirmesini dün tamamladığım, “çocuklar için youtube” adını verdiğim Chrome eklentisi dün onaylanarak yayınlandı. Çıkış noktam, YouTube’da daha az vakit geçirebilmekti. Malum, insanlar YouTube’a özel bir amaç için girdiklerinde bile kendilerini saçma sapan bir videoyu izlerken bulabiliyorlar. Bu kendini buluş süreci bazen çok uzun sürebiliyor yani saate bir bakıyorsunuz onlarca dakika geçmiş. Neticede insan kendine “ben buraya ne için girmiştim?” sorusunu soruyor ve işini bitirip çıkıyor. En azından durum benim için ve tanıdığım bir çok insan için de böyle.&lt;/p&gt;
@@ -66,12 +66,12 @@
     
     <item>
       <title>Firefox Tureng Sözlük Eklentisi</title>
-      <link>http://example.org/2018/12/firefox-tureng-sozluk-eklentisi/</link>
+      <link>https://ceylanb.gitlab.io/2018/12/firefox-tureng-sozluk-eklentisi/</link>
       <pubDate>Sun, 23 Dec 2018 21:39:57 +0000</pubDate>
       
-      <guid>http://example.org/2018/12/firefox-tureng-sozluk-eklentisi/</guid>
+      <guid>https://ceylanb.gitlab.io/2018/12/firefox-tureng-sozluk-eklentisi/</guid>
       <description>&lt;p&gt;
-  &lt;img src=&#34;http://example.org/posts/firefox-tureng/ff-1.png&#34; alt=&#34;Featured&#34;&gt;
+  &lt;img src=&#34;https://ceylanb.gitlab.io/posts/firefox-tureng/ff-1.png&#34; alt=&#34;Featured&#34;&gt;
 
 &lt;/p&gt;
 &lt;p&gt;Son haftalarda Chrome’da karşılaştığım bir problemden dolayı tekrar Firefox’a dönme kararı aldım. Ancak Chrome’da kullanımına alışkın olduğum Google Çeviri eklentisi Firefox’ta olmadığı için eksikliğini hemen hissettirdi. Bunun üzerine Firefox’ta Google Çeviri’ye benzeyen bir eklenti var mı diye şöyle bir bakındım. Her ne kadar benzerleri olsa da tam isteğimi karşılayan bir eklenti bulamadım. Zaten Firefox için bir eklenti geliştirmek istiyordum. Bu durum da kolları sıvamak için güzel bir neden oldu. Sonuç olarak &lt;a href=&#34;https://addons.mozilla.org/tr/firefox/addon/tureng-kelime-%C3%A7eviri/&#34;&gt;Mozilla Firefox Tureng Anlık Sözlük&lt;/a&gt; eklentisini geliştirerek Mozilla eklentiler kataloğunda yayınladım.&lt;/p&gt;</description>
@@ -79,39 +79,39 @@
     
     <item>
       <title>WordPress Plugin Survey &amp; Poll SQL Injection</title>
-      <link>http://example.org/2018/09/wordpress-plugin-survey-poll-sql-injection/</link>
+      <link>https://ceylanb.gitlab.io/2018/09/wordpress-plugin-survey-poll-sql-injection/</link>
       <pubDate>Fri, 14 Sep 2018 17:24:09 +0000</pubDate>
       
-      <guid>http://example.org/2018/09/wordpress-plugin-survey-poll-sql-injection/</guid>
+      <guid>https://ceylanb.gitlab.io/2018/09/wordpress-plugin-survey-poll-sql-injection/</guid>
       <description>I decided to write some posts in English. This post is one of them. In this post, I am going to explain a vulnerability that I discovered in WordPress Survey &amp;amp; Poll plugin.
 I’ve always done black box testing, till today! A few days ago, I decided to spend my time reading code for finding a vulnerability until my conscription date came up. At the end of this quest, i found a treasure: an SQL injection vulnerability.</description>
     </item>
     
     <item>
       <title>Celery: Büyük İşlemlerin Asenkron İşletilmesi (Django)</title>
-      <link>http://example.org/2018/08/django-asenkron-islemler-celery/</link>
+      <link>https://ceylanb.gitlab.io/2018/08/django-asenkron-islemler-celery/</link>
       <pubDate>Tue, 28 Aug 2018 13:33:29 +0000</pubDate>
       
-      <guid>http://example.org/2018/08/django-asenkron-islemler-celery/</guid>
+      <guid>https://ceylanb.gitlab.io/2018/08/django-asenkron-islemler-celery/</guid>
       <description>Son yazımda arkadaşımın akademik çalışmasından bahsetmiştim. Bu yazının içeriği de Python’da Django Framework üzerinde Celery kullanarak, büyük işlemlerin arka planda asenkron olarak işletilmesi üzerine olacak.
 Asenkron işlemlere neden ihtiyaç duyduğumu belirtmek için projemden kısaca bahsedeyim. Projenin amacı özetle; sembolik regresyon problemlerinin, kullanıcı dostu bir arayüzle evrimsel hesaplama algoritmaları kullanılarak web uygulaması üzerinden çözülebilmesini sağlamak. Amaçtan da anlaşıldığı gibi bir web uygulamasında saatler sürecek işlemlerin gerçekleştirilmesi gerekiyor. Bu işlemlerin, web uygulamasındaki gezintiyi etkilememesi için işlemlerin arkaplanda asenkron olarak çalıştırılması gerekiyor.</description>
     </item>
     
     <item>
       <title>Archlinux Serüveni 2: Kurulum</title>
-      <link>http://example.org/2018/06/archlinux-seruveni-2-kurulum/</link>
+      <link>https://ceylanb.gitlab.io/2018/06/archlinux-seruveni-2-kurulum/</link>
       <pubDate>Thu, 21 Jun 2018 08:40:09 +0000</pubDate>
       
-      <guid>http://example.org/2018/06/archlinux-seruveni-2-kurulum/</guid>
+      <guid>https://ceylanb.gitlab.io/2018/06/archlinux-seruveni-2-kurulum/</guid>
       <description>Bu bölümde, Archlinux Kurulumu’nu değil, kurulum esnasında edindiğim tecrübeleri ve detayları anlatıyor olacağım. Önceki bölümde,Archlinux Wiki “Installation Guide”sayfasında yer alan yönergeleri takip ederek kurulum yaptığımı belirtmiştim. Tek bir sayfa ve kısa olduğu için kurulumun kolay olacağını düşünmüştüm ancak durum sandığım kadar basit değildi. Çünkü ezbere bir kurulum yapmak istemediğim için diğer sayfalara verilen bağlantıların hemen hemen hepsine tek tek girip okumuştum. Neticede, okuduklarım ışığında ilk sayfadakinden biraz farklı bir kurulum gerçekleştirmiş oldum.</description>
     </item>
     
     <item>
       <title>Giriş</title>
-      <link>http://example.org/2018/06/giris/</link>
+      <link>https://ceylanb.gitlab.io/2018/06/giris/</link>
       <pubDate>Mon, 11 Jun 2018 16:38:58 +0000</pubDate>
       
-      <guid>http://example.org/2018/06/giris/</guid>
+      <guid>https://ceylanb.gitlab.io/2018/06/giris/</guid>
       <description>&lt;p&gt;Uzun süre blog açma konusunda gelgitler yaşadıktan sonra nihayet bu blogu açmış bulunuyorum. Elbette, her sonucun bir sebebi olduğu gibi bu kararın da bir sebebi var. Not tutmak, kayıt etmek!&lt;/p&gt;</description>
     </item>
     
