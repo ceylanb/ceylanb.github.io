@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ceylan Bozogullarindan&#39;s Webpage</title>
-    <link>https://ceylanb.gitlab.io/en/</link>
+    <link>https://ceylanb.github.io/en/</link>
     <description>Recent content on Ceylan Bozogullarindan&#39;s Webpage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>tr</language>
-    <copyright>Ceylan Bozoğullarından</copyright><atom:link href="https://ceylanb.gitlab.io/en/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Ceylan Bozoğullarından</copyright><atom:link href="https://ceylanb.github.io/en/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

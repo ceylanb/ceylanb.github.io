@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>python on Ceylan Bozoğullarından | Kişisel Web Sayfası</title>
-    <link>https://ceylanb.gitlab.io/tags/python/</link>
+    <link>https://ceylanb.github.io/tags/python/</link>
     <description>Recent content in python on Ceylan Bozoğullarından | Kişisel Web Sayfası</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>tr</language>
     <copyright>Ceylan Bozoğullarından</copyright>
-    <lastBuildDate>Tue, 28 Aug 2018 13:33:29 +0000</lastBuildDate><atom:link href="https://ceylanb.gitlab.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 28 Aug 2018 13:33:29 +0000</lastBuildDate><atom:link href="https://ceylanb.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Celery: Büyük İşlemlerin Asenkron İşletilmesi (Django)</title>
-      <link>https://ceylanb.gitlab.io/2018/08/django-asenkron-islemler-celery/</link>
+      <link>https://ceylanb.github.io/2018/08/django-asenkron-islemler-celery/</link>
       <pubDate>Tue, 28 Aug 2018 13:33:29 +0000</pubDate>
       
-      <guid>https://ceylanb.gitlab.io/2018/08/django-asenkron-islemler-celery/</guid>
+      <guid>https://ceylanb.github.io/2018/08/django-asenkron-islemler-celery/</guid>
       <description>Son yazımda arkadaşımın akademik çalışmasından bahsetmiştim. Bu yazının içeriği de Python’da Django Framework üzerinde Celery kullanarak, büyük işlemlerin arka planda asenkron olarak işletilmesi üzerine olacak.
 Asenkron işlemlere neden ihtiyaç duyduğumu belirtmek için projemden kısaca bahsedeyim. Projenin amacı özetle; sembolik regresyon problemlerinin, kullanıcı dostu bir arayüzle evrimsel hesaplama algoritmaları kullanılarak web uygulaması üzerinden çözülebilmesini sağlamak. Amaçtan da anlaşıldığı gibi bir web uygulamasında saatler sürecek işlemlerin gerçekleştirilmesi gerekiyor. Bu işlemlerin, web uygulamasındaki gezintiyi etkilememesi için işlemlerin arkaplanda asenkron olarak çalıştırılması gerekiyor.</description>
     </item>
