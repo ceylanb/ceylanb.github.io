@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vim on Ceylan Bozoğullarından | Kişisel Web Sayfası</title>
+    <link>https://bozogullarindan.com/tags/vim/</link>
+    <description>Recent content in vim on Ceylan Bozoğullarından | Kişisel Web Sayfası</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>tr</language>
+    <copyright>Ceylan Bozoğullarından</copyright>
+    <lastBuildDate>Sun, 01 Jul 2018 11:13:59 +0000</lastBuildDate><atom:link href="https://bozogullarindan.com/tags/vim/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Archlinux Serüveni 3 : Vim</title>
+      <link>https://bozogullarindan.com/2018/07/archlinux-seruveni-bolum-3-vim/</link>
+      <pubDate>Sun, 01 Jul 2018 11:13:59 +0000</pubDate>
+      
+      <guid>https://bozogullarindan.com/2018/07/archlinux-seruveni-bolum-3-vim/</guid>
+      <description>Artık bir Linux kullanıcısı olduğuma göre geleneksel editör alışkanlıklarımı da değiştirmenin vakti geldi. Tabii burada sadece kullanım alışkanlıklarından da öte kas alışkanlıkları da devreye giriyor. Çünkü geleneksel editörlerde bolca fare ve yön tuşları kullanımı vardı fakat geçiş yaptığım Vim editöründe, tamamen klavye kullanımı söz konusu. Dolayısıyla bazen yön tuşlarına giden elimi ulaşmadan geri çevirmek gibi kas alışkanlıklarıyla karşı karşıya kalıyorum. Bunu sağlak birinin sol elle yazı yazma çabasına benzetebiliriz. Bu bölümde Vim editöründen, kullanmakta zorlandığım noktalardan ve son olarak bu zorlukları kolaylaştırma çabamdan bahsedeceğim.</description>
+    </item>
+    
+  </channel>
+</rss>

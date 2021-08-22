@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linux on Ceylan Bozoğullarından | Kişisel Web Sayfası</title>
+    <link>https://bozogullarindan.com/tags/linux/</link>
+    <description>Recent content in linux on Ceylan Bozoğullarından | Kişisel Web Sayfası</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>tr</language>
+    <copyright>Ceylan Bozoğullarından</copyright>
+    <lastBuildDate>Wed, 13 Jun 2018 10:26:22 +0000</lastBuildDate><atom:link href="https://bozogullarindan.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Archlinux Serüveni: Bölüm 1</title>
+      <link>https://bozogullarindan.com/2018/06/archlinux-seruveni-bolum-1/</link>
+      <pubDate>Wed, 13 Jun 2018 10:26:22 +0000</pubDate>
+      
+      <guid>https://bozogullarindan.com/2018/06/archlinux-seruveni-bolum-1/</guid>
+      <description>Windows geleneğinden gelen bir kullanıcının yani benim, Linux’a geçiş evrelerinde neler yaşadığımı, hangi problemlerle karşılaştığımı, beğenilerimi, araçlar hakkındaki yorumlarımı en başından anlatan “Archlinux Serüveni” başlıklı yazı dizisini başlatmak istedim. Bu bölümde Linux dağıtımı seçerken dikkate aldığım parametrelerden ve sonucunda seçtiğim Archlinux’tan, edindiğim başlangıç deneyimlerinden kısaca bahsettim. Sonraki bölümde bu deneyimlere daha detaylı değiniyor olacağım.
+Uzun süredir kişisel bilgisayarımda Windows işletim sistemi kullanıyordum. Ama her zaman bir tarafım Linux kullanmaktan yanaydı.</description>
+    </item>
+    
+  </channel>
+</rss>

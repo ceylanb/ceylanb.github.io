@@ -2,8 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://bozogullarindan.com/categories/akademik/</loc>
+    <lastmod>2019-07-06T16:15:59+00:00</lastmod>
+  </url><url>
+    <loc>https://bozogullarindan.com/tags/artificial-intelligence/</loc>
+    <lastmod>2019-07-06T16:15:59+00:00</lastmod>
+  </url><url>
     <loc>https://bozogullarindan.com/categories/</loc>
-    <lastmod>2020-01-27T15:48:49+00:00</lastmod>
+    <lastmod>2019-07-06T16:15:59+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -16,7 +22,7 @@
                 />
   </url><url>
     <loc>https://bozogullarindan.com/</loc>
-    <lastmod>2020-01-27T15:48:49+00:00</lastmod>
+    <lastmod>2019-07-06T16:15:59+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -27,21 +33,6 @@
                 hreflang="tr"
                 href="https://bozogullarindan.com/"
                 />
-  </url><url>
-    <loc>https://bozogullarindan.com/posts/</loc>
-    <lastmod>2020-01-27T15:48:49+00:00</lastmod>
-  </url><url>
-    <loc>https://bozogullarindan.com/categories/uncategorized/</loc>
-    <lastmod>2020-01-27T15:48:49+00:00</lastmod>
-  </url><url>
-    <loc>https://bozogullarindan.com/2020/01/webgoat-insecure-deserialization-cozumu/</loc>
-    <lastmod>2020-01-27T15:48:49+00:00</lastmod>
-  </url><url>
-    <loc>https://bozogullarindan.com/categories/akademik/</loc>
-    <lastmod>2019-07-06T16:15:59+00:00</lastmod>
-  </url><url>
-    <loc>https://bozogullarindan.com/tags/artificial-intelligence/</loc>
-    <lastmod>2019-07-06T16:15:59+00:00</lastmod>
   </url><url>
     <loc>https://bozogullarindan.com/tags/deep-learning/</loc>
     <lastmod>2019-07-06T16:15:59+00:00</lastmod>
@@ -59,6 +50,9 @@
     <lastmod>2019-07-06T16:15:59+00:00</lastmod>
   </url><url>
     <loc>https://bozogullarindan.com/tags/phishing/</loc>
+    <lastmod>2019-07-06T16:15:59+00:00</lastmod>
+  </url><url>
+    <loc>https://bozogullarindan.com/posts/</loc>
     <lastmod>2019-07-06T16:15:59+00:00</lastmod>
   </url><url>
     <loc>https://bozogullarindan.com/categories/siber-g%C3%BCvenlik/</loc>
@@ -159,13 +153,40 @@
     <lastmod>2018-08-28T13:33:29+00:00</lastmod>
   </url><url>
     <loc>https://bozogullarindan.com/tags/archlinux/</loc>
-    <lastmod>2018-06-21T08:40:09+00:00</lastmod>
+    <lastmod>2018-07-09T13:04:10+00:00</lastmod>
+  </url><url>
+    <loc>https://bozogullarindan.com/2018/07/archlinux-seruveni-4-yazici-sorunu/</loc>
+    <lastmod>2018-07-09T13:04:10+00:00</lastmod>
+  </url><url>
+    <loc>https://bozogullarindan.com/tags/cups/</loc>
+    <lastmod>2018-07-09T13:04:10+00:00</lastmod>
+  </url><url>
+    <loc>https://bozogullarindan.com/tags/nostringval-error/</loc>
+    <lastmod>2018-07-09T13:04:10+00:00</lastmod>
+  </url><url>
+    <loc>https://bozogullarindan.com/tags/printing/</loc>
+    <lastmod>2018-07-09T13:04:10+00:00</lastmod>
+  </url><url>
+    <loc>https://bozogullarindan.com/2018/07/archlinux-seruveni-bolum-3-vim/</loc>
+    <lastmod>2018-07-01T11:13:59+00:00</lastmod>
+  </url><url>
+    <loc>https://bozogullarindan.com/tags/vim/</loc>
+    <lastmod>2018-07-01T11:13:59+00:00</lastmod>
   </url><url>
     <loc>https://bozogullarindan.com/2018/06/archlinux-seruveni-2-kurulum/</loc>
     <lastmod>2018-06-21T08:40:09+00:00</lastmod>
   </url><url>
     <loc>https://bozogullarindan.com/tags/kurulum/</loc>
     <lastmod>2018-06-21T08:40:09+00:00</lastmod>
+  </url><url>
+    <loc>https://bozogullarindan.com/2018/06/archlinux-seruveni-bolum-1/</loc>
+    <lastmod>2018-06-13T10:26:22+00:00</lastmod>
+  </url><url>
+    <loc>https://bozogullarindan.com/tags/i%C5%9Fletim-sistemi/</loc>
+    <lastmod>2018-06-13T10:26:22+00:00</lastmod>
+  </url><url>
+    <loc>https://bozogullarindan.com/tags/linux/</loc>
+    <lastmod>2018-06-13T10:26:22+00:00</lastmod>
   </url><url>
     <loc>https://bozogullarindan.com/2018/06/giris/</loc>
     <lastmod>2018-06-11T16:38:58+00:00</lastmod>

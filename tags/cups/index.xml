@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cups on Ceylan Bozoğullarından | Kişisel Web Sayfası</title>
+    <link>https://bozogullarindan.com/tags/cups/</link>
+    <description>Recent content in cups on Ceylan Bozoğullarından | Kişisel Web Sayfası</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>tr</language>
+    <copyright>Ceylan Bozoğullarından</copyright>
+    <lastBuildDate>Mon, 09 Jul 2018 13:04:10 +0000</lastBuildDate><atom:link href="https://bozogullarindan.com/tags/cups/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Archlinux Serüveni 4: Yazıcı Sorunu</title>
+      <link>https://bozogullarindan.com/2018/07/archlinux-seruveni-4-yazici-sorunu/</link>
+      <pubDate>Mon, 09 Jul 2018 13:04:10 +0000</pubDate>
+      
+      <guid>https://bozogullarindan.com/2018/07/archlinux-seruveni-4-yazici-sorunu/</guid>
+      <description>&lt;p&gt;Archlinux’u kurduğumdan bu yana, yazdırma ile ilgili sorunlar yaşıyordum ve bugün itibariyle sorunu çözüp buraya not etmek istedim. Bu bölümün içeriğinde, karşılaştığım yazıcı sorunlarını ve çözümünü anlatıyor olacağım.&lt;/p&gt;
+&lt;p&gt;Hemen yazıcı marka ve modelimi belirteyim: Lexmark E260d. Windows kullanırken her şey çok rahattı. Sürücüsünü kurup, yazdırıyordum istediğim uygulamadan istediğim belge türlerini. Ancak bu durum Archlinux kurduktan sonra iyice bulaşık bir hal aldı. O hallerden biraz bahsedeyim.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

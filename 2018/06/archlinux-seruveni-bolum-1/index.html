@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> Archlinux Serüveni: Bölüm 1 | Ceylan Bozoğullarından | Kişisel Web Sayfası</title>
+  <link rel = 'canonical' href = 'https://bozogullarindan.com/2018/06/archlinux-seruveni-bolum-1/'>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta property="og:title" content="Archlinux Serüveni: Bölüm 1" />
+<meta property="og:description" content="Windows geleneğinden gelen bir kullanıcının yani benim, Linux’a geçiş evrelerinde neler yaşadığımı, hangi problemlerle karşılaştığımı, beğenilerimi, araçlar hakkındaki yorumlarımı en başından anlatan “Archlinux Serüveni” başlıklı yazı dizisini başlatmak istedim. Bu bölümde Linux dağıtımı seçerken dikkate aldığım parametrelerden ve sonucunda seçtiğim Archlinux’tan, edindiğim başlangıç deneyimlerinden kısaca bahsettim. Sonraki bölümde bu deneyimlere daha detaylı değiniyor olacağım.
+Uzun süredir kişisel bilgisayarımda Windows işletim sistemi kullanıyordum. Ama her zaman bir tarafım Linux kullanmaktan yanaydı." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://bozogullarindan.com/2018/06/archlinux-seruveni-bolum-1/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2018-06-13T10:26:22+00:00" />
+<meta property="article:modified_time" content="2018-06-13T10:26:22+00:00" /><meta property="og:site_name" content="Ceylan Bozoğullarından | Kişisel Web Sayfası" />
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Archlinux Serüveni: Bölüm 1"/>
+<meta name="twitter:description" content="Windows geleneğinden gelen bir kullanıcının yani benim, Linux’a geçiş evrelerinde neler yaşadığımı, hangi problemlerle karşılaştığımı, beğenilerimi, araçlar hakkındaki yorumlarımı en başından anlatan “Archlinux Serüveni” başlıklı yazı dizisini başlatmak istedim. Bu bölümde Linux dağıtımı seçerken dikkate aldığım parametrelerden ve sonucunda seçtiğim Archlinux’tan, edindiğim başlangıç deneyimlerinden kısaca bahsettim. Sonraki bölümde bu deneyimlere daha detaylı değiniyor olacağım.
+Uzun süredir kişisel bilgisayarımda Windows işletim sistemi kullanıyordum. Ama her zaman bir tarafım Linux kullanmaktan yanaydı."/>
+
+  
+  
+    
+  
+  
+  <link rel="stylesheet" href="https://bozogullarindan.com/css/styles.c05d68261bf086a9d7713c4f8a6215a3601608e267a816a7ee58f139b3d1aae51222aae2081c8e0c6bd35e1334773b7a16283022f31f92afd93bb37e5e822e66.css" integrity="sha512-wF1oJhvwhqnXcTxPimIVo2AWCOJnqBan7ljxObPRquUSIqriCByODGvTXhM0dzt6FigwIvMfkq/ZO7N&#43;XoIuZg==">
+  <link rel="stylesheet" href="https://bozogullarindan.com/css/styles.aa7f4879cac49d951c789d9f35a54627ec2d3da6b0f6b1a638d54cd60a3b1d4d827cc0a737e071cbe211e5813758ffcd847cd7fc33aea5573917e1718700e955.css" integrity="sha512-qn9IecrEnZUceJ2fNaVGJ&#43;wtPaaw9rGmONVM1go7HU2CfMCnN&#43;Bxy&#43;IR5YE3WP/NhHzX/DOupVc5F&#43;FxhwDpVQ=="> 
+
+  
+  
+  
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+  
+<link rel="icon" type="image/png" href="https://bozogullarindan.com/images/favicon.ico" />
+
+  
+  
+  
+  
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+  <div class="content index py4">
+
+  <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+        <li><a href="/">Anasayfa</a></li>
+         
+        <li><a href="/posts">Tüm Yazılar</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li>
+          <a class="icon" href=" https://bozogullarindan.com/2018/06/giris/" aria-label="Previous">
+            <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a class="icon" href="https://bozogullarindan.com/2018/06/archlinux-seruveni-2-kurulum/" aria-label="Next">
+            <i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i>
+          </a>
+        </li>
+        
+        <li>
+          <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+            <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i>
+          </a>
+        </li>
+        <li>
+          <a class="icon" href="#" aria-label="Share">
+            <i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i>
+          </a>
+        </li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Önceki Yazı</span>
+      <span id="i-next" class="info" style="display:none;">Sonraki Yazı</span>
+      <span id="i-top" class="info" style="display:none;">Yukarı Dön</span>
+      <span id="i-share" class="info" style="display:none;">Yazıyı Paylaş</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fbozogullarindan.com%2f2018%2f06%2farchlinux-seruveni-bolum-1%2f" aria-label="Facebook">
+      <i class="fab fa-facebook " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fbozogullarindan.com%2f2018%2f06%2farchlinux-seruveni-bolum-1%2f&text=Archlinux%20Ser%c3%bcveni%3a%20B%c3%b6l%c3%bcm%201" aria-label="Twitter">
+      <i class="fab fa-twitter " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fbozogullarindan.com%2f2018%2f06%2farchlinux-seruveni-bolum-1%2f&title=Archlinux%20Ser%c3%bcveni%3a%20B%c3%b6l%c3%bcm%201" aria-label="Linkedin">
+      <i class="fab fa-linkedin " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fbozogullarindan.com%2f2018%2f06%2farchlinux-seruveni-bolum-1%2f&is_video=false&description=Archlinux%20Ser%c3%bcveni%3a%20B%c3%b6l%c3%bcm%201" aria-label="Pinterest">
+      <i class="fab fa-pinterest " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=Archlinux%20Ser%c3%bcveni%3a%20B%c3%b6l%c3%bcm%201&body=Check out this article: https%3a%2f%2fbozogullarindan.com%2f2018%2f06%2farchlinux-seruveni-bolum-1%2f" aria-label="Email">
+      <i class="fas fa-envelope " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fbozogullarindan.com%2f2018%2f06%2farchlinux-seruveni-bolum-1%2f&title=Archlinux%20Ser%c3%bcveni%3a%20B%c3%b6l%c3%bcm%201" aria-label="Pocket">
+      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fbozogullarindan.com%2f2018%2f06%2farchlinux-seruveni-bolum-1%2f&title=Archlinux%20Ser%c3%bcveni%3a%20B%c3%b6l%c3%bcm%201" aria-label="reddit">
+      <i class="fab fa-reddit " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fbozogullarindan.com%2f2018%2f06%2farchlinux-seruveni-bolum-1%2f&name=Archlinux%20Ser%c3%bcveni%3a%20B%c3%b6l%c3%bcm%201&description=Windows%20gelene%c4%9finden%20gelen%20bir%20kullan%c4%b1c%c4%b1n%c4%b1n%20yani%20benim%2c%20Linux%e2%80%99a%20ge%c3%a7i%c5%9f%20evrelerinde%20neler%20ya%c5%9fad%c4%b1%c4%9f%c4%b1m%c4%b1%2c%20hangi%20problemlerle%20kar%c5%9f%c4%b1la%c5%9ft%c4%b1%c4%9f%c4%b1m%c4%b1%2c%20be%c4%9fenilerimi%2c%20ara%c3%a7lar%20hakk%c4%b1ndaki%20yorumlar%c4%b1m%c4%b1%20en%20ba%c5%9f%c4%b1ndan%20anlatan%20%e2%80%9cArchlinux%20Ser%c3%bcveni%e2%80%9d%20ba%c5%9fl%c4%b1kl%c4%b1%20yaz%c4%b1%20dizisini%20ba%c5%9flatmak%20istedim.%c2%a0Bu%20b%c3%b6l%c3%bcmde%20Linux%20da%c4%9f%c4%b1t%c4%b1m%c4%b1%20se%c3%a7erken%20dikkate%20ald%c4%b1%c4%9f%c4%b1m%20parametrelerden%20ve%20sonucunda%20se%c3%a7ti%c4%9fim%20Archlinux%e2%80%99tan%2c%20edindi%c4%9fim%20ba%c5%9flang%c4%b1%c3%a7%20deneyimlerinden%20k%c4%b1saca%20bahsettim.%20Sonraki%20b%c3%b6l%c3%bcmde%20bu%20deneyimlere%20daha%20detayl%c4%b1%20de%c4%9finiyor%20olaca%c4%9f%c4%b1m.%0aUzun%20s%c3%bcredir%20ki%c5%9fisel%20bilgisayar%c4%b1mda%20Windows%20i%c5%9fletim%20sistemi%20kullan%c4%b1yordum.%c2%a0Ama%20her%20zaman%20bir%20taraf%c4%b1m%20Linux%20kullanmaktan%20yanayd%c4%b1." aria-label="Tumblr">
+      <i class="fab fa-tumblr " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fbozogullarindan.com%2f2018%2f06%2farchlinux-seruveni-bolum-1%2f&t=Archlinux%20Ser%c3%bcveni%3a%20B%c3%b6l%c3%bcm%201" aria-label="Hacker News">
+      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#archlinux">Archlinux</a></li>
+    <li><a href="#ubuntu-mint-pclinuxos-debian">Ubuntu, Mint, PCLinuxOS, Debian</a></li>
+    <li><a href="#manjaro">Manjaro</a></li>
+    <li><a href="#kaynaklar">Kaynaklar</a></li>
+  </ul>
+</nav>
+    </div>
+  </span>
+</div>
+
+
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+      <h1 class="posttitle" itemprop="name headline">
+        Archlinux Serüveni: Bölüm 1
+      </h1>
+      <div class="meta">
+        
+        <div class="postdate">
+          
+          <time datetime="2018-06-13 10:26:22 &#43;0000 &#43;0000" itemprop="datePublished">2018-06-13</time>
+          
+        </div>
+        
+        
+        <div class="article-read-time">
+          <i class="far fa-clock"></i>
+          
+          4 dakikalık okuma
+        </div>
+        
+        
+        <div class="article-category">
+            <i class="fas fa-archive"></i>
+            
+            
+            <a class="category-link" href="/categories/linux">Linux</a>
+            
+        </div>
+        
+        
+        <div class="article-tag">
+            <i class="fas fa-tag"></i>
+            
+            
+            <a class="tag-link" href="/tags/archlinux" rel="tag">archlinux</a>
+            
+             ,  
+            <a class="tag-link" href="/tags/i%C5%9Fletim-sistemi" rel="tag">işletim sistemi</a>
+            
+             ,  
+            <a class="tag-link" href="/tags/linux" rel="tag">linux</a>
+            
+        </div>
+        
+      </div>
+    </header>
+
+  
+    <div class="content" itemprop="articleBody">
+      <p>
+  <img src="/posts/arch-seruveni-1/arch-seruveni-1.png" alt="Archey">
+
+</p>
+<p>Windows geleneğinden gelen bir kullanıcının yani benim, Linux’a geçiş evrelerinde neler yaşadığımı, hangi problemlerle karşılaştığımı, beğenilerimi, araçlar hakkındaki yorumlarımı en başından anlatan “Archlinux Serüveni” başlıklı yazı dizisini başlatmak istedim. Bu bölümde Linux dağıtımı seçerken dikkate aldığım parametrelerden ve sonucunda seçtiğim Archlinux’tan, edindiğim başlangıç deneyimlerinden kısaca bahsettim. Sonraki bölümde bu deneyimlere daha detaylı değiniyor olacağım.</p>
+<p>Uzun süredir kişisel bilgisayarımda Windows işletim sistemi kullanıyordum.  Ama her zaman bir tarafım Linux kullanmaktan yanaydı. Öyle bilgisayarıma çok sık format atan biri olmadığım için Linux işletim sistemine geçmeye de üşeniyordum doğrusu. Ancak işler son iki haftada değişti. Yeni başladığım işim için kurum tarafından alınan yeni bilgisayarıma Linux kurmaya karar verdim. Tabii akla gelen ilk soru şu oldu, “Hangi Linux dağıtımını kullanmalıyım?”.</p>
+<p>Bu soruya yanıt verebilmek için bir işletim sisteminden neler beklediğimi belirlemeliydim. Biraz düşününce; hızlı, esnek, sürekli güncel tutulan, sık kullandığım uygulamalarla uyumlu, geliştirici topluluğu geniş, <!-- raw HTML omitted -->ücretsiz, kişisel verilerimi hizmet geliştireceğim muhabbetiyle toplamayan,<!-- raw HTML omitted --> Linux’u sıfırdan öğrenebileceğim, ilgili olduğum siber güvenlik alanında övgüler alan, sahip olduğum bilgisayar donanımlarını/kaynaklarını destekleyen ve bu kaynakları en verimli şekilde kullanabilen bir işletim sistemini tercih etmeliydim. Bu doğrultuda Archlinux dağıtımının benim isteklerimi karşılayacağına “inandım” ve kurdum. Böylece Archlinux serüvenim başlamış oldu.</p>
+<p>Gelelim sorgulanması gereken diğer konuya, “Neden Archlinux?”. Bu konu üzerine çok düşünmedim ve araştırma da yapmadım açıkçası. Bilinen güvenlik uzmanlarının kullandığı ve tavsiye ettiği bir dağıtım olduğu için Archlinux ‘u tercih ettim [1, 2]. Tabii araştırmadan, sadece birilerinin tavsiyesi ile hareket etmek doğru olmaz. İş işten geçti, kurdum artık. Ama olsun, en azından ne kurduğuma bir göz atayım şimdi…</p>
+<h2 id="archlinux">Archlinux</h2>
+<p>Deneyimlediğim en büyük avantajlarından biri, dokümantasyonun çok iyi hazırlanmış olması. <!-- raw HTML omitted -->Wiki sayfasında<!-- raw HTML omitted --> kurulumundan, karşılaşılacak problemlere kadar hemen her konuya değinilmiş diyebilirim. Evet bazı konularda forumları gezme ihtiyacı hissettim ama olsun o kadar.</p>
+<p>Yine diğer bir iyi yanı (benim için), kurulumdan bu yana birçok yeni şeyi öğrenmiş olmam. Kurulum esnasında öğrenirken zorlanmadım diyemem. Çünkü kurulumda dahi “mount” işlemi, “UEFI/BIOS” kavramları, “Boot Loader” kavramı gibi birçok kimisini önceden yarım yamalak öğrenip kafamda oturtamadığım kimisini ise hiç duymadığım yeni şeyler öğrendim. Hala problem oldukça, çözüm buldukça öğrenmeye devam ediyorum.</p>
+<p>Diğer birçok dağıtım gibi ücretsiz ve kişisel verilerimi almaya çalışmamasının yanı sıra uygulama/paket yelpazesinin geniş ve paket yönetiminin kolay olması övgüyü hakediyor. Bu özelliklerini diğer dağıtımlarla maalesef kıyaslayamıyorum ama birçok kaynakta paket yönetiminin mükemmel olduğundan bahsediliyor [4]. Nedenini bilmiyorum, kullandıkça anlayacağım sanırım.</p>
+<p>“Lightweight” olarak tanımlanan bir işletim sistemi olmasının nedeni, kurulduğunda 100Mb dahi RAM kullanmayacak şekilde sadece birkaç ekstra paketle geliyor olması. Windows’un beraberinde gelen birçok kullanmadığımız özelliklerinin sisteme getirdiği yükü düşündüğümüzde sanırım Archlinux bu özelliği ile büyük bir nimet olarak görünecektir gözümüze.</p>
+<p>Hep olumlu yanlarından bahsettim, bir de şuana kadar gördüğüm tek olumsuz tarafını da belirtmeden geçmeyeyim. Tahmin etmesi zor olmasa gerek, bilmemek! Kurulum esnasında ve sonrasında, bilmeden ezbere hareket etmemek için hemen her şeyi araştırıp okumak zorunda kaldım. Hatta bazen birden fazla doğru olduğunda hangisinin en iyisi olduğuna da ordan burdan yorumları okuyarak karar verdim.</p>
+<p>Örnek vereyim, kurulum aşamasında bir SSD bir de HDD diskim olduğu için bu ikisini en uygun şekilde bölümlendirip, mount etmem gerekiyordu. Bunu doğru şekilde yapabilmek için epey vakit harcamıştım. Forumlarda ayrı telden çalanlar da vardı, gerçekten en doğrusunu yapanlar da. Zor olanda bu ya, farklı durumlarda internet çöplüğünde sana en uygun çözümü bulabilmek. Diğer bir örnek, PDF görüntüleyici gibi diğer işlevler için kullanılabilecek birden çok alternatif vardı mesela. Hangisinin iyi olduğunu bilmiyordum. Bu durumlarda da Reddit, Quora gibi platformlardan milletin o iş için ne kullandığını ve neden kullandığını araştırmak gerekti. Her bir araştırma sonucunda yeni şeyler öğrendim tabii ama vakit alıcı ve yorucuydu. O yüzden sabrınız yoksa, Archlinux kurmayı tekrar düşünün derim.</p>
+<p>Elbette bilmediğim birçok özelliği daha vardır. Ya da şuanda nimetinden yararlandığım ancak farkına varamadığım parametreler de vardır. Bunları deneyimledikçe bu yazıyı güncellerim.</p>
+<p>Archlinux’un kendi wiki sayfasında diğer dağıtımlarla farklı parametreler üzerine karşılaştırmalar yapılmış zaten [3]. Ben sadece Archlinux’un yukarıdaki isteklerime cevap veren taraflarına değinerek, bilinen diğer işletim sistemlerini [4] seçebilir miydim diye ufak çaplı bir değerlendirme yapacağım.</p>
+<h2 id="ubuntu-mint-pclinuxos-debian">Ubuntu, Mint, PCLinuxOS, Debian</h2>
+<p>Bu dağıtımlar kullanıcı dostu ve dünyada en sık kullanılan dağıtımlardır. Linux ile tanışmak isteyen kullanıcılar için tavsiye edilebilir. Kullanım kolaylığı, geniş paket yelpazesi ile normal kullanıcı ihtiyaçlarını rahatça karşılayabiliyorlar. Ubuntu, Mint ve Debian’ı daha önce kurup deneme şansım olmuştu. Archlinux kurma ve kullanma serüvenimde deneyimlediğim Linux kullanım hissiyatını vermemişlerdi bana. Öğrenme amacıyla çıktığım bu yol için bunları seçmediğim iyi olmuş diyebilirim. Bir araştırmacının konu ile ilgili benzetmesini de buraya not edelim.</p>
+<blockquote>
+<p>I would compare it to the difference between buying a toy car and buying a model kit where we paint the individual pieces and glue them together. Putting together the model takes a lot longer and requires some skill, but what we end up with includes just the pieces we used and in the colour we wanted. [6]</p>
+</blockquote>
+<h2 id="manjaro">Manjaro</h2>
+<p>Başkalarının Archlinux ile ilgili deneyimlerini okurken bu işletim sistemi hakkında karşılaştığım bir cümleyi de buraya not etmeden geçmeyeyim. Bu arada kendileri de Archlinux tabanlı bir Linux dağıtımıdır.</p>
+<blockquote>
+<p>I’ve read a number of comments on Reddit from people who found their Manjaro installation broken after an update. [5]</p>
+</blockquote>
+<p>Yeteri kadar zamanım olsaydı biraz daha eşeleyip diğer dağıtımlarla da kıyaslama yapacaktım. Fakat zaman buna elvermedi. Ama sonradan aklıma eser de bir daha araştırma aksiyonuna girişirsem burayı güncellerim.</p>
+<p>Sonraki bölümlerde, Windows’ta sıkça kullandığım araçlar yerine Archlinux’ta neler kullanıyorum ve bu araçlar hakkındaki yorumlarım neler, bunlardan bahsetmeyi  de planlıyorum.</p>
+<h2 id="kaynaklar">Kaynaklar</h2>
+<ol>
+<li>
+<p>Mehmet Ince. (n.d.). Linux Nasıl Öğrenilir ? – Mehmet INCE | Information Security. Retrieved June 13, 2018, from <a href="https://www.mehmetince.net/linux-nasil-ogrenilir/">https://www.mehmetince.net/linux-nasil-ogrenilir/</a></p>
+</li>
+<li>
+<p>Mehmet Ince. (n.d.). Siber Güvenlik alanında kendimi nasıl geliştirebilirim ? Nereden başlamalıyım ? – Mehmet INCE | Information Security. Retrieved June 13, 2018, from <a href="https://www.mehmetince.net/siber-guvenlik-alaninda-kendimi-nasil-gelistirebilirim-nereden-baslamaliyim/">https://www.mehmetince.net/siber-guvenlik-alaninda-kendimi-nasil-gelistirebilirim-nereden-baslamaliyim/</a></p>
+</li>
+<li>
+<p>Arch compared to other distributions – ArchWiki. (n.d.). Retrieved June 13, 2018, from <a href="https://wiki.archlinux.org/index.php/arch_compared_to_other_distributions">https://wiki.archlinux.org/index.php/arch_compared_to_other_distributions</a></p>
+</li>
+<li>
+<p>DistroWatch.com: Put the fun back into computing. Use Linux, BSD. (n.d.). Retrieved June 13, 2018, from <a href="https://distrowatch.com/dwres.php?resource=major">https://distrowatch.com/dwres.php?resource=major</a></p>
+</li>
+<li>
+<p>Review of Arch Linux on a Lenovo Yoga 900 « keithcu.com. (n.d.). Retrieved June 13, 2018, from <a href="http://keithcu.com/wordpress/?p=3739">http://keithcu.com/wordpress/?p=3739</a></p>
+</li>
+<li>
+<p>DistroWatch.com: Put the fun back into computing. Use Linux, BSD. (n.d.). Retrieved June 13, 2018, from <a href="https://distrowatch.com/weekly.php?issue=20151221#arch">https://distrowatch.com/weekly.php?issue=20151221#arch</a></p>
+</li>
+</ol>
+
+    </div>
+  </article>
+
+  
+  
+
+
+
+
+  
+    <div class="blog-post-comments">
+        <div id="disqus_thread">
+          <script type="text/javascript">
+          
+          (function() {
+              
+              
+              
+              
+          
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              var disqus_shortname = 'bozogullarindan';
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+          <a href="https://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+    </div>
+
+  
+
+
+  <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Anasayfa</a></li>
+         
+          <li><a href="/posts">Tüm Yazılar</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#archlinux">Archlinux</a></li>
+    <li><a href="#ubuntu-mint-pclinuxos-debian">Ubuntu, Mint, PCLinuxOS, Debian</a></li>
+    <li><a href="#manjaro">Manjaro</a></li>
+    <li><a href="#kaynaklar">Kaynaklar</a></li>
+  </ul>
+</nav>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fbozogullarindan.com%2f2018%2f06%2farchlinux-seruveni-bolum-1%2f" aria-label="Facebook">
+      <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fbozogullarindan.com%2f2018%2f06%2farchlinux-seruveni-bolum-1%2f&text=Archlinux%20Ser%c3%bcveni%3a%20B%c3%b6l%c3%bcm%201" aria-label="Twitter">
+      <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fbozogullarindan.com%2f2018%2f06%2farchlinux-seruveni-bolum-1%2f&title=Archlinux%20Ser%c3%bcveni%3a%20B%c3%b6l%c3%bcm%201" aria-label="Linkedin">
+      <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fbozogullarindan.com%2f2018%2f06%2farchlinux-seruveni-bolum-1%2f&is_video=false&description=Archlinux%20Ser%c3%bcveni%3a%20B%c3%b6l%c3%bcm%201" aria-label="Pinterest">
+      <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=Archlinux%20Ser%c3%bcveni%3a%20B%c3%b6l%c3%bcm%201&body=Check out this article: https%3a%2f%2fbozogullarindan.com%2f2018%2f06%2farchlinux-seruveni-bolum-1%2f" aria-label="Email">
+      <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fbozogullarindan.com%2f2018%2f06%2farchlinux-seruveni-bolum-1%2f&title=Archlinux%20Ser%c3%bcveni%3a%20B%c3%b6l%c3%bcm%201" aria-label="Pocket">
+      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fbozogullarindan.com%2f2018%2f06%2farchlinux-seruveni-bolum-1%2f&title=Archlinux%20Ser%c3%bcveni%3a%20B%c3%b6l%c3%bcm%201" aria-label="reddit">
+      <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fbozogullarindan.com%2f2018%2f06%2farchlinux-seruveni-bolum-1%2f&name=Archlinux%20Ser%c3%bcveni%3a%20B%c3%b6l%c3%bcm%201&description=Windows%20gelene%c4%9finden%20gelen%20bir%20kullan%c4%b1c%c4%b1n%c4%b1n%20yani%20benim%2c%20Linux%e2%80%99a%20ge%c3%a7i%c5%9f%20evrelerinde%20neler%20ya%c5%9fad%c4%b1%c4%9f%c4%b1m%c4%b1%2c%20hangi%20problemlerle%20kar%c5%9f%c4%b1la%c5%9ft%c4%b1%c4%9f%c4%b1m%c4%b1%2c%20be%c4%9fenilerimi%2c%20ara%c3%a7lar%20hakk%c4%b1ndaki%20yorumlar%c4%b1m%c4%b1%20en%20ba%c5%9f%c4%b1ndan%20anlatan%20%e2%80%9cArchlinux%20Ser%c3%bcveni%e2%80%9d%20ba%c5%9fl%c4%b1kl%c4%b1%20yaz%c4%b1%20dizisini%20ba%c5%9flatmak%20istedim.%c2%a0Bu%20b%c3%b6l%c3%bcmde%20Linux%20da%c4%9f%c4%b1t%c4%b1m%c4%b1%20se%c3%a7erken%20dikkate%20ald%c4%b1%c4%9f%c4%b1m%20parametrelerden%20ve%20sonucunda%20se%c3%a7ti%c4%9fim%20Archlinux%e2%80%99tan%2c%20edindi%c4%9fim%20ba%c5%9flang%c4%b1%c3%a7%20deneyimlerinden%20k%c4%b1saca%20bahsettim.%20Sonraki%20b%c3%b6l%c3%bcmde%20bu%20deneyimlere%20daha%20detayl%c4%b1%20de%c4%9finiyor%20olaca%c4%9f%c4%b1m.%0aUzun%20s%c3%bcredir%20ki%c5%9fisel%20bilgisayar%c4%b1mda%20Windows%20i%c5%9fletim%20sistemi%20kullan%c4%b1yordum.%c2%a0Ama%20her%20zaman%20bir%20taraf%c4%b1m%20Linux%20kullanmaktan%20yanayd%c4%b1." aria-label="Tumblr">
+      <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fbozogullarindan.com%2f2018%2f06%2farchlinux-seruveni-bolum-1%2f&t=Archlinux%20Ser%c3%bcveni%3a%20B%c3%b6l%c3%bcm%201" aria-label="Hacker News">
+      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      
+        <a id="menu-toggle" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;" aria-label="Menu">
+          <i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc-toggle" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;" aria-label="TOC">
+          <i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share-toggle" class="icon" href="#" onclick="$('#share-footer').toggle();return false;" aria-label="Share">
+          <i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+          <i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+
+  <footer id="footer">
+  <div class="footer-left">
+    Copyright  &copy; 2021  Ceylan Bozoğullarından 
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+        <li><a href="/">Anasayfa</a></li>
+         
+        <li><a href="/posts">Tüm Yazılar</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+
+  </div>
+</body>
+
+<link rel="stylesheet" href=/lib/font-awesome/css/all.min.css>
+<script src=/lib/jquery/jquery.min.js></script>
+<script src=/js/main.js></script>
+<script src=/js/code-copy.js></script>
+
+
+
+</html>

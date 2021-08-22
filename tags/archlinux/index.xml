@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>tr</language>
     <copyright>Ceylan Bozoğullarından</copyright>
-    <lastBuildDate>Thu, 21 Jun 2018 08:40:09 +0000</lastBuildDate><atom:link href="https://bozogullarindan.com/tags/archlinux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 09 Jul 2018 13:04:10 +0000</lastBuildDate><atom:link href="https://bozogullarindan.com/tags/archlinux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Archlinux Serüveni 4: Yazıcı Sorunu</title>
+      <link>https://bozogullarindan.com/2018/07/archlinux-seruveni-4-yazici-sorunu/</link>
+      <pubDate>Mon, 09 Jul 2018 13:04:10 +0000</pubDate>
+      
+      <guid>https://bozogullarindan.com/2018/07/archlinux-seruveni-4-yazici-sorunu/</guid>
+      <description>&lt;p&gt;Archlinux’u kurduğumdan bu yana, yazdırma ile ilgili sorunlar yaşıyordum ve bugün itibariyle sorunu çözüp buraya not etmek istedim. Bu bölümün içeriğinde, karşılaştığım yazıcı sorunlarını ve çözümünü anlatıyor olacağım.&lt;/p&gt;
+&lt;p&gt;Hemen yazıcı marka ve modelimi belirteyim: Lexmark E260d. Windows kullanırken her şey çok rahattı. Sürücüsünü kurup, yazdırıyordum istediğim uygulamadan istediğim belge türlerini. Ancak bu durum Archlinux kurduktan sonra iyice bulaşık bir hal aldı. O hallerden biraz bahsedeyim.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Archlinux Serüveni 2: Kurulum</title>
       <link>https://bozogullarindan.com/2018/06/archlinux-seruveni-2-kurulum/</link>
@@ -15,6 +25,16 @@
       
       <guid>https://bozogullarindan.com/2018/06/archlinux-seruveni-2-kurulum/</guid>
       <description>Bu bölümde, Archlinux Kurulumu’nu değil, kurulum esnasında edindiğim tecrübeleri ve detayları anlatıyor olacağım. Önceki bölümde,Archlinux Wiki “Installation Guide”sayfasında yer alan yönergeleri takip ederek kurulum yaptığımı belirtmiştim. Tek bir sayfa ve kısa olduğu için kurulumun kolay olacağını düşünmüştüm ancak durum sandığım kadar basit değildi. Çünkü ezbere bir kurulum yapmak istemediğim için diğer sayfalara verilen bağlantıların hemen hemen hepsine tek tek girip okumuştum. Neticede, okuduklarım ışığında ilk sayfadakinden biraz farklı bir kurulum gerçekleştirmiş oldum.</description>
+    </item>
+    
+    <item>
+      <title>Archlinux Serüveni: Bölüm 1</title>
+      <link>https://bozogullarindan.com/2018/06/archlinux-seruveni-bolum-1/</link>
+      <pubDate>Wed, 13 Jun 2018 10:26:22 +0000</pubDate>
+      
+      <guid>https://bozogullarindan.com/2018/06/archlinux-seruveni-bolum-1/</guid>
+      <description>Windows geleneğinden gelen bir kullanıcının yani benim, Linux’a geçiş evrelerinde neler yaşadığımı, hangi problemlerle karşılaştığımı, beğenilerimi, araçlar hakkındaki yorumlarımı en başından anlatan “Archlinux Serüveni” başlıklı yazı dizisini başlatmak istedim. Bu bölümde Linux dağıtımı seçerken dikkate aldığım parametrelerden ve sonucunda seçtiğim Archlinux’tan, edindiğim başlangıç deneyimlerinden kısaca bahsettim. Sonraki bölümde bu deneyimlere daha detaylı değiniyor olacağım.
+Uzun süredir kişisel bilgisayarımda Windows işletim sistemi kullanıyordum. Ama her zaman bir tarafım Linux kullanmaktan yanaydı.</description>
     </item>
     
   </channel>

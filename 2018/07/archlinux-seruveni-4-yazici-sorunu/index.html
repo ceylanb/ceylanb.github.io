@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> Archlinux Serüveni 4: Yazıcı Sorunu | Ceylan Bozoğullarından | Kişisel Web Sayfası</title>
+  <link rel = 'canonical' href = 'https://bozogullarindan.com/2018/07/archlinux-seruveni-4-yazici-sorunu/'>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta property="og:title" content="Archlinux Serüveni 4: Yazıcı Sorunu" />
+<meta property="og:description" content="Archlinux’u kurduğumdan bu yana, yazdırma ile ilgili sorunlar yaşıyordum ve bugün itibariyle sorunu çözüp buraya not etmek istedim. Bu bölümün içeriğinde, karşılaştığım yazıcı sorunlarını ve çözümünü anlatıyor olacağım.
+Hemen yazıcı marka ve modelimi belirteyim: Lexmark E260d. Windows kullanırken her şey çok rahattı. Sürücüsünü kurup, yazdırıyordum istediğim uygulamadan istediğim belge türlerini. Ancak bu durum Archlinux kurduktan sonra iyice bulaşık bir hal aldı. O hallerden biraz bahsedeyim." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://bozogullarindan.com/2018/07/archlinux-seruveni-4-yazici-sorunu/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2018-07-09T13:04:10+00:00" />
+<meta property="article:modified_time" content="2018-07-09T13:04:10+00:00" /><meta property="og:site_name" content="Ceylan Bozoğullarından | Kişisel Web Sayfası" />
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Archlinux Serüveni 4: Yazıcı Sorunu"/>
+<meta name="twitter:description" content="Archlinux’u kurduğumdan bu yana, yazdırma ile ilgili sorunlar yaşıyordum ve bugün itibariyle sorunu çözüp buraya not etmek istedim. Bu bölümün içeriğinde, karşılaştığım yazıcı sorunlarını ve çözümünü anlatıyor olacağım.
+Hemen yazıcı marka ve modelimi belirteyim: Lexmark E260d. Windows kullanırken her şey çok rahattı. Sürücüsünü kurup, yazdırıyordum istediğim uygulamadan istediğim belge türlerini. Ancak bu durum Archlinux kurduktan sonra iyice bulaşık bir hal aldı. O hallerden biraz bahsedeyim."/>
+
+  
+  
+    
+  
+  
+  <link rel="stylesheet" href="https://bozogullarindan.com/css/styles.c05d68261bf086a9d7713c4f8a6215a3601608e267a816a7ee58f139b3d1aae51222aae2081c8e0c6bd35e1334773b7a16283022f31f92afd93bb37e5e822e66.css" integrity="sha512-wF1oJhvwhqnXcTxPimIVo2AWCOJnqBan7ljxObPRquUSIqriCByODGvTXhM0dzt6FigwIvMfkq/ZO7N&#43;XoIuZg==">
+  <link rel="stylesheet" href="https://bozogullarindan.com/css/styles.aa7f4879cac49d951c789d9f35a54627ec2d3da6b0f6b1a638d54cd60a3b1d4d827cc0a737e071cbe211e5813758ffcd847cd7fc33aea5573917e1718700e955.css" integrity="sha512-qn9IecrEnZUceJ2fNaVGJ&#43;wtPaaw9rGmONVM1go7HU2CfMCnN&#43;Bxy&#43;IR5YE3WP/NhHzX/DOupVc5F&#43;FxhwDpVQ=="> 
+
+  
+  
+  
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+  
+<link rel="icon" type="image/png" href="https://bozogullarindan.com/images/favicon.ico" />
+
+  
+  
+  
+  
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+  <div class="content index py4">
+
+  <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+        <li><a href="/">Anasayfa</a></li>
+         
+        <li><a href="/posts">Tüm Yazılar</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li>
+          <a class="icon" href=" https://bozogullarindan.com/2018/07/archlinux-seruveni-bolum-3-vim/" aria-label="Previous">
+            <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a class="icon" href="https://bozogullarindan.com/2018/08/django-asenkron-islemler-celery/" aria-label="Next">
+            <i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i>
+          </a>
+        </li>
+        
+        <li>
+          <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+            <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i>
+          </a>
+        </li>
+        <li>
+          <a class="icon" href="#" aria-label="Share">
+            <i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i>
+          </a>
+        </li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Önceki Yazı</span>
+      <span id="i-next" class="info" style="display:none;">Sonraki Yazı</span>
+      <span id="i-top" class="info" style="display:none;">Yukarı Dön</span>
+      <span id="i-share" class="info" style="display:none;">Yazıyı Paylaş</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fbozogullarindan.com%2f2018%2f07%2farchlinux-seruveni-4-yazici-sorunu%2f" aria-label="Facebook">
+      <i class="fab fa-facebook " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fbozogullarindan.com%2f2018%2f07%2farchlinux-seruveni-4-yazici-sorunu%2f&text=Archlinux%20Ser%c3%bcveni%204%3a%20Yaz%c4%b1c%c4%b1%20Sorunu" aria-label="Twitter">
+      <i class="fab fa-twitter " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fbozogullarindan.com%2f2018%2f07%2farchlinux-seruveni-4-yazici-sorunu%2f&title=Archlinux%20Ser%c3%bcveni%204%3a%20Yaz%c4%b1c%c4%b1%20Sorunu" aria-label="Linkedin">
+      <i class="fab fa-linkedin " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fbozogullarindan.com%2f2018%2f07%2farchlinux-seruveni-4-yazici-sorunu%2f&is_video=false&description=Archlinux%20Ser%c3%bcveni%204%3a%20Yaz%c4%b1c%c4%b1%20Sorunu" aria-label="Pinterest">
+      <i class="fab fa-pinterest " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=Archlinux%20Ser%c3%bcveni%204%3a%20Yaz%c4%b1c%c4%b1%20Sorunu&body=Check out this article: https%3a%2f%2fbozogullarindan.com%2f2018%2f07%2farchlinux-seruveni-4-yazici-sorunu%2f" aria-label="Email">
+      <i class="fas fa-envelope " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fbozogullarindan.com%2f2018%2f07%2farchlinux-seruveni-4-yazici-sorunu%2f&title=Archlinux%20Ser%c3%bcveni%204%3a%20Yaz%c4%b1c%c4%b1%20Sorunu" aria-label="Pocket">
+      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fbozogullarindan.com%2f2018%2f07%2farchlinux-seruveni-4-yazici-sorunu%2f&title=Archlinux%20Ser%c3%bcveni%204%3a%20Yaz%c4%b1c%c4%b1%20Sorunu" aria-label="reddit">
+      <i class="fab fa-reddit " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fbozogullarindan.com%2f2018%2f07%2farchlinux-seruveni-4-yazici-sorunu%2f&name=Archlinux%20Ser%c3%bcveni%204%3a%20Yaz%c4%b1c%c4%b1%20Sorunu&description=%3cp%3eArchlinux%e2%80%99u%20kurdu%c4%9fumdan%20bu%20yana%2c%20yazd%c4%b1rma%20ile%20ilgili%20sorunlar%20ya%c5%9f%c4%b1yordum%20ve%20bug%c3%bcn%20itibariyle%20sorunu%20%c3%a7%c3%b6z%c3%bcp%20buraya%20not%20etmek%20istedim.%20Bu%20b%c3%b6l%c3%bcm%c3%bcn%20i%c3%a7eri%c4%9finde%2c%20kar%c5%9f%c4%b1la%c5%9ft%c4%b1%c4%9f%c4%b1m%20yaz%c4%b1c%c4%b1%20sorunlar%c4%b1n%c4%b1%20ve%20%c3%a7%c3%b6z%c3%bcm%c3%bcn%c3%bc%20anlat%c4%b1yor%20olaca%c4%9f%c4%b1m.%3c%2fp%3e%0a%3cp%3eHemen%20yaz%c4%b1c%c4%b1%20marka%20ve%20modelimi%20belirteyim%3a%20Lexmark%20E260d.%20Windows%20kullan%c4%b1rken%20her%20%c5%9fey%20%c3%a7ok%20rahatt%c4%b1.%20S%c3%bcr%c3%bcc%c3%bcs%c3%bcn%c3%bc%20kurup%2c%20yazd%c4%b1r%c4%b1yordum%20istedi%c4%9fim%20uygulamadan%20istedi%c4%9fim%20belge%20t%c3%bcrlerini.%20Ancak%20bu%20durum%20Archlinux%20kurduktan%20sonra%20iyice%20bula%c5%9f%c4%b1k%20bir%20hal%20ald%c4%b1.%20O%20hallerden%20biraz%20bahsedeyim.%3c%2fp%3e" aria-label="Tumblr">
+      <i class="fab fa-tumblr " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fbozogullarindan.com%2f2018%2f07%2farchlinux-seruveni-4-yazici-sorunu%2f&t=Archlinux%20Ser%c3%bcveni%204%3a%20Yaz%c4%b1c%c4%b1%20Sorunu" aria-label="Hacker News">
+      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#karşılaştığım-sorunlar">Karşılaştığım Sorunlar</a></li>
+    <li><a href="#güncelleme-1-10072018">Güncelleme 1 (10.07.2018)</a></li>
+    <li><a href="#güncelleme-2-08082018">Güncelleme 2 (08.08.2018)</a></li>
+    <li><a href="#kaynaklar">Kaynaklar</a></li>
+  </ul>
+</nav>
+    </div>
+  </span>
+</div>
+
+
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+      <h1 class="posttitle" itemprop="name headline">
+        Archlinux Serüveni 4: Yazıcı Sorunu
+      </h1>
+      <div class="meta">
+        
+        <div class="postdate">
+          
+          <time datetime="2018-07-09 13:04:10 &#43;0000 &#43;0000" itemprop="datePublished">2018-07-09</time>
+          
+        </div>
+        
+        
+        <div class="article-read-time">
+          <i class="far fa-clock"></i>
+          
+          4 dakikalık okuma
+        </div>
+        
+        
+        <div class="article-category">
+            <i class="fas fa-archive"></i>
+            
+            
+            <a class="category-link" href="/categories/linux">Linux</a>
+            
+        </div>
+        
+        
+        <div class="article-tag">
+            <i class="fas fa-tag"></i>
+            
+            
+            <a class="tag-link" href="/tags/archlinux" rel="tag">archlinux</a>
+            
+             ,  
+            <a class="tag-link" href="/tags/cups" rel="tag">cups</a>
+            
+             ,  
+            <a class="tag-link" href="/tags/nostringval-error" rel="tag">nostringval error</a>
+            
+             ,  
+            <a class="tag-link" href="/tags/printing" rel="tag">printing</a>
+            
+        </div>
+        
+      </div>
+    </header>
+
+  
+    <div class="content" itemprop="articleBody">
+      <p>Archlinux’u kurduğumdan bu yana, yazdırma ile ilgili sorunlar yaşıyordum ve bugün itibariyle sorunu çözüp buraya not etmek istedim. Bu bölümün içeriğinde, karşılaştığım yazıcı sorunlarını ve çözümünü anlatıyor olacağım.</p>
+<p>Hemen yazıcı marka ve modelimi belirteyim: Lexmark E260d. Windows kullanırken her şey çok rahattı. Sürücüsünü kurup, yazdırıyordum istediğim uygulamadan istediğim belge türlerini. Ancak bu durum Archlinux kurduktan sonra iyice bulaşık bir hal aldı. O hallerden biraz bahsedeyim.</p>
+<h2 id="karşılaştığım-sorunlar">Karşılaştığım Sorunlar</h2>
+<p>Yazıcıyı sisteme tanıtmak için <!-- raw HTML omitted -->Archlinux Wiki – CUPS<!-- raw HTML omitted --> başlıklı sayfayı okuyup kurulumu yapmıştım. Sistem tanıdı mı yazıcıyı? Evet tanıdı. Ancak her uygulamadan yazdırma işlemini gerçekleştiremiyordum. Mesela Chrome ile açtığım bir PDF dosyasını yazdırmaya çalıştığımda A4 kağıda şu satırlar dökülüyordu:</p>
+<p>
+  <img src="/posts/arch-seruveni-4/printing-error.jpeg" alt="Hata">
+
+</p>
+<p>Yazdırma vakalarımın birçoğunda kağıtta bunların yazması bir hayli sinir bozucuydu. Bu durumlarda, bazı kullanıcılar, PDF dosyasını Evince gibi PDF görüntüleyici programlarla açıp oradan yazdırıyorlar-mış, forumlardan edindiğim bilgilere göre. Ben de öyle yaptım tabii. Artık PDF dosyaları direkt Evince’te açıyor sonrasında yazdırıyordum. Eğer dosya PDF değilse düz metin ise, onu da PDF ‘e çevirip Evince’te açıp öyle yazdırıyordum. Artık canıma tak etti. Ve tekrar gündemime aldım sorunu.</p>
+<p>Önceki kurulumda, yazıcı kurulumu için gerekli olan .PPD (PostScript Printer Description) uzantılı dosyayı <!-- raw HTML omitted -->Foomatic<!-- raw HTML omitted --> ‘ten çekip kullanmıştım. Ancak yukarıda değindiğim problemle karşılaştım. Biraz araştırmayla bazı forumlarda hatanın, yazıcı sürücüsünden kaynaklandığı yazılıyordu. Bunun üzerine Lexmark’ın sitesine girip “<!-- raw HTML omitted -->PPD (PostScript Printer Description) for CUPS-based systems<!-- raw HTML omitted -->” sürücüsünü indirdim ve içinde gelen Readme-CUPS.txt dosyasındaki yönergeleri takip ederek kurulumu gerçekleştirdim. Artık her uygulamadan her türde dosyayı yazdırabiliyorum.</p>
+<p>Her ne kadar hata çözülse de hatanın nedenini araştırdım. Eski sürücü ile de problemi basit konfigürasyonlarla çözebilir miydim diye merak ediyordum. Birkaç platformda hatanın bir PostScript hatası olduğu belirtiliyordu [1, 2]. Hatada geçen <!-- raw HTML omitted -->setpagedevice <!-- raw HTML omitted -->ibaresi, sorunun, yazıcının çıkış birimlerinin yanlış konfigürasyonundan kaynaklandığını gösteriyordu. Mesela sürücü parametrelerinden çıktı alınacak tepsi seçimi, yazıcıda olmayan bir tepsi olarak ayarlanmışsa bu hata alınabiliyor. Ya da yazıcının desteklemediği bir sayfa boyutunda çıktı isteniyorsa da aynı şekilde hatalarla karşılaşılabiliyor. Ben de kendi parametre değerlerime hem yazıcının web arayüzünden hem de konsoldan bakıp kontrol ettim. Bazı değerleri değiştirdim ancak sorunu çözemedim. Aşağıda parametreler ve değerleri mevcut.</p>
+<pre><code>PageSize/Page Size: Custom.WIDTHxHEIGHT Letter *A4 11x17 A3 A5 B5 Env10 EnvC5 EnvDL EnvISOB5 EnvMonarch Executive Legal
+InputSlot/Media Source: Default *Upper Lower Multipurpose Manual
+Duplex/Double-Sided Printing: DuplexNoTumble DuplexTumble *None
+Resolution/Resolution: 150x150dpi 300x300dpi 600x600dpi *1200x1200dpi
+</code></pre><p>Ardından yeni yüklediğim sürücünün parametrelerine baktım:</p>
+<pre><code>PageSize/Media Size: Letter Legal Oficio B5 *A4 Executive A5 A6 Folio Statement Monarch C4 Comm10 DL C5 ISOB5 OthEnv Custom.WIDTHxHEIGHT
+InputSlot/Media Source: *Tray1 Tray2 ManualPaper ManualEnv
+Trays/Trays: *Tray1 Tray12
+OptDuplex/Duplex: *InstalledM NotInstalledM
+Resolution/Resolution: 600dpi 1200dpi *1200x600dpi 2400x600dpi
+TonerDarkness/Toner Darkness: *PrinterS 1 2 3 4 5 6 7 8 9 10
+GrayCorrection/Gray Correction: *PrinterS Auto FalseM
+LexPixelBoost/Pixel Boost: *PrinterS False Fonts Horizontally Vertically BothDirections
+LexBrightness/Brightness: *PrinterS -6 -5 -4 -3 -2 -1 0 +1 +2 +3 +4 +5 +6
+LexContrast/Contrast: *PrinterS 0 1 2 3 4 5
+LexLineDetail/Enhance Fine Lines: *PrinterS FalseF TrueF
+OutputBin/Output Bin: *PrinterS StandardBin
+MediaType/Paper Type: *PrinterS Plain Card Transparency Labels Bond Envelope Letterhead Preprint Colored Light Heavy Rough Recycled RoughEnvelope Custom1 Custom2 Custom3 Custom4 Custom5 Custom6
+LexBlankPage/Print Blank Pages: *PrinterS False True
+Duplex/Duplex: *None DuplexNoTumble DuplexTumble
+Collate/Collation: False *True
+SepPages/Separator Pages: *PrinterS NoneF Jobs Copies Pages
+SepSource/Separator Source: *PrinterS Tray1 Tray2
+</code></pre><p>Görüldüğü gibi eski sürücüde yeni sürücüdeki parametreler yok. Zaten varolan parametre değerlerinin alabileceği tüm kombinasyonları denememe rağmen hata ile karşılaştım. Sonuç itibariyle sorunu yeni sürücüyü Lexmark’ın kendi web sitesinden yükleyerek çözdüm. Umarım bir daha sorun çıkarmaz.</p>
+<h2 id="güncelleme-1-10072018">Güncelleme 1 (10.07.2018)</h2>
+<p>“Umarım bir daha sorun çıkarmaz.” dedim, dün. Ama maalesef başka bir sorunla daha karşılaştım. Hemen sorunu tanımlayayım; Bugün acil çıktı alma ihtiyacım oldu. Ancak istediğim zamanda yazdıramadım. İdeal olanı, butona bastığınız anda çıktıyı almaktır. Ama 3-5 defa basmama rağmen yazıcı hareketleniyor, bir takım sesler (ilk açıldığında çıkardığı gibi) çıkarıyor ancak sonuç yok. Sonra dmesg ile loglara bir bakayım dedim ve şu satırlarla karşılaştım;</p>
+<pre><code>[86816.271877] usblp 3-2:1.0: usblp0: USB Bidirectional printer dev 3 if 0 alt 0 proto 2 vid 0x043D pid 0x0122
+[87059.244133] usblp0: removed
+</code></pre><p>Hatanın nedenini araştırmaya başladım. Yine forumlarda bir sürü bilgi kalabalığı vardı. Neler neler denemişler tabii ben de denemek zorunda kaldım. Yazıcı ara kablosunun bozuk veya olması gerekenden uzun olabileceğini veya USB portlarında sorun olabileceğini dillendiren forum sakinleri de vardı. Ancak sorun olsaydı Windows işletim sistemini kullanırken de benzer problemlerle karşılaşırdım. Zaten kablo tek parça ve uzun değildi. Dolayısıyla bu ihtimali  de eledim.</p>
+<p>Yukarıdaki hata kayıtlarına bakınca, hatanın <code>usblp</code> modülünden kaynaklanabileceğini düşünüp söz konusu modül üzerine araştırmalarımı yönelttim ve döndüm dolaştım yine Arch Wiki ‘de buldum kendimi. CUPS sayfasında altbaşlık olarak usblp modülünde çakışma olabileceğinden bahsedilmiş ve çözüm önerisi de sunulmuştu [3].</p>
+<p>Önerilen çözüme göre <code>usblp</code> modülünü blacklist’e aldım ve usbcore modülünü aktif ettim. Bu sorun da bu şekilde çözülmüş oldu. Ancak modülü anlık yükledim yani bilgisayar kapanıp açılınca usbcore modülü yüklenmeyecek ve manuel olarak yükleyeceğim. Bunun da önüne geçmek için kalıcı ayarları yapıp tekrar bu yazıyı güncelleyeceğim.</p>
+<h2 id="güncelleme-2-08082018">Güncelleme 2 (08.08.2018)</h2>
+<p>Yeni karşılaştığım bir problemin çözümünü de buraya eklemek istedim. Son yazdırma deneyimimde birden fazla sayfa yazdırırken, yazıcı iki sayfa arasında normalden çok ama çok uzun bekliyordu. Sanki iki sayfa arasında yazıcı kapanıp tekrar açılıyor ve yazdırmaya kaldığı yerden devam ediyordu. Sistem loglarına baktığımda güçle ilgili bir hata alıyordum. Sonra bu durumun, güç tüketimini azaltmak için Archlinux’un kullanılmayan USB portlarındaki gücü askıya almasından (autosuspend) kaynaklandığını öğrendim [4].</p>
+<p>Çözümü gayet basitti. Yazıcının <code>lsusb</code> komutuyla kimlik bilgilerini alıp aşağıdaki gibi yeni bir udev kuralı oluşturmak gerekiyordu.</p>
+<p><code>lsusb</code> çıktısı:</p>
+<pre><code>Bus 003 Device 002: ID 043d:0122 Lexmark International, Inc.
+</code></pre><p>Udev kuralı: <code>/etc/udev/rules.d/50-usb_power_save.rules</code></p>
+<pre><code># blacklist for usb autosuspend
+ACTION==&quot;add&quot;, SUBSYSTEM==&quot;usb&quot;, ATTR{idVendor}==&quot;043d&quot;, ATTR{idProduct}==&quot;0122&quot;
+</code></pre><p>Bu konfigürasyonların ardından bu problem de giderilmiş oldu.</p>
+<h2 id="kaynaklar">Kaynaklar</h2>
+<ol>
+<li>
+<p><a href="http://www.fixya.com/support/t10394952-clear">http://www.fixya.com/support/t10394952-clear</a>_syntaxerror_offending</p>
+</li>
+<li>
+<p><a href="https://groups.google.com/forum/#!topic/comp.unix.admin/xzz7jn0TiKI">https://groups.google.com/forum/#!topic/comp.unix.admin/xzz7jn0TiKI</a></p>
+</li>
+<li>
+<p><a href="https://wiki.archlinux.org/index.php/CUPS/Troubleshooting#Conflict">https://wiki.archlinux.org/index.php/CUPS/Troubleshooting#Conflict</a>_with_usblp</p>
+</li>
+<li>
+<p><a href="https://wiki.archlinux.org/index.php/Power">https://wiki.archlinux.org/index.php/Power</a>_management#USB_autosuspend</p>
+</li>
+</ol>
+    </div>
+  </article>
+
+  
+  
+
+
+
+
+  
+    <div class="blog-post-comments">
+        <div id="disqus_thread">
+          <script type="text/javascript">
+          
+          (function() {
+              
+              
+              
+              
+          
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              var disqus_shortname = 'bozogullarindan';
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+          <a href="https://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+    </div>
+
+  
+
+
+  <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Anasayfa</a></li>
+         
+          <li><a href="/posts">Tüm Yazılar</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#karşılaştığım-sorunlar">Karşılaştığım Sorunlar</a></li>
+    <li><a href="#güncelleme-1-10072018">Güncelleme 1 (10.07.2018)</a></li>
+    <li><a href="#güncelleme-2-08082018">Güncelleme 2 (08.08.2018)</a></li>
+    <li><a href="#kaynaklar">Kaynaklar</a></li>
+  </ul>
+</nav>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fbozogullarindan.com%2f2018%2f07%2farchlinux-seruveni-4-yazici-sorunu%2f" aria-label="Facebook">
+      <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fbozogullarindan.com%2f2018%2f07%2farchlinux-seruveni-4-yazici-sorunu%2f&text=Archlinux%20Ser%c3%bcveni%204%3a%20Yaz%c4%b1c%c4%b1%20Sorunu" aria-label="Twitter">
+      <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fbozogullarindan.com%2f2018%2f07%2farchlinux-seruveni-4-yazici-sorunu%2f&title=Archlinux%20Ser%c3%bcveni%204%3a%20Yaz%c4%b1c%c4%b1%20Sorunu" aria-label="Linkedin">
+      <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fbozogullarindan.com%2f2018%2f07%2farchlinux-seruveni-4-yazici-sorunu%2f&is_video=false&description=Archlinux%20Ser%c3%bcveni%204%3a%20Yaz%c4%b1c%c4%b1%20Sorunu" aria-label="Pinterest">
+      <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=Archlinux%20Ser%c3%bcveni%204%3a%20Yaz%c4%b1c%c4%b1%20Sorunu&body=Check out this article: https%3a%2f%2fbozogullarindan.com%2f2018%2f07%2farchlinux-seruveni-4-yazici-sorunu%2f" aria-label="Email">
+      <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fbozogullarindan.com%2f2018%2f07%2farchlinux-seruveni-4-yazici-sorunu%2f&title=Archlinux%20Ser%c3%bcveni%204%3a%20Yaz%c4%b1c%c4%b1%20Sorunu" aria-label="Pocket">
+      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fbozogullarindan.com%2f2018%2f07%2farchlinux-seruveni-4-yazici-sorunu%2f&title=Archlinux%20Ser%c3%bcveni%204%3a%20Yaz%c4%b1c%c4%b1%20Sorunu" aria-label="reddit">
+      <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fbozogullarindan.com%2f2018%2f07%2farchlinux-seruveni-4-yazici-sorunu%2f&name=Archlinux%20Ser%c3%bcveni%204%3a%20Yaz%c4%b1c%c4%b1%20Sorunu&description=%3cp%3eArchlinux%e2%80%99u%20kurdu%c4%9fumdan%20bu%20yana%2c%20yazd%c4%b1rma%20ile%20ilgili%20sorunlar%20ya%c5%9f%c4%b1yordum%20ve%20bug%c3%bcn%20itibariyle%20sorunu%20%c3%a7%c3%b6z%c3%bcp%20buraya%20not%20etmek%20istedim.%20Bu%20b%c3%b6l%c3%bcm%c3%bcn%20i%c3%a7eri%c4%9finde%2c%20kar%c5%9f%c4%b1la%c5%9ft%c4%b1%c4%9f%c4%b1m%20yaz%c4%b1c%c4%b1%20sorunlar%c4%b1n%c4%b1%20ve%20%c3%a7%c3%b6z%c3%bcm%c3%bcn%c3%bc%20anlat%c4%b1yor%20olaca%c4%9f%c4%b1m.%3c%2fp%3e%0a%3cp%3eHemen%20yaz%c4%b1c%c4%b1%20marka%20ve%20modelimi%20belirteyim%3a%20Lexmark%20E260d.%20Windows%20kullan%c4%b1rken%20her%20%c5%9fey%20%c3%a7ok%20rahatt%c4%b1.%20S%c3%bcr%c3%bcc%c3%bcs%c3%bcn%c3%bc%20kurup%2c%20yazd%c4%b1r%c4%b1yordum%20istedi%c4%9fim%20uygulamadan%20istedi%c4%9fim%20belge%20t%c3%bcrlerini.%20Ancak%20bu%20durum%20Archlinux%20kurduktan%20sonra%20iyice%20bula%c5%9f%c4%b1k%20bir%20hal%20ald%c4%b1.%20O%20hallerden%20biraz%20bahsedeyim.%3c%2fp%3e" aria-label="Tumblr">
+      <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fbozogullarindan.com%2f2018%2f07%2farchlinux-seruveni-4-yazici-sorunu%2f&t=Archlinux%20Ser%c3%bcveni%204%3a%20Yaz%c4%b1c%c4%b1%20Sorunu" aria-label="Hacker News">
+      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      
+        <a id="menu-toggle" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;" aria-label="Menu">
+          <i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc-toggle" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;" aria-label="TOC">
+          <i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share-toggle" class="icon" href="#" onclick="$('#share-footer').toggle();return false;" aria-label="Share">
+          <i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+          <i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+
+  <footer id="footer">
+  <div class="footer-left">
+    Copyright  &copy; 2021  Ceylan Bozoğullarından 
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+        <li><a href="/">Anasayfa</a></li>
+         
+        <li><a href="/posts">Tüm Yazılar</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+
+  </div>
+</body>
+
+<link rel="stylesheet" href=/lib/font-awesome/css/all.min.css>
+<script src=/lib/jquery/jquery.min.js></script>
+<script src=/js/main.js></script>
+<script src=/js/code-copy.js></script>
+
+
+
+</html>
