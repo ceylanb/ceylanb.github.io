@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>erciyes üniversitesi on Ceylan Bozoğullarından | Kişisel Web Sayfası</title>
+    <link>https://bozogullarindan.com/tags/erciyes-%C3%BCniversitesi/</link>
+    <description>Recent content in erciyes üniversitesi on Ceylan Bozoğullarından | Kişisel Web Sayfası</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>tr</language>
+    <copyright>Ceylan Bozoğullarından</copyright>
+    <lastBuildDate>Thu, 20 Jun 2019 22:26:04 +0000</lastBuildDate><atom:link href="https://bozogullarindan.com/tags/erciyes-%C3%BCniversitesi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Erciyes Üniv. Duyuru Mobil Uygulaması: Test Sürümü</title>
+      <link>https://bozogullarindan.com/2019/06/erciyes-univ-duyuru-mobil-uygulamasi-test-surumu/</link>
+      <pubDate>Thu, 20 Jun 2019 22:26:04 +0000</pubDate>
+      
+      <guid>https://bozogullarindan.com/2019/06/erciyes-univ-duyuru-mobil-uygulamasi-test-surumu/</guid>
+      <description>&lt;p&gt;Erciyes Üniversitesi öğrencilerinin ve öğretim elemanlarının bölüm web sitelerini takip ederek erişebildikleri duyuruları, yayınlandıkları anda telefonlarından bilidirim olarak alabilmelerini sağlayan bir mobil uygulama üzerinde çalışıyordum (boş vakitlerimde tabii). Bugün uygulamanın ilk versiyonunu tamamladım. Adını “ERU Duyuru” olarak belirlediğim uygulama, bölüm web sayfalarında yayınlanan &lt;strong&gt;yeni duyurular&lt;/strong&gt;ın yanı sıra &lt;strong&gt;güncellenen duyurular&lt;/strong&gt;ı da bildirim olarak gösterebiliyor. Uygulama sadece Android işletim sistemine sahip telefonlarda kullanılabiliyor.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

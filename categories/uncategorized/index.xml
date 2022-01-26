@@ -17,5 +17,23 @@
       <description>&lt;p&gt;“Insecure Deserialization” zafiyeti için araştırma yaparken, WebGoat’ta yer alan problemi çözeyim dedim ancak problem sandığımdan zor çıktı. Beklemediğim birçok problemle karşılaştım. Herhangi bir yerde adam akıllı kaynak da bulamayınca, çözümü buraya kaydetmek istedim. Zafiyetin ne olduğu ile ilgili internette tonla kaynak varken, zafiyetin anlatımı ile ilgili bir benim yazmamın herhalde pek bir katma değeri olmaz. O yüzden direkt karşılaştığım problemlerle birlikte çözümü yazacağım.&lt;/p&gt;</description>
     </item>
     
+    <item>
+      <title>Thinkpad E490 – Archlinux Ekran Parlaklığı Tuş Problemi</title>
+      <link>https://bozogullarindan.com/?p=503/</link>
+      <pubDate>Wed, 08 Jan 2020 19:45:22 +0000</pubDate>
+      
+      <guid>https://bozogullarindan.com/?p=503/</guid>
+      <description>&lt;p&gt;Yeni aldığım Thinkpad E490’da karşılaştığım ve çözümü için saatler harcadığım bir problemi ve çözümünü bu yazı ile kayıt altına almak istiyorum. Şöyle ki; klavyedeki F5 ve F6 tuşlarının üzerinde yer alan ikonlar sırasıyla bu tuşların ekran parlaklığının arttırılması ve azaltılması için özelleştirildiğini gösteriyordu. Fakat bu iki tuş fonksiyonlarını maalesef yerine getirmiyordu. Yani ekran parlaklığını ancak komut yazarak değiştirebiliyordum.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Erciyes Üniv. Duyuru Mobil Uygulaması: Test Sürümü</title>
+      <link>https://bozogullarindan.com/2019/06/erciyes-univ-duyuru-mobil-uygulamasi-test-surumu/</link>
+      <pubDate>Thu, 20 Jun 2019 22:26:04 +0000</pubDate>
+      
+      <guid>https://bozogullarindan.com/2019/06/erciyes-univ-duyuru-mobil-uygulamasi-test-surumu/</guid>
+      <description>&lt;p&gt;Erciyes Üniversitesi öğrencilerinin ve öğretim elemanlarının bölüm web sitelerini takip ederek erişebildikleri duyuruları, yayınlandıkları anda telefonlarından bilidirim olarak alabilmelerini sağlayan bir mobil uygulama üzerinde çalışıyordum (boş vakitlerimde tabii). Bugün uygulamanın ilk versiyonunu tamamladım. Adını “ERU Duyuru” olarak belirlediğim uygulama, bölüm web sayfalarında yayınlanan &lt;strong&gt;yeni duyurular&lt;/strong&gt;ın yanı sıra &lt;strong&gt;güncellenen duyurular&lt;/strong&gt;ı da bildirim olarak gösterebiliyor. Uygulama sadece Android işletim sistemine sahip telefonlarda kullanılabiliyor.&lt;/p&gt;</description>
+    </item>
+    
   </channel>
 </rss>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> Thinkpad E490 – Archlinux Ekran Parlaklığı Tuş Problemi | Ceylan Bozoğullarından | Kişisel Web Sayfası</title>
+  <link rel = 'canonical' href = 'https://bozogullarindan.com/?p=503/'>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta property="og:title" content="Thinkpad E490 – Archlinux Ekran Parlaklığı Tuş Problemi" />
+<meta property="og:description" content="Yeni aldığım Thinkpad E490’da karşılaştığım ve çözümü için saatler harcadığım bir problemi ve çözümünü bu yazı ile kayıt altına almak istiyorum. Şöyle ki; klavyedeki F5 ve F6 tuşlarının üzerinde yer alan ikonlar sırasıyla bu tuşların ekran parlaklığının arttırılması ve azaltılması için özelleştirildiğini gösteriyordu. Fakat bu iki tuş fonksiyonlarını maalesef yerine getirmiyordu. Yani ekran parlaklığını ancak komut yazarak değiştirebiliyordum." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://bozogullarindan.com/?p=503/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-01-08T19:45:22+00:00" />
+<meta property="article:modified_time" content="2020-01-08T19:45:22+00:00" /><meta property="og:site_name" content="Ceylan Bozoğullarından | Kişisel Web Sayfası" />
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Thinkpad E490 – Archlinux Ekran Parlaklığı Tuş Problemi"/>
+<meta name="twitter:description" content="Yeni aldığım Thinkpad E490’da karşılaştığım ve çözümü için saatler harcadığım bir problemi ve çözümünü bu yazı ile kayıt altına almak istiyorum. Şöyle ki; klavyedeki F5 ve F6 tuşlarının üzerinde yer alan ikonlar sırasıyla bu tuşların ekran parlaklığının arttırılması ve azaltılması için özelleştirildiğini gösteriyordu. Fakat bu iki tuş fonksiyonlarını maalesef yerine getirmiyordu. Yani ekran parlaklığını ancak komut yazarak değiştirebiliyordum."/>
+
+  
+  
+    
+  
+  
+  <link rel="stylesheet" href="https://bozogullarindan.com/css/styles.c05d68261bf086a9d7713c4f8a6215a3601608e267a816a7ee58f139b3d1aae51222aae2081c8e0c6bd35e1334773b7a16283022f31f92afd93bb37e5e822e66.css" integrity="sha512-wF1oJhvwhqnXcTxPimIVo2AWCOJnqBan7ljxObPRquUSIqriCByODGvTXhM0dzt6FigwIvMfkq/ZO7N&#43;XoIuZg==">
+  <link rel="stylesheet" href="https://bozogullarindan.com/css/styles.aa7f4879cac49d951c789d9f35a54627ec2d3da6b0f6b1a638d54cd60a3b1d4d827cc0a737e071cbe211e5813758ffcd847cd7fc33aea5573917e1718700e955.css" integrity="sha512-qn9IecrEnZUceJ2fNaVGJ&#43;wtPaaw9rGmONVM1go7HU2CfMCnN&#43;Bxy&#43;IR5YE3WP/NhHzX/DOupVc5F&#43;FxhwDpVQ=="> 
+
+  
+  
+  
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+  
+<link rel="icon" type="image/png" href="https://bozogullarindan.com/images/favicon.ico" />
+
+  
+  
+  
+  
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+  <div class="content index py4">
+
+  <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+        <li><a href="/">Anasayfa</a></li>
+         
+        <li><a href="/posts">Tüm Yazılar</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li>
+          <a class="icon" href=" https://bozogullarindan.com/2019/07/phishhunterai-test-oltalama-saldirilari-icin-chrome-eklentisi/" aria-label="Previous">
+            <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a class="icon" href="https://bozogullarindan.com/2020/01/webgoat-insecure-deserialization-cozumu/" aria-label="Next">
+            <i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i>
+          </a>
+        </li>
+        
+        <li>
+          <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+            <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i>
+          </a>
+        </li>
+        <li>
+          <a class="icon" href="#" aria-label="Share">
+            <i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i>
+          </a>
+        </li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Önceki Yazı</span>
+      <span id="i-next" class="info" style="display:none;">Sonraki Yazı</span>
+      <span id="i-top" class="info" style="display:none;">Yukarı Dön</span>
+      <span id="i-share" class="info" style="display:none;">Yazıyı Paylaş</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fbozogullarindan.com%2f%3fp%3d503%2f" aria-label="Facebook">
+      <i class="fab fa-facebook " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fbozogullarindan.com%2f%3fp%3d503%2f&text=Thinkpad%20E490%20%e2%80%93%20Archlinux%20Ekran%20Parlakl%c4%b1%c4%9f%c4%b1%20Tu%c5%9f%20Problemi" aria-label="Twitter">
+      <i class="fab fa-twitter " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fbozogullarindan.com%2f%3fp%3d503%2f&title=Thinkpad%20E490%20%e2%80%93%20Archlinux%20Ekran%20Parlakl%c4%b1%c4%9f%c4%b1%20Tu%c5%9f%20Problemi" aria-label="Linkedin">
+      <i class="fab fa-linkedin " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fbozogullarindan.com%2f%3fp%3d503%2f&is_video=false&description=Thinkpad%20E490%20%e2%80%93%20Archlinux%20Ekran%20Parlakl%c4%b1%c4%9f%c4%b1%20Tu%c5%9f%20Problemi" aria-label="Pinterest">
+      <i class="fab fa-pinterest " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=Thinkpad%20E490%20%e2%80%93%20Archlinux%20Ekran%20Parlakl%c4%b1%c4%9f%c4%b1%20Tu%c5%9f%20Problemi&body=Check out this article: https%3a%2f%2fbozogullarindan.com%2f%3fp%3d503%2f" aria-label="Email">
+      <i class="fas fa-envelope " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fbozogullarindan.com%2f%3fp%3d503%2f&title=Thinkpad%20E490%20%e2%80%93%20Archlinux%20Ekran%20Parlakl%c4%b1%c4%9f%c4%b1%20Tu%c5%9f%20Problemi" aria-label="Pocket">
+      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fbozogullarindan.com%2f%3fp%3d503%2f&title=Thinkpad%20E490%20%e2%80%93%20Archlinux%20Ekran%20Parlakl%c4%b1%c4%9f%c4%b1%20Tu%c5%9f%20Problemi" aria-label="reddit">
+      <i class="fab fa-reddit " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fbozogullarindan.com%2f%3fp%3d503%2f&name=Thinkpad%20E490%20%e2%80%93%20Archlinux%20Ekran%20Parlakl%c4%b1%c4%9f%c4%b1%20Tu%c5%9f%20Problemi&description=%3cp%3eYeni%20ald%c4%b1%c4%9f%c4%b1m%20Thinkpad%20E490%e2%80%99da%20kar%c5%9f%c4%b1la%c5%9ft%c4%b1%c4%9f%c4%b1m%20ve%20%c3%a7%c3%b6z%c3%bcm%c3%bc%20i%c3%a7in%20saatler%20harcad%c4%b1%c4%9f%c4%b1m%20bir%20problemi%20ve%20%c3%a7%c3%b6z%c3%bcm%c3%bcn%c3%bc%20bu%20yaz%c4%b1%20ile%20kay%c4%b1t%20alt%c4%b1na%20almak%20istiyorum.%20%c5%9e%c3%b6yle%20ki%3b%20klavyedeki%20F5%20ve%20F6%20tu%c5%9flar%c4%b1n%c4%b1n%20%c3%bczerinde%20yer%20alan%20ikonlar%20s%c4%b1ras%c4%b1yla%20bu%20tu%c5%9flar%c4%b1n%20ekran%20parlakl%c4%b1%c4%9f%c4%b1n%c4%b1n%20artt%c4%b1r%c4%b1lmas%c4%b1%20ve%20azalt%c4%b1lmas%c4%b1%20i%c3%a7in%20%c3%b6zelle%c5%9ftirildi%c4%9fini%20g%c3%b6steriyordu.%20Fakat%20bu%20iki%20tu%c5%9f%20fonksiyonlar%c4%b1n%c4%b1%20maalesef%20yerine%20getirmiyordu.%20Yani%20ekran%20parlakl%c4%b1%c4%9f%c4%b1n%c4%b1%20ancak%20komut%20yazarak%20de%c4%9fi%c5%9ftirebiliyordum.%3c%2fp%3e" aria-label="Tumblr">
+      <i class="fab fa-tumblr " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fbozogullarindan.com%2f%3fp%3d503%2f&t=Thinkpad%20E490%20%e2%80%93%20Archlinux%20Ekran%20Parlakl%c4%b1%c4%9f%c4%b1%20Tu%c5%9f%20Problemi" aria-label="Hacker News">
+      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <nav id="TableOfContents"></nav>
+    </div>
+  </span>
+</div>
+
+
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+      <h1 class="posttitle" itemprop="name headline">
+        Thinkpad E490 – Archlinux Ekran Parlaklığı Tuş Problemi
+      </h1>
+      <div class="meta">
+        
+        <div class="postdate">
+          
+          <time datetime="2020-01-08 19:45:22 &#43;0000 &#43;0000" itemprop="datePublished">2020-01-08</time>
+          
+        </div>
+        
+        
+        <div class="article-read-time">
+          <i class="far fa-clock"></i>
+          
+          1 dakikalık okuma
+        </div>
+        
+        
+        <div class="article-category">
+            <i class="fas fa-archive"></i>
+            
+            
+            <a class="category-link" href="/categories/uncategorized">Uncategorized</a>
+            
+        </div>
+        
+        
+      </div>
+    </header>
+
+  
+    <div class="content" itemprop="articleBody">
+      <p>Yeni aldığım Thinkpad E490’da karşılaştığım ve çözümü için saatler harcadığım bir problemi ve çözümünü bu yazı ile kayıt altına almak istiyorum. Şöyle ki; klavyedeki F5 ve F6 tuşlarının üzerinde yer alan ikonlar sırasıyla bu tuşların ekran parlaklığının arttırılması ve azaltılması için özelleştirildiğini gösteriyordu. Fakat bu iki tuş fonksiyonlarını maalesef yerine getirmiyordu. Yani ekran parlaklığını ancak komut yazarak değiştirebiliyordum.</p>
+<p>İlk işim Archlinux Wiki’ye bakmak oldu. Ancak Wiki’de <a href="https://wiki.archlinux.org/index.php/Backlight#Kernel_command-line_options">önerilen yöntemler</a> işe yaramadı. Araştırmaya devam ettiğimde <a href="https://bbs.archlinux.org/">Archlinux Forum</a>‘da aynı problemle karşılaşan momu mahlaslı kullanıcının <a href="https://bbs.archlinux.org/viewtopic.php?id=230932">yorumuna</a> rastladım. “momu”, kernel parametrelerine <strong>“pcie_aspm=force”</strong> ve <strong>“acpi_osi=”</strong> değerlerini eklemeyi öneriyordu. Bunun üzerine <code>/etc/default/grub</code> dosyasındaki <strong>GRUB_CMDLINE_LINUX_DEFAULT</strong> değişken değerini aşağıdaki gibi değiştirdim.</p>
+<p><code>GRUB_CMDLINE_LINUX_DEFAULT=&quot;loglevel=3 quiet pcie_aspm=force acpi_osi=&quot;</code></p>
+<p>Grub konfigürasyon dosyasını aşağıdaki komutla oluşturdum ve sistemi tekrar başlattım.</p>
+<p><code>sudo grub-mkconfig -o /boot/grub/grub.cfg</code></p>
+<p>Ve sorun çözüldü. İlginç olan çözümün wiki dışında bir forumun çok uç bir noktasında karşıma çıkmasıydı.</p>
+    </div>
+  </article>
+
+  
+  
+
+
+
+
+  
+    <div class="blog-post-comments">
+        <div id="disqus_thread">
+          <script type="text/javascript">
+          
+          (function() {
+              
+              
+              
+              
+          
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              var disqus_shortname = 'bozogullarindan';
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+          <a href="https://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+    </div>
+
+  
+
+
+  <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Anasayfa</a></li>
+         
+          <li><a href="/posts">Tüm Yazılar</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <nav id="TableOfContents"></nav>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fbozogullarindan.com%2f%3fp%3d503%2f" aria-label="Facebook">
+      <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fbozogullarindan.com%2f%3fp%3d503%2f&text=Thinkpad%20E490%20%e2%80%93%20Archlinux%20Ekran%20Parlakl%c4%b1%c4%9f%c4%b1%20Tu%c5%9f%20Problemi" aria-label="Twitter">
+      <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fbozogullarindan.com%2f%3fp%3d503%2f&title=Thinkpad%20E490%20%e2%80%93%20Archlinux%20Ekran%20Parlakl%c4%b1%c4%9f%c4%b1%20Tu%c5%9f%20Problemi" aria-label="Linkedin">
+      <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fbozogullarindan.com%2f%3fp%3d503%2f&is_video=false&description=Thinkpad%20E490%20%e2%80%93%20Archlinux%20Ekran%20Parlakl%c4%b1%c4%9f%c4%b1%20Tu%c5%9f%20Problemi" aria-label="Pinterest">
+      <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=Thinkpad%20E490%20%e2%80%93%20Archlinux%20Ekran%20Parlakl%c4%b1%c4%9f%c4%b1%20Tu%c5%9f%20Problemi&body=Check out this article: https%3a%2f%2fbozogullarindan.com%2f%3fp%3d503%2f" aria-label="Email">
+      <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fbozogullarindan.com%2f%3fp%3d503%2f&title=Thinkpad%20E490%20%e2%80%93%20Archlinux%20Ekran%20Parlakl%c4%b1%c4%9f%c4%b1%20Tu%c5%9f%20Problemi" aria-label="Pocket">
+      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fbozogullarindan.com%2f%3fp%3d503%2f&title=Thinkpad%20E490%20%e2%80%93%20Archlinux%20Ekran%20Parlakl%c4%b1%c4%9f%c4%b1%20Tu%c5%9f%20Problemi" aria-label="reddit">
+      <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fbozogullarindan.com%2f%3fp%3d503%2f&name=Thinkpad%20E490%20%e2%80%93%20Archlinux%20Ekran%20Parlakl%c4%b1%c4%9f%c4%b1%20Tu%c5%9f%20Problemi&description=%3cp%3eYeni%20ald%c4%b1%c4%9f%c4%b1m%20Thinkpad%20E490%e2%80%99da%20kar%c5%9f%c4%b1la%c5%9ft%c4%b1%c4%9f%c4%b1m%20ve%20%c3%a7%c3%b6z%c3%bcm%c3%bc%20i%c3%a7in%20saatler%20harcad%c4%b1%c4%9f%c4%b1m%20bir%20problemi%20ve%20%c3%a7%c3%b6z%c3%bcm%c3%bcn%c3%bc%20bu%20yaz%c4%b1%20ile%20kay%c4%b1t%20alt%c4%b1na%20almak%20istiyorum.%20%c5%9e%c3%b6yle%20ki%3b%20klavyedeki%20F5%20ve%20F6%20tu%c5%9flar%c4%b1n%c4%b1n%20%c3%bczerinde%20yer%20alan%20ikonlar%20s%c4%b1ras%c4%b1yla%20bu%20tu%c5%9flar%c4%b1n%20ekran%20parlakl%c4%b1%c4%9f%c4%b1n%c4%b1n%20artt%c4%b1r%c4%b1lmas%c4%b1%20ve%20azalt%c4%b1lmas%c4%b1%20i%c3%a7in%20%c3%b6zelle%c5%9ftirildi%c4%9fini%20g%c3%b6steriyordu.%20Fakat%20bu%20iki%20tu%c5%9f%20fonksiyonlar%c4%b1n%c4%b1%20maalesef%20yerine%20getirmiyordu.%20Yani%20ekran%20parlakl%c4%b1%c4%9f%c4%b1n%c4%b1%20ancak%20komut%20yazarak%20de%c4%9fi%c5%9ftirebiliyordum.%3c%2fp%3e" aria-label="Tumblr">
+      <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fbozogullarindan.com%2f%3fp%3d503%2f&t=Thinkpad%20E490%20%e2%80%93%20Archlinux%20Ekran%20Parlakl%c4%b1%c4%9f%c4%b1%20Tu%c5%9f%20Problemi" aria-label="Hacker News">
+      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      
+        <a id="menu-toggle" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;" aria-label="Menu">
+          <i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc-toggle" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;" aria-label="TOC">
+          <i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share-toggle" class="icon" href="#" onclick="$('#share-footer').toggle();return false;" aria-label="Share">
+          <i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+          <i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+
+  <footer id="footer">
+  <div class="footer-left">
+    Copyright  &copy; 2022  Ceylan Bozoğullarından 
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+        <li><a href="/">Anasayfa</a></li>
+         
+        <li><a href="/posts">Tüm Yazılar</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+
+  </div>
+</body>
+
+<link rel="stylesheet" href=/lib/font-awesome/css/all.min.css>
+<script src=/lib/jquery/jquery.min.js></script>
+<script src=/js/main.js></script>
+<script src=/js/code-copy.js></script>
+
+
+
+</html>

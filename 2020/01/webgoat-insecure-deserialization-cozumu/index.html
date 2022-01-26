@@ -73,11 +73,17 @@
       <ul>
         
         <li>
-          <a class="icon" href=" https://bozogullarindan.com/2019/07/phishhunterai-test-oltalama-saldirilari-icin-chrome-eklentisi/" aria-label="Previous">
+          <a class="icon" href=" https://bozogullarindan.com/?p=503/" aria-label="Previous">
             <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
           </a>
         </li>
         
+        
+        <li>
+          <a class="icon" href="https://bozogullarindan.com/2021/10/wordpress-plugin-mortgage-calculators-wp-1.52-stored-xss-authenticated/" aria-label="Next">
+            <i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i>
+          </a>
+        </li>
         
         <li>
           <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
@@ -196,7 +202,7 @@
     <div class="content" itemprop="articleBody">
       <p>“Insecure Deserialization” zafiyeti için araştırma yaparken, WebGoat’ta yer alan problemi çözeyim dedim ancak problem sandığımdan zor çıktı. Beklemediğim birçok problemle karşılaştım. Herhangi bir yerde adam akıllı kaynak da bulamayınca, çözümü buraya kaydetmek istedim. Zafiyetin ne olduğu ile ilgili internette tonla kaynak varken, zafiyetin anlatımı ile ilgili bir benim yazmamın herhalde pek bir katma değeri olmaz. O yüzden direkt karşılaştığım problemlerle birlikte çözümü yazacağım.</p>
 <p>Problemde verilen kutucuğa VulnerableTaskHolder sınıfından üretilen nesnenin serialize edilmiş halinin base64 ile şifrelenerek yazılması isteniyor. Ancak ilgili sınıftan nesne üretirken Constructor’ında yer alan “taskAction” değerine “sleep 5” değerinin girilmesi gerekiyor çünkü görev uygulamadan gelecek cevabı 5 saniye geciktirmek.</p>
-<p>Bunun için öncelikle üçüncü adımda verilen VulnerableTaskHolder.java dosyası indirdim. Dosyada “org.dummy.insecure.framework” paketi kullanıldığı için bu dosyayı yeni oluşturduğum “org/dummy/insecure/framework” klasörünün içine taşıdım. Ardından istenilen istismar kodunu oluşturmak üzere aynı klasöre “Exploit.java” dosyası oluşturarak, içine aşağıdaki kodları yazdım.</p>
+<p>Bunun için öncelikle üçüncü adımda verilen VulnerableTaskHolder.java dosyası indirdim. Dosyada <code>org.dummy.insecure.framework</code> paketi kullanıldığı için bu dosyayı yeni oluşturduğum <code>org/dummy/insecure/framework</code> klasörünün içine taşıdım. Ardından istenilen istismar kodunu oluşturmak üzere aynı klasöre <code>Exploit.java</code> dosyası oluşturarak, içine aşağıdaki kodları yazdım.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Java" data-lang="Java"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span style="color:#ff79c6">package</span> org.dummy.insecure.framework<span style="color:#ff79c6">;</span>
 <span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span style="color:#ff79c6">import</span> org.dummy.insecure.framework.VulnerableTaskHolder<span style="color:#ff79c6">;</span>
 <span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span style="color:#ff79c6">import</span> java.io.ByteArrayOutputStream<span style="color:#ff79c6">;</span>
@@ -239,7 +245,7 @@
 <blockquote>
 <p>The task is not executable between now and the next ten minutes, so the action will be ignored. Maybe you copied an old solution? Let’s try again.</p>
 </blockquote>
-<p>Uzun uğraşlardan sonra sorunu çözdüm. VulnerableTaskHolder sınıfının özelliklerinden biri olan “requestedExecutionTime” nesnenin üretildiği zamanı üretildiği sistemin zamanına göre tutuyordu. Oysa üzerinde çalıştığım WebGoat ise sistem zamanı bir gün geride olan sanal bir makinede çalışıyordu. Bu nedenle sorunu anlayabilmem epey bir zaman aldı. Bu sorunu da sanal sunucunun zamanını ana makinemin zamanına senkron hale getirerek çözmüş oldum. Elbette başka çözüm yöntemi de vardır bu durumda ama kolay olan bu olduğu için bu yöntemi tercih ettim.</p>
+<p>Uzun uğraşlardan sonra sorunu çözdüm. VulnerableTaskHolder sınıfının özelliklerinden biri olan <code>requestedExecutionTime</code> nesnenin üretildiği zamanı üretildiği sistemin zamanına göre tutuyordu. Oysa üzerinde çalıştığım WebGoat ise sistem zamanı bir gün geride olan sanal bir makinede çalışıyordu. Bu nedenle sorunu anlayabilmem epey bir zaman aldı. Bu sorunu da sanal sunucunun zamanını ana makinemin zamanına senkron hale getirerek çözmüş oldum. Elbette başka çözüm yöntemi de vardır bu durumda ama kolay olan bu olduğu için bu yöntemi tercih ettim.</p>
 <p>Zaman problemini de çözdükten sonra WebGoat ‘ı durdurup yeniden başlattım ve Exploit ‘i tekrar çalıştırarak yeni kodu aldım. Sonuç başarılıydı!</p>
     </div>
   </article>
@@ -367,7 +373,7 @@
 
   <footer id="footer">
   <div class="footer-left">
-    Copyright  &copy; 2021  Ceylan Bozoğullarından 
+    Copyright  &copy; 2022  Ceylan Bozoğullarından 
   </div>
   <div class="footer-right">
     <nav>

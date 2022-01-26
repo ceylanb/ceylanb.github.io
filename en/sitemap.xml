@@ -3,6 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://bozogullarindan.com/en/categories/</loc>
+    <lastmod>2022-01-08T03:30:06+03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="tr"
@@ -15,6 +16,7 @@
                 />
   </url><url>
     <loc>https://bozogullarindan.com/en/</loc>
+    <lastmod>2022-01-08T03:30:06+03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="tr"
@@ -25,6 +27,34 @@
                 hreflang="en"
                 href="https://bozogullarindan.com/en/"
                 />
+  </url><url>
+    <loc>https://bozogullarindan.com/en/posts/</loc>
+    <lastmod>2022-01-08T03:30:06+03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="tr"
+                href="https://bozogullarindan.com/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://bozogullarindan.com/en/posts/"
+                />
+  </url><url>
+    <loc>https://bozogullarindan.com/en/categories/vulnerabilities/</loc>
+    <lastmod>2022-01-08T03:30:06+03:00</lastmod>
+  </url><url>
+    <loc>https://bozogullarindan.com/en/2022/01/wordpress-learnpress-plugin-4.1.4.1-arbitrary-image-renaming/</loc>
+    <lastmod>2022-01-08T03:30:06+03:00</lastmod>
+  </url><url>
+    <loc>https://bozogullarindan.com/en/2021/10/wordpress-domain-check-1.0.16-admin-reflected-xss/</loc>
+    <lastmod>2021-10-30T23:17:06+03:00</lastmod>
+  </url><url>
+    <loc>https://bozogullarindan.com/en/2021/10/wordpress-statcounter-2.0.6-admin-stored-xss/</loc>
+    <lastmod>2021-10-29T14:17:06+03:00</lastmod>
+  </url><url>
+    <loc>https://bozogullarindan.com/en/2021/10/wordpress-mortgage-calculators-wp-1.52-admin-stored-xss/</loc>
+    <lastmod>2021-10-25T01:42:06+03:00</lastmod>
   </url><url>
     <loc>https://bozogullarindan.com/en/tags/</loc>
     <xhtml:link

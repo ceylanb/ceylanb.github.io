@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Siber Güvenlik on Ceylan Bozogullarindan&#39;s Webpage</title>
+    <link>https://bozogullarindan.com/en/categories/siber-g%C3%BCvenlik/</link>
+    <description>Recent content in Siber Güvenlik on Ceylan Bozogullarindan&#39;s Webpage</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>tr</language>
+    <copyright>Ceylan Bozoğullarından</copyright>
+    <lastBuildDate>Mon, 25 Oct 2021 01:42:06 +0300</lastBuildDate><atom:link href="https://bozogullarindan.com/en/categories/siber-g%C3%BCvenlik/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mortgage Calculators WP &lt;= 1.52 - Admin&#43; Stored Cross-Site Scripting</title>
+      <link>https://bozogullarindan.com/en/2021/10/mortgage-calculators-wp-1.52-admin-stored-cross-site-scripting/</link>
+      <pubDate>Mon, 25 Oct 2021 01:42:06 +0300</pubDate>
+      
+      <guid>https://bozogullarindan.com/en/2021/10/mortgage-calculators-wp-1.52-admin-stored-cross-site-scripting/</guid>
+      <description>Sometimes, I really would like to review open source projects to discover new vulnerabilities. Because of some obstacles, I always postpone that intention to an appropriate time. Until today! The day is the day of read, the day is the day of work and the day is the day of hack!
+Today, I have decided to review a few Wordpress plugins, and chose Mortgage Calculators WP. There was an input space to set background color of the calculator.</description>
+    </item>
+    
+  </channel>
+</rss>

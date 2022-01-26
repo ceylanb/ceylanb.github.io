@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vulnerabilities on Ceylan Bozogullarindan&#39;s Webpage</title>
+    <link>https://bozogullarindan.com/en/categories/vulnerabilities/</link>
+    <description>Recent content in Vulnerabilities on Ceylan Bozogullarindan&#39;s Webpage</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>tr</language>
+    <copyright>Ceylan Bozoğullarından</copyright>
+    <lastBuildDate>Sat, 08 Jan 2022 03:30:06 +0300</lastBuildDate><atom:link href="https://bozogullarindan.com/en/categories/vulnerabilities/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Wordpress Learnpress Plugin &lt;= 4.1.4.1 - Arbitrary Image Renaming</title>
+      <link>https://bozogullarindan.com/en/2022/01/wordpress-learnpress-plugin-4.1.4.1-arbitrary-image-renaming/</link>
+      <pubDate>Sat, 08 Jan 2022 03:30:06 +0300</pubDate>
+      
+      <guid>https://bozogullarindan.com/en/2022/01/wordpress-learnpress-plugin-4.1.4.1-arbitrary-image-renaming/</guid>
+      <description>LearnPress is a WordPress complete solution for creating a Learning Management System (LMS). It can help you to create courses, lessons and quizzes.
+A user of this LMS can upload an image as a profile avatar after the registration. After this process the user crops and saves the image. Then a &amp;ldquo;POST&amp;rdquo; request that contains user supplied name of the image is sent to the server for renaming and cropping of the image.</description>
+    </item>
+    
+    <item>
+      <title>Wordpress Domain Check &lt;= 1.0.16 - Admin&#43; Reflected XSS</title>
+      <link>https://bozogullarindan.com/en/2021/10/wordpress-domain-check-1.0.16-admin-reflected-xss/</link>
+      <pubDate>Sat, 30 Oct 2021 23:17:06 +0300</pubDate>
+      
+      <guid>https://bozogullarindan.com/en/2021/10/wordpress-domain-check-1.0.16-admin-reflected-xss/</guid>
+      <description>Domain Check is a Wordpress plugin that allows you to see what domains and SSL certificates are coming up for expiration and to quickly locate the coupons, coupon codes, and deals from your favorite sites before renewing.
+An authenticated user is able to inject arbitrary javascript or HTML code to the &amp;ldquo;Domain Check Profile&amp;rdquo; interface available in settings page of the plugin, due to incorrect sanitization of user-supplied data and achive a Reflected Cross-Site Scripting attack against the administrators.</description>
+    </item>
+    
+    <item>
+      <title>Wordpress StatCounter &lt;= 2.0.6 - Admin&#43; Stored XSS</title>
+      <link>https://bozogullarindan.com/en/2021/10/wordpress-statcounter-2.0.6-admin-stored-xss/</link>
+      <pubDate>Fri, 29 Oct 2021 14:17:06 +0300</pubDate>
+      
+      <guid>https://bozogullarindan.com/en/2021/10/wordpress-statcounter-2.0.6-admin-stored-xss/</guid>
+      <description>StatCounter is a free web traffic analysis service, which provides summary stats on all wordpress traffic and a detailed analysis of last 500 page views. StatCounter is used by 100,000+ wordpress web site. To use this service in wordpress, it is needed to install and activate the plugin.
+A stored XSS vulnerability has been discovered in StatCounter Wordpress Plugin&amp;rsquo;s admin panel. The plugin versions prior to 2.06 are affected by this vulnerability.</description>
+    </item>
+    
+    <item>
+      <title>Wordpress Mortgage Calculators WP &lt;= 1.52 - Admin&#43; Stored XSS</title>
+      <link>https://bozogullarindan.com/en/2021/10/wordpress-mortgage-calculators-wp-1.52-admin-stored-xss/</link>
+      <pubDate>Mon, 25 Oct 2021 01:42:06 +0300</pubDate>
+      
+      <guid>https://bozogullarindan.com/en/2021/10/wordpress-mortgage-calculators-wp-1.52-admin-stored-xss/</guid>
+      <description>Sometimes, I really would like to review open source projects to discover new vulnerabilities. Because of some obstacles, I always postpone that intention to an appropriate time. Until today! The day is the day of read, the day is the day of work and the day is the day of hack!
+Today, I have decided to review a few Wordpress plugins, and chose Mortgage Calculators WP. There was an input space to set background color of the calculator.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> Çok Bantlı Derin Sinir Ağları ile Yaya Tespiti | Ceylan Bozoğullarından | Kişisel Web Sayfası</title>
+  <link rel = 'canonical' href = 'https://bozogullarindan.com/2018/08/derin-sinir-aglari-ile-yaya-tespiti/'>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta property="og:title" content="Çok Bantlı Derin Sinir Ağları ile Yaya Tespiti" />
+<meta property="og:description" content="Ders döneminin bitmesiyle, akademik çalışmalara yoğulaştığımdan blog yazmaya ara vermiştim. Yüksek lisans çalışmamı bitirip, nihayet yeni bir blog yazısı yazmak için fırsat bulabildim. Bu yazının konusu, Caffe kullanılarak çok bantlı derin sinir ağları ile yaya tespitinin yapılması olacak.
+Yazmaya karar verdiğim konular genelde yaparken zorlandığım işler üzerine oluyor. Bunun nedenini ilk blog yazımda anlatmıştım; unutmamak için not etmek. Bu konu da yine zorlandığım, tamamlamak için üç hafta uğraştığım konulardan biri. O yüzden bilgilerim taze iken hatırladığım kadarını kaydetmek istiyorum.
+Bu yazının içeriğinde öyle orijinal, inovatif herhangi bir şey yok. Zaten amacım,  Rutgers Üniversitesi’nden Jingjing Liu ‘nun GitHub ‘da paylaştığı multispectral-pedestration-py-faster-rcnn projesinin kurulumunu yapmak ve demosunu çalıştırmaktı. Yazının içeriğinde bundan ötesi yer almıyor. Yani teorik bir içerikten ziyade teknik boyutu yazıyor olacağım." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://bozogullarindan.com/2018/08/derin-sinir-aglari-ile-yaya-tespiti/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2018-08-02T08:35:28+00:00" />
+<meta property="article:modified_time" content="2018-08-02T08:35:28+00:00" /><meta property="og:site_name" content="Ceylan Bozoğullarından | Kişisel Web Sayfası" />
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Çok Bantlı Derin Sinir Ağları ile Yaya Tespiti"/>
+<meta name="twitter:description" content="Ders döneminin bitmesiyle, akademik çalışmalara yoğulaştığımdan blog yazmaya ara vermiştim. Yüksek lisans çalışmamı bitirip, nihayet yeni bir blog yazısı yazmak için fırsat bulabildim. Bu yazının konusu, Caffe kullanılarak çok bantlı derin sinir ağları ile yaya tespitinin yapılması olacak.
+Yazmaya karar verdiğim konular genelde yaparken zorlandığım işler üzerine oluyor. Bunun nedenini ilk blog yazımda anlatmıştım; unutmamak için not etmek. Bu konu da yine zorlandığım, tamamlamak için üç hafta uğraştığım konulardan biri. O yüzden bilgilerim taze iken hatırladığım kadarını kaydetmek istiyorum.
+Bu yazının içeriğinde öyle orijinal, inovatif herhangi bir şey yok. Zaten amacım,  Rutgers Üniversitesi’nden Jingjing Liu ‘nun GitHub ‘da paylaştığı multispectral-pedestration-py-faster-rcnn projesinin kurulumunu yapmak ve demosunu çalıştırmaktı. Yazının içeriğinde bundan ötesi yer almıyor. Yani teorik bir içerikten ziyade teknik boyutu yazıyor olacağım."/>
+
+  
+  
+    
+  
+  
+  <link rel="stylesheet" href="https://bozogullarindan.com/css/styles.c05d68261bf086a9d7713c4f8a6215a3601608e267a816a7ee58f139b3d1aae51222aae2081c8e0c6bd35e1334773b7a16283022f31f92afd93bb37e5e822e66.css" integrity="sha512-wF1oJhvwhqnXcTxPimIVo2AWCOJnqBan7ljxObPRquUSIqriCByODGvTXhM0dzt6FigwIvMfkq/ZO7N&#43;XoIuZg==">
+  <link rel="stylesheet" href="https://bozogullarindan.com/css/styles.aa7f4879cac49d951c789d9f35a54627ec2d3da6b0f6b1a638d54cd60a3b1d4d827cc0a737e071cbe211e5813758ffcd847cd7fc33aea5573917e1718700e955.css" integrity="sha512-qn9IecrEnZUceJ2fNaVGJ&#43;wtPaaw9rGmONVM1go7HU2CfMCnN&#43;Bxy&#43;IR5YE3WP/NhHzX/DOupVc5F&#43;FxhwDpVQ=="> 
+
+  
+  
+  
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+  
+<link rel="icon" type="image/png" href="https://bozogullarindan.com/images/favicon.ico" />
+
+  
+  
+  
+  
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+  <div class="content index py4">
+
+  <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+        <li><a href="/">Anasayfa</a></li>
+         
+        <li><a href="/posts">Tüm Yazılar</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li>
+          <a class="icon" href=" https://bozogullarindan.com/2018/07/archlinux-seruveni-4-yazici-sorunu/" aria-label="Previous">
+            <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a class="icon" href="https://bozogullarindan.com/2018/08/django-asenkron-islemler-celery/" aria-label="Next">
+            <i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i>
+          </a>
+        </li>
+        
+        <li>
+          <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+            <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i>
+          </a>
+        </li>
+        <li>
+          <a class="icon" href="#" aria-label="Share">
+            <i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i>
+          </a>
+        </li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Önceki Yazı</span>
+      <span id="i-next" class="info" style="display:none;">Sonraki Yazı</span>
+      <span id="i-top" class="info" style="display:none;">Yukarı Dön</span>
+      <span id="i-share" class="info" style="display:none;">Yazıyı Paylaş</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fbozogullarindan.com%2f2018%2f08%2fderin-sinir-aglari-ile-yaya-tespiti%2f" aria-label="Facebook">
+      <i class="fab fa-facebook " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fbozogullarindan.com%2f2018%2f08%2fderin-sinir-aglari-ile-yaya-tespiti%2f&text=%c3%87ok%20Bantl%c4%b1%20Derin%20Sinir%20A%c4%9flar%c4%b1%20ile%20Yaya%20Tespiti" aria-label="Twitter">
+      <i class="fab fa-twitter " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fbozogullarindan.com%2f2018%2f08%2fderin-sinir-aglari-ile-yaya-tespiti%2f&title=%c3%87ok%20Bantl%c4%b1%20Derin%20Sinir%20A%c4%9flar%c4%b1%20ile%20Yaya%20Tespiti" aria-label="Linkedin">
+      <i class="fab fa-linkedin " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fbozogullarindan.com%2f2018%2f08%2fderin-sinir-aglari-ile-yaya-tespiti%2f&is_video=false&description=%c3%87ok%20Bantl%c4%b1%20Derin%20Sinir%20A%c4%9flar%c4%b1%20ile%20Yaya%20Tespiti" aria-label="Pinterest">
+      <i class="fab fa-pinterest " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=%c3%87ok%20Bantl%c4%b1%20Derin%20Sinir%20A%c4%9flar%c4%b1%20ile%20Yaya%20Tespiti&body=Check out this article: https%3a%2f%2fbozogullarindan.com%2f2018%2f08%2fderin-sinir-aglari-ile-yaya-tespiti%2f" aria-label="Email">
+      <i class="fas fa-envelope " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fbozogullarindan.com%2f2018%2f08%2fderin-sinir-aglari-ile-yaya-tespiti%2f&title=%c3%87ok%20Bantl%c4%b1%20Derin%20Sinir%20A%c4%9flar%c4%b1%20ile%20Yaya%20Tespiti" aria-label="Pocket">
+      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fbozogullarindan.com%2f2018%2f08%2fderin-sinir-aglari-ile-yaya-tespiti%2f&title=%c3%87ok%20Bantl%c4%b1%20Derin%20Sinir%20A%c4%9flar%c4%b1%20ile%20Yaya%20Tespiti" aria-label="reddit">
+      <i class="fab fa-reddit " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fbozogullarindan.com%2f2018%2f08%2fderin-sinir-aglari-ile-yaya-tespiti%2f&name=%c3%87ok%20Bantl%c4%b1%20Derin%20Sinir%20A%c4%9flar%c4%b1%20ile%20Yaya%20Tespiti&description=%3cp%3eDers%20d%c3%b6neminin%20bitmesiyle%2c%20akademik%20%c3%a7al%c4%b1%c5%9fmalara%20yo%c4%9fula%c5%9ft%c4%b1%c4%9f%c4%b1mdan%20blog%20yazmaya%20ara%20vermi%c5%9ftim.%20Y%c3%bcksek%20lisans%20%c3%a7al%c4%b1%c5%9fmam%c4%b1%20bitirip%2c%20nihayet%20yeni%20bir%20blog%20yaz%c4%b1s%c4%b1%20yazmak%20i%c3%a7in%20f%c4%b1rsat%20bulabildim.%20Bu%20yaz%c4%b1n%c4%b1n%20konusu%2c%20Caffe%20kullan%c4%b1larak%20%c3%a7ok%20bantl%c4%b1%20derin%20sinir%20a%c4%9flar%c4%b1%20ile%20yaya%20tespitinin%20yap%c4%b1lmas%c4%b1%20olacak.%3c%2fp%3e%0a%3cp%3eYazmaya%20karar%20verdi%c4%9fim%20konular%20genelde%20yaparken%20zorland%c4%b1%c4%9f%c4%b1m%20i%c5%9fler%20%c3%bczerine%20oluyor.%20Bunun%20nedenini%20ilk%20blog%20yaz%c4%b1mda%20anlatm%c4%b1%c5%9ft%c4%b1m%3b%20unutmamak%20i%c3%a7in%20not%20etmek.%20Bu%20konu%20da%20yine%20zorland%c4%b1%c4%9f%c4%b1m%2c%20tamamlamak%20i%c3%a7in%20%c3%bc%c3%a7%20hafta%20u%c4%9fra%c5%9ft%c4%b1%c4%9f%c4%b1m%20konulardan%20biri.%20O%20y%c3%bczden%20bilgilerim%20taze%20iken%20hat%c4%b1rlad%c4%b1%c4%9f%c4%b1m%20kadar%c4%b1n%c4%b1%20kaydetmek%20istiyorum.%3c%2fp%3e%0a%3cp%3eBu%20yaz%c4%b1n%c4%b1n%20i%c3%a7eri%c4%9finde%20%c3%b6yle%20orijinal%2c%20inovatif%20herhangi%20bir%20%c5%9fey%20yok.%20Zaten%20amac%c4%b1m%2c%c2%a0%20Rutgers%20%c3%9cniversitesi%e2%80%99nden%20Jingjing%20Liu%20%e2%80%98nun%20%3c%21--%20raw%20HTML%20omitted%20--%3eGitHub%20%e2%80%98da%20payla%c5%9ft%c4%b1%c4%9f%c4%b1%20%3c%21--%20raw%20HTML%20omitted%20--%3emultispectral-pedestration-py-faster-rcnn%3c%21--%20raw%20HTML%20omitted%20--%3e%20projesinin%20kurulumunu%20yapmak%20ve%20demosunu%20%c3%a7al%c4%b1%c5%9ft%c4%b1rmakt%c4%b1.%20Yaz%c4%b1n%c4%b1n%20i%c3%a7eri%c4%9finde%20bundan%20%c3%b6tesi%20yer%20alm%c4%b1yor.%20Yani%20teorik%20bir%20i%c3%a7erikten%20ziyade%20teknik%20boyutu%20yaz%c4%b1yor%20olaca%c4%9f%c4%b1m.%3c%21--%20raw%20HTML%20omitted%20--%3e%3c%2fp%3e" aria-label="Tumblr">
+      <i class="fab fa-tumblr " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fbozogullarindan.com%2f2018%2f08%2fderin-sinir-aglari-ile-yaya-tespiti%2f&t=%c3%87ok%20Bantl%c4%b1%20Derin%20Sinir%20A%c4%9flar%c4%b1%20ile%20Yaya%20Tespiti" aria-label="Hacker News">
+      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#sahip-olduğum-kaynaklar">Sahip Olduğum Kaynaklar</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#cudnn-kurulumu">cuDNN Kurulumu</a></li>
+            <li><a href="#proje-ve-caffe-dosyalarının-indirilmesi">Proje ve Caffe Dosyalarının  İndirilmesi</a></li>
+            <li><a href="#modellerin-yüklenmesi-ve-demo">Modellerin Yüklenmesi ve Demo</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+  </span>
+</div>
+
+
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+      <h1 class="posttitle" itemprop="name headline">
+        Çok Bantlı Derin Sinir Ağları ile Yaya Tespiti
+      </h1>
+      <div class="meta">
+        
+        <div class="postdate">
+          
+          <time datetime="2018-08-02 08:35:28 &#43;0000 &#43;0000" itemprop="datePublished">2018-08-02</time>
+          
+        </div>
+        
+        
+        <div class="article-read-time">
+          <i class="far fa-clock"></i>
+          
+          5 dakikalık okuma
+        </div>
+        
+        
+        <div class="article-category">
+            <i class="fas fa-archive"></i>
+            
+            
+            <a class="category-link" href="/categories/akademik">Akademik</a>
+            
+             ,  
+            <a class="category-link" href="/categories/derin-%C3%B6%C4%9Frenme">Derin Öğrenme</a>
+            
+        </div>
+        
+        
+      </div>
+    </header>
+
+  
+    <div class="content" itemprop="articleBody">
+      <p>Ders döneminin bitmesiyle, akademik çalışmalara yoğulaştığımdan blog yazmaya ara vermiştim. Yüksek lisans çalışmamı bitirip, nihayet yeni bir blog yazısı yazmak için fırsat bulabildim. Bu yazının konusu, Caffe kullanılarak çok bantlı derin sinir ağları ile yaya tespitinin yapılması olacak.</p>
+<p>Yazmaya karar verdiğim konular genelde yaparken zorlandığım işler üzerine oluyor. Bunun nedenini ilk blog yazımda anlatmıştım; unutmamak için not etmek. Bu konu da yine zorlandığım, tamamlamak için üç hafta uğraştığım konulardan biri. O yüzden bilgilerim taze iken hatırladığım kadarını kaydetmek istiyorum.</p>
+<p>Bu yazının içeriğinde öyle orijinal, inovatif herhangi bir şey yok. Zaten amacım,  Rutgers Üniversitesi’nden Jingjing Liu ‘nun <!-- raw HTML omitted -->GitHub ‘da paylaştığı <!-- raw HTML omitted -->multispectral-pedestration-py-faster-rcnn<!-- raw HTML omitted --> projesinin kurulumunu yapmak ve demosunu çalıştırmaktı. Yazının içeriğinde bundan ötesi yer almıyor. Yani teorik bir içerikten ziyade teknik boyutu yazıyor olacağım.<!-- raw HTML omitted --></p>
+<h2 id="sahip-olduğum-kaynaklar">Sahip Olduğum Kaynaklar</h2>
+<p><!-- raw HTML omitted -->[<em>]<!-- raw HTML omitted --> İşletim sistemi: Ubuntu 16.04<!-- raw HTML omitted --> <!-- raw HTML omitted -->[</em>]<!-- raw HTML omitted --> GPU: Asus GeForce GTX750 Ti<!-- raw HTML omitted --> <!-- raw HTML omitted -->[<em>]<!-- raw HTML omitted --> Python: 2.7.12<!-- raw HTML omitted --> <!-- raw HTML omitted -->[</em>]<!-- raw HTML omitted --> Cuda: 8.0<!-- raw HTML omitted --> <!-- raw HTML omitted -->[<em>]<!-- raw HTML omitted --> cuDNN: 3.0.8<!-- raw HTML omitted --> <!-- raw HTML omitted -->[</em>]<!-- raw HTML omitted --> OpenCV 2.4</p>
+<!-- raw HTML omitted -->
+<p>Caffe, GPU kodlarını derlemek için CUDA’nın <!-- raw HTML omitted -->nvcc<!-- raw HTML omitted --> derleyicisine ihtiyaç duyduğundan önce CUDA kurulumunun yapılması gerekiyor. <a href="http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Linux.pdf">1</a> Kuruluma başladığım acemilik dönemlerinde, önce NVIDIA GPU sürücüsünü kurmayı denedim. Ancak bunun gerekli olmadığını, CUDA kurulumunu beklediğim sırada konsol ekranını izlerken farkettim. Çünkü zaten CUDA kurulurken otomatik olarak sürücüyü de kuruyordu. O yüzden hiç NVIDIA ‘nın web sitesinden sürücü indirip kurulumu ile uğraşmadan direkt CUDA kurulabiliyor.</p>
+<p>CUDA kurulumu için iki yöntem bulunuyor:</p>
+<ol>
+<li>Runfile ile Kurulum<!-- raw HTML omitted --> 2. İşletim Sisteminin Paket Yönetimi ile Kurulum (Package Manager Inst.)</li>
+</ol>
+<p>CUDA kurulumunda birçok defa düştüğüm hatalardan biri de sürekli zor olan ilk yöntemi denemekti. Bu yöntemde, NVIDIA sitesinden indirilen runfile dosyasını çalıştırarak kurulum gerçekleştiriliyor. Ancak bu dosya X Server çalışırken hata veriyor. O yüzden önce X Server’i durdurmak gerekiyor. Ardından Ubuntu ile gelen NVIDIA’nın açık kaynak sürücüsü, nouveau ‘yu da durdurmak gerekiyor. Bunlara rağmen yine farklı hatalarla karşılaştığım oluyordu. Hatta bu yöntem birkaç defa format atmama sebep oldu.</p>
+<p>İkinci yöntemi keşfedene kadar ilk yöntemle uzun bir süre uğraşmıştım. Bu yöntem diğerine nispeten çok daha kolaydı. Ubuntu’nun paket yönetimi ile 3-5 komut çalıştırarak CUDA’yı ve GPU sürücüsünü kurmuştum.</p>
+<p>CUDA kurulumu için yararlandığım kaynak: <a href="http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Linux.pdf">NVIDIA CUDA Installation Guide For Linux</a></p>
+<p><!-- raw HTML omitted --></p>
+<p>Yukarıdaki resimde yer alan ilk adım için, aşağıda paylaştığım adresten, işletim sistemine ve mimarisine uygun istenilen versiyondaki CUDA ‘nın .deb uzantılı dosyayı indirmek gerekiyor. Ben, yukarıda bahsettiğim proje için Cuda 8.0 versiyonunu kurdum. Çünkü proje, CUDA 7.0 ve üzeri versiyonlarla stabil çalışıyor. <a href="http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Linux.pdf">1</a> Örnek olması açısından indirdiğim dosyanın adı: <!-- raw HTML omitted -->cuda-&lt;strong&gt;repo&lt;/strong&gt;-ubuntu1604_8.0.61-1_amd64.deb<!-- raw HTML omitted --></p>
+<pre><code>https://developer.download.nvidia.com/compute/cuda/repos/
+</code></pre>
+<p>Yukarıdaki adımları gerçekleştirdikten sonra yapılması zorunlu olan birkaç adım kalıyor geriye. Onlar da aşağıdaki resimde yer alıyor.</p>
+<p><!-- raw HTML omitted --></p>
+<p>Yukarıdaki resimde cuda-7.5 yazan yerleri kurduğum versiyon cuda-8.0 ile değiştirdim. İşletim sistemim 64 bitlik mimariye sahip olduğu için ilk iki komutu çalıştırdım. ve CUDA kurulumu böylece tamamlanmış oldu.</p>
+<h4 id="cudnn-kurulumu">cuDNN Kurulumu</h4>
+<p>En iyi performansı alabilmek için Caffe cuDNN ile hızlandırılıyor. Bu nedenle ikinci aşama olarak cuDNN kuruluyor <a href="http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Linux.pdf">1</a>. Bu tarz kurulumları yaparken kurulum klavuzlarını okuyarak ilerlemek gerçekten büyük kolaylık sağlıyor. Burada, cuDNN kurulumu için yararlandığımız kaynak: <!-- raw HTML omitted -->cuDNN Installation Guide.<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --></p>
+<p>Yukarıdaki resimde belirttiğim kaynağın, “Tar Dosyası ile Kurulum” başlığı altında yer alan adımları uyguladım. İkinci adımı uygulayabilmek için bir .tgz dosyası indirmem gerekiyordu. Çalıştırmak istediğim projenin en stabil çalıştığı  cuDNN versiyonu 3.0 olduğundan, bu versiyonun .tgz uzantılı kurulum dosyasını, aşağıda adresini paylaştığım NVIDIA cuDNN arşivinden indirip diğer adımları uyguladım.</p>
+<pre><code>https://developer.nvidia.com/rdp/cudnn-archive
+</code></pre>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted -->Dikkat!<!-- raw HTML omitted --> Son adımda dikkat edilmesi gereken bir durumu da belirteyim; yukarıdaki komutları PDF ‘ten hızla kopyalayıp terminale yapıştırırken, son adımın son satırı farklı bir komutmuş gibi geliyor. Ancak dikkatli bakıldığında öyle olmadığı anlaşılıyor. Son iki satırı tek satır haline getirip bir komut olarak yapıştırmak gerekiyor. Yani şöyle;<!-- raw HTML omitted --> <!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<p>Dikkat edilmesi gereken diğer bir konudan da bahsedeyim. Cuda kurulduğunda <!-- raw HTML omitted -->/usr/local/cuda<!-- raw HTML omitted --> dizini ve yanında bir de <!-- raw HTML omitted -->/usr/local/cuda-8.0<!-- raw HTML omitted --> dizini oluşturuluyor. Yukarıdaki komutlarla ilk dizine cuDNN dosyalarını atarak kurulumu yapmış oluyoruz. Oysa kullandığımız proje ayarlarında Cuda dizinini /usr/local/cuda-8.0 olarak ayarlayacağımız için aynı komutları cuda-8.0 için de çalıştırmak gerekiyor. Yani şöyle;</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>Bu adımları da gerçekleştirdikten sonra cuDNN kurulumu da tamamlanmış oldu.</p>
+<h4 id="proje-ve-caffe-dosyalarının-indirilmesi">Proje ve Caffe Dosyalarının  İndirilmesi</h4>
+<p>Çalıştırmayı istediğim projenin kendi içinde Caffe dosyalarının geldiğini öğrenene kadar Caffe’yi bağımsız olarak kendi sitesinden indirip kurmaya çalışıyordum. Ancak derleme aşamasında sürekli hata alıyordum. Sonrasında bu uğraşımdan vazgeçip, proje dosyaları içinde gelen Caffe dosyaları ile derlemeyi gerçekleştirdim. Bu nedenle derlemeye geçmeden önce proje dosyalarını aşağıdaki komutla işletim sisteminde uygun bir yere çekelim.</p>
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted -->Dikkat!<!-- raw HTML omitted --> Yukarıdaki komutta <!-- raw HTML omitted -->&ndash;recursive<!-- raw HTML omitted --> parametresi yazılmadığı takdirde Caffe dosyaları gelmeyecektir. Basit bir klon işlemi diye düşünüp bu hataya düştüğüm için yazıyorum.</p>
+<p>Caffe Kurulumu</p>
+<p>Caffe kurulumu için işletim sisteminde bazı bağımlı paketlerin kurulması gerekiyor. Bunun dışında, kurulumda işletim sistemine göre değişen durumlar  söz konusu, bunlar da kaynaklar altında linkini paylaştığım “Ubuntu 16.04 or 15.10 Installation Guide” başlıklı sayfadan incelenebilir [2]. Aşağıdaki komutlarla birlikte, Python 2.7, OpenCV 2.4 ve Caffe için gerekli olan diğer gereksinimler kurulmuş oluyor.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h5 id="libhdf5-hatası">lIbhdf5 Hatası</h5>
+<p>Sil baştan aldığım kurulumların çoğunda HDF5 kütüphanesi ile ilgili bir hata alıyordum. Bunun nedeni gerekli dosyaların gerekli yerde olmamasından kaynaklanıyordu. Bu durum işletim sistemine göre değişkenlik gösterebiliyor [2]. Ubuntu 16.04 için, sorun, aşağıdaki komutları çalıştırarak giderilebilir.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h5 id="cython-modüllerinin-derlenmesi">Cython Modüllerinin Derlenmesi</h5>
+<p>Projenin çalışabilmesi için Cython modüllerinin de derlenmesi gerekiyor. İndirilen projenin, ana dizininde yer alan <!-- raw HTML omitted -->/lib<!-- raw HTML omitted --> klasöründe <!-- raw HTML omitted -->make<!-- raw HTML omitted --> komutu çalıştırılarak Cython modülleri derlenebilir.</p>
+<h5 id="caffe-derlemesi-için-gerekli-konfigürasyonlar">Caffe Derlemesi için Gerekli Konfigürasyonlar</h5>
+<p>Derlemeyi başlatmadan önce, bazı konfigürasyonların yapılması gerekiyor <a href="http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Linux.pdf">1</a>. Konfigürasyonlar özelleştirilebildiği için burada kendi kaynaklarım için özelleştirdiğim konfigürasyonları anlatacağım. Farklı bir durum söz konusu ise yine kaynaklar bölümünde yer alan “Caffe Fast rCNN Installation” kaynağı incelenebilir.</p>
+<p>Proje dosyalarında <!-- raw HTML omitted -->/caffe-fast-rcnn<!-- raw HTML omitted --> adında bir dizin yer alıyor. Bu dizinde yer alan <!-- raw HTML omitted -->Makefile.config<!-- raw HTML omitted -->, <!-- raw HTML omitted -->Makefile<!-- raw HTML omitted --> ve <!-- raw HTML omitted -->CMakeLists.txt<!-- raw HTML omitted --> dosyalarında duruma göre bazı değişiklikler yapmak gerekiyor. Aşağıda bizim kullandığımız söz konusu üç dosyayının da linki mevcut, indirip referans alınabilir. O yüzden konfigürasyonları uzun uzadıya yazma ihtiyacı duymuyorum.</p>
+<p><!-- raw HTML omitted -->Makefile.config<!-- raw HTML omitted --> dosyası için <!-- raw HTML omitted -->tıkla!<!-- raw HTML omitted --><!-- raw HTML omitted --> <!-- raw HTML omitted -->Makefile<!-- raw HTML omitted --> dosyası için <!-- raw HTML omitted -->tıkla!<!-- raw HTML omitted --><!-- raw HTML omitted --> <!-- raw HTML omitted -->CMakeLists.txt<!-- raw HTML omitted --> dosyası için <!-- raw HTML omitted -->tıkla!<!-- raw HTML omitted --></p>
+<p>Yukarıdaki dosyalarda ilgili değişiklikleri yaptıktan sonra <!-- raw HTML omitted -->/caffe-fast-rcnn/python<!-- raw HTML omitted --> dizininde aşağıdaki komut çalıştırılarak Caffe’nin python bağımlılıkları kurulur.</p>
+<!-- raw HTML omitted -->
+<h5 id="caffe-ve-pycaffe8217nin-derlenmesi">Caffe ve pycaffe’nin Derlenmesi</h5>
+<p>Bağımlılıklar yüklenip yukarıdaki konfigürasyonlar tamamlandıktan sonra <!-- raw HTML omitted -->/caffe-fast-rcnn<!-- raw HTML omitted --> dizinindeyken aşağıdaki komut çalıştırılarak derleme işlemi gerçekleştirilir.</p>
+<!-- raw HTML omitted -->
+<h5 id="no-module-named-caffe-hatası">No module named caffe Hatası</h5>
+<p>Kurulumlar tamamlandıktan sonra PYTHONPATH değişkeni geçici olarak tanımlanmışsa bu hata alınabilir. Kalıcı olarak çözmek için ~/.bashrc dosyasına aşağıdaki satırda ilgili yerler değiştirilerek eklenmeli.</p>
+<!-- raw HTML omitted -->
+<h5 id="no-module-named-_caffe-hatası">No Module Named _CAFFE Hatası</h5>
+<p>Yukarıdaki çözümün aynısı diyebiliriz, eklediğimiz satır şöyle güncellenmeli;</p>
+<!-- raw HTML omitted -->
+<h4 id="modellerin-yüklenmesi-ve-demo">Modellerin Yüklenmesi ve Demo</h4>
+<p>Buraya kadar hatasız bir şekilde gelebilmek bir hayli zaman almıştı. Artık burdan sonrası projenin çalıştırılması. Demo’yu çalıştırmak için bazı veriseti dosyalarının belli konumlara indirilmesi gerekiyor. Burada sadece Kaist Color verisetinin örneğini anlatacağım. Diğerleri referans alınarak ya da <!-- raw HTML omitted -->projenin kendi sayfası<!-- raw HTML omitted -->na bakarak yapılabilir.</p>
+<p>Kaist Color yaya veri seti <!-- raw HTML omitted -->şuradan<!-- raw HTML omitted -->  indirilerek proje dizininde yer alan <!-- raw HTML omitted -->/models/kaist/VGG16/<!-- raw HTML omitted --> dizinine atılır ve demoyu çalıştırmak için ana dizinde aşağıdaki komut çalıştırılır.</p>
+<!-- raw HTML omitted -->
+<p><strong>Ve sonuç:</strong></p>
+<p><!-- raw HTML omitted --></p>
+<h5 id="kaynaklar">Kaynaklar</h5>
+<p><strong>1.</strong> Caffe Fast rCNN Installation, <a href="https://github.com/rbgirshick/caffe-fast">https://github.com/rbgirshick/caffe-fast</a> rcnn/blob/master/docs/installation.md</p>
+<p><strong>2.</strong> Ubuntu 16.04 or 15.10 Installation Guide, <a href="https://github.com/BVLC/caffe/wiki/Ubuntu-16.04-or-15.10-Installation-Guide">https://github.com/BVLC/caffe/wiki/Ubuntu-16.04-or-15.10-Installation-Guide</a></p>
+    </div>
+  </article>
+
+  
+  
+
+
+
+
+  
+    <div class="blog-post-comments">
+        <div id="disqus_thread">
+          <script type="text/javascript">
+          
+          (function() {
+              
+              
+              
+              
+          
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              var disqus_shortname = 'bozogullarindan';
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+          <a href="https://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+    </div>
+
+  
+
+
+  <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Anasayfa</a></li>
+         
+          <li><a href="/posts">Tüm Yazılar</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#sahip-olduğum-kaynaklar">Sahip Olduğum Kaynaklar</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#cudnn-kurulumu">cuDNN Kurulumu</a></li>
+            <li><a href="#proje-ve-caffe-dosyalarının-indirilmesi">Proje ve Caffe Dosyalarının  İndirilmesi</a></li>
+            <li><a href="#modellerin-yüklenmesi-ve-demo">Modellerin Yüklenmesi ve Demo</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fbozogullarindan.com%2f2018%2f08%2fderin-sinir-aglari-ile-yaya-tespiti%2f" aria-label="Facebook">
+      <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fbozogullarindan.com%2f2018%2f08%2fderin-sinir-aglari-ile-yaya-tespiti%2f&text=%c3%87ok%20Bantl%c4%b1%20Derin%20Sinir%20A%c4%9flar%c4%b1%20ile%20Yaya%20Tespiti" aria-label="Twitter">
+      <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fbozogullarindan.com%2f2018%2f08%2fderin-sinir-aglari-ile-yaya-tespiti%2f&title=%c3%87ok%20Bantl%c4%b1%20Derin%20Sinir%20A%c4%9flar%c4%b1%20ile%20Yaya%20Tespiti" aria-label="Linkedin">
+      <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fbozogullarindan.com%2f2018%2f08%2fderin-sinir-aglari-ile-yaya-tespiti%2f&is_video=false&description=%c3%87ok%20Bantl%c4%b1%20Derin%20Sinir%20A%c4%9flar%c4%b1%20ile%20Yaya%20Tespiti" aria-label="Pinterest">
+      <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=%c3%87ok%20Bantl%c4%b1%20Derin%20Sinir%20A%c4%9flar%c4%b1%20ile%20Yaya%20Tespiti&body=Check out this article: https%3a%2f%2fbozogullarindan.com%2f2018%2f08%2fderin-sinir-aglari-ile-yaya-tespiti%2f" aria-label="Email">
+      <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fbozogullarindan.com%2f2018%2f08%2fderin-sinir-aglari-ile-yaya-tespiti%2f&title=%c3%87ok%20Bantl%c4%b1%20Derin%20Sinir%20A%c4%9flar%c4%b1%20ile%20Yaya%20Tespiti" aria-label="Pocket">
+      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fbozogullarindan.com%2f2018%2f08%2fderin-sinir-aglari-ile-yaya-tespiti%2f&title=%c3%87ok%20Bantl%c4%b1%20Derin%20Sinir%20A%c4%9flar%c4%b1%20ile%20Yaya%20Tespiti" aria-label="reddit">
+      <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fbozogullarindan.com%2f2018%2f08%2fderin-sinir-aglari-ile-yaya-tespiti%2f&name=%c3%87ok%20Bantl%c4%b1%20Derin%20Sinir%20A%c4%9flar%c4%b1%20ile%20Yaya%20Tespiti&description=%3cp%3eDers%20d%c3%b6neminin%20bitmesiyle%2c%20akademik%20%c3%a7al%c4%b1%c5%9fmalara%20yo%c4%9fula%c5%9ft%c4%b1%c4%9f%c4%b1mdan%20blog%20yazmaya%20ara%20vermi%c5%9ftim.%20Y%c3%bcksek%20lisans%20%c3%a7al%c4%b1%c5%9fmam%c4%b1%20bitirip%2c%20nihayet%20yeni%20bir%20blog%20yaz%c4%b1s%c4%b1%20yazmak%20i%c3%a7in%20f%c4%b1rsat%20bulabildim.%20Bu%20yaz%c4%b1n%c4%b1n%20konusu%2c%20Caffe%20kullan%c4%b1larak%20%c3%a7ok%20bantl%c4%b1%20derin%20sinir%20a%c4%9flar%c4%b1%20ile%20yaya%20tespitinin%20yap%c4%b1lmas%c4%b1%20olacak.%3c%2fp%3e%0a%3cp%3eYazmaya%20karar%20verdi%c4%9fim%20konular%20genelde%20yaparken%20zorland%c4%b1%c4%9f%c4%b1m%20i%c5%9fler%20%c3%bczerine%20oluyor.%20Bunun%20nedenini%20ilk%20blog%20yaz%c4%b1mda%20anlatm%c4%b1%c5%9ft%c4%b1m%3b%20unutmamak%20i%c3%a7in%20not%20etmek.%20Bu%20konu%20da%20yine%20zorland%c4%b1%c4%9f%c4%b1m%2c%20tamamlamak%20i%c3%a7in%20%c3%bc%c3%a7%20hafta%20u%c4%9fra%c5%9ft%c4%b1%c4%9f%c4%b1m%20konulardan%20biri.%20O%20y%c3%bczden%20bilgilerim%20taze%20iken%20hat%c4%b1rlad%c4%b1%c4%9f%c4%b1m%20kadar%c4%b1n%c4%b1%20kaydetmek%20istiyorum.%3c%2fp%3e%0a%3cp%3eBu%20yaz%c4%b1n%c4%b1n%20i%c3%a7eri%c4%9finde%20%c3%b6yle%20orijinal%2c%20inovatif%20herhangi%20bir%20%c5%9fey%20yok.%20Zaten%20amac%c4%b1m%2c%c2%a0%20Rutgers%20%c3%9cniversitesi%e2%80%99nden%20Jingjing%20Liu%20%e2%80%98nun%20%3c%21--%20raw%20HTML%20omitted%20--%3eGitHub%20%e2%80%98da%20payla%c5%9ft%c4%b1%c4%9f%c4%b1%20%3c%21--%20raw%20HTML%20omitted%20--%3emultispectral-pedestration-py-faster-rcnn%3c%21--%20raw%20HTML%20omitted%20--%3e%20projesinin%20kurulumunu%20yapmak%20ve%20demosunu%20%c3%a7al%c4%b1%c5%9ft%c4%b1rmakt%c4%b1.%20Yaz%c4%b1n%c4%b1n%20i%c3%a7eri%c4%9finde%20bundan%20%c3%b6tesi%20yer%20alm%c4%b1yor.%20Yani%20teorik%20bir%20i%c3%a7erikten%20ziyade%20teknik%20boyutu%20yaz%c4%b1yor%20olaca%c4%9f%c4%b1m.%3c%21--%20raw%20HTML%20omitted%20--%3e%3c%2fp%3e" aria-label="Tumblr">
+      <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fbozogullarindan.com%2f2018%2f08%2fderin-sinir-aglari-ile-yaya-tespiti%2f&t=%c3%87ok%20Bantl%c4%b1%20Derin%20Sinir%20A%c4%9flar%c4%b1%20ile%20Yaya%20Tespiti" aria-label="Hacker News">
+      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      
+        <a id="menu-toggle" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;" aria-label="Menu">
+          <i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc-toggle" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;" aria-label="TOC">
+          <i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share-toggle" class="icon" href="#" onclick="$('#share-footer').toggle();return false;" aria-label="Share">
+          <i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+          <i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+
+  <footer id="footer">
+  <div class="footer-left">
+    Copyright  &copy; 2022  Ceylan Bozoğullarından 
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+        <li><a href="/">Anasayfa</a></li>
+         
+        <li><a href="/posts">Tüm Yazılar</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+
+  </div>
+</body>
+
+<link rel="stylesheet" href=/lib/font-awesome/css/all.min.css>
+<script src=/lib/jquery/jquery.min.js></script>
+<script src=/js/main.js></script>
+<script src=/js/code-copy.js></script>
+
+
+
+</html>
