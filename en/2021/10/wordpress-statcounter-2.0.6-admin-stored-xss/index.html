@@ -188,7 +188,7 @@ A stored XSS vulnerability has been discovered in StatCounter Wordpress Plugin&r
         <div class="article-read-time">
           <i class="far fa-clock"></i>
           
-          2 minute read
+          1 minute read
         </div>
         
         
@@ -210,34 +210,7 @@ A stored XSS vulnerability has been discovered in StatCounter Wordpress Plugin&r
 <p>A stored XSS vulnerability has been discovered in StatCounter Wordpress Plugin&rsquo;s admin panel. The plugin versions prior to 2.06 are affected by this vulnerability.</p>
 <p>The vulnerability is due to that values of the configuration parameters are not sanitized. The parameters which causing the vulnerability are Project ID and Secure Code. These parameters are stored and reflected to StatCounter Stats page available under &ldquo;Dashboard&rdquo; menu item, and settings page of the StatCounter plugin.</p>
 <p>The vulnerability can be used by an attacker, to takeover the other admin users' sessions. The details of the discovery are given below. There will be much more reviews and researches, stay close!</p>
-<pre><code># Exploit Title: WordPress Plugin StatCounter &lt;= 2.0.6 - Stored Cross-Site Scripting (XSS) (Authenticated)
-# Date: 29-10-2021
-# Exploit Author: Ceylan Bozogullarindan
-# Vendor Homepage: https://statcounter.com/
-# Software Link: https://tr.wordpress.org/plugins/official-statcounter-plugin-for-wordpress/
-# Version: 2.0.6
-# Tested on: Linux
-# CVE: CVE-2021-24920
 
-
-# Description:
-
-StatCounter is a free web traffic analysis service, which provides summary stats on all wordpress traffic and a detailed analysis of last 500 page views. StatCounter is used by 100,000+ wordpress web site. To use this service in wordpress, it is needed to install and activate the plugin.
-
-A stored XSS vulnerability has been discovered in StatCounter Wordpress Plugin's admin panel. The plugin versions prior to 2.06 are affected by this vulnerability.
-
-The vulnerability is due to that values of the configuration parameters are not sanitized. The parameters which causing the vulnerability are Project ID and Secure Code. These parameters are stored and reflected to StatCounter Stats page available under &quot;Dashboard&quot; menu item, and settings page of the StatCounter plugin.
-
-The vulnerability can be used by an attacker, to takeover the other admin users' sessions. The details of the discovery are given below.
-
-
-# Steps To Reproduce:
-1. Go to &quot;StatCounter&quot; setting page available under the &quot;Settings&quot; menu item.
-2. Type the following payload to Project ID input space: `hacked'&gt;&lt;/iframe&gt;&lt;script&gt;alert(1)&lt;/script&gt;`
-3. Click the &quot;Update Options&quot; button to save settings.
-4. After reloading of the page, the XSS will be triggered on the setting page.
-5. It is also triggered in the StatCounter Stats page available under &quot;Dashboard&quot; menu item.
-</code></pre>
     </div>
   </article>
 

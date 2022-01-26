@@ -204,27 +204,7 @@ Today, I have decided to review a few Wordpress plugins, and chose Mortgage Calc
 <p>Today, I have decided to review a few Wordpress plugins, and chose Mortgage Calculators WP. There was an input space to set background color of the calculator. The value of that input, was being reflected to web page of the calculator, without any sanitisation. This situation  can lead to a XSS vulnerability. Therefore I tried to exploit the vulnerability, and successfully run a XSS payload.</p>
 <p>More importantly! I have requested my very first CVE with this issue. My submission has been verified by WPScan, and CVE-2021-24904 has been reserved for it.</p>
 <p>The details of the discovery are given below. There will be much more reviews and researches, stay close!</p>
-<pre><code># Exploit Title: WordPress Plugin Mortgage Calculators WP &lt;= 1.52 - Stored Cross-Site Scripting (XSS) (Authenticated)
-# Date: 25-10-2021
-# Exploit Author: Ceylan Bozogullarindan
-# Vendor Homepage: https://lenderd.com/
-# Software Link: https://mortgagecalculatorsplugin.com/
-# Version: 1.52
-# Tested on: Linux
-# CVE : CVE-2021-24904
 
-
-# Description:
-The plugin gives users real-time estimates by providing mortgage calculators. It does not implement any sanitisation on the color value of the background of a calculator in admin panel, which could lead to authenticated Stored Cross-Site Scripting issues. An attacker can execute malicious javascript codes for all visitors of a page containing the calculator.
-
-
-# Steps To Reproduce:
-1. Go to settings page available under the &quot;Calculator&quot; menu item.
-2. Click the &quot;Select Color&quot; button and type the following payload the input space: `hacked&lt;/style&gt;&lt;/head&gt;&lt;script&gt;alert(1)&lt;/script&gt;`
-3. Click the &quot;Save Changes&quot; button to save settings.
-4. Create a new page and add the shortcode ([mcwp type=&quot;cv&quot;]) of the calculator, for testing.
-5. Visit the page to trigger XSS.
-</code></pre>
     </div>
   </article>
 
