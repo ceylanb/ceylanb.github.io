@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>tr</language>
     <copyright>Ceylan Bozoğullarından</copyright>
-    <lastBuildDate>Sat, 08 Jan 2022 03:30:06 +0300</lastBuildDate><atom:link href="https://bozogullarindan.com/en/categories/vulnerabilities/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 11 Jan 2022 20:30:06 +0300</lastBuildDate><atom:link href="https://bozogullarindan.com/en/categories/vulnerabilities/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Wordpress iQ Block Country &lt;= 1.2.13 - Admin&#43; Arbitrary File Deletion via Zip Slip</title>
+      <link>https://bozogullarindan.com/en/2022/01/wordpress-iq-block-country-1.2.13-admin-arbitrary-file-deletion-via-zip-slip/</link>
+      <pubDate>Tue, 11 Jan 2022 20:30:06 +0300</pubDate>
+      
+      <guid>https://bozogullarindan.com/en/2022/01/wordpress-iq-block-country-1.2.13-admin-arbitrary-file-deletion-via-zip-slip/</guid>
+      <description>iQ Block Country is a Wordpress plugin that allows you to limit access to your website content. It can allow or disallow visitors from defined countries to (parts of) the content of the website.
+The settings of the plugin can be exported or imported using its backup functionality. An authorized user can import preconfigured settings of the plugin by uploading a zip file. After the uploading process, files in the uploaded zip file are extracted one by one.</description>
+    </item>
+    
     <item>
       <title>Wordpress Learnpress Plugin &lt;= 4.1.4.1 - Arbitrary Image Renaming</title>
       <link>https://bozogullarindan.com/en/2022/01/wordpress-learnpress-plugin-4.1.4.1-arbitrary-image-renaming/</link>
